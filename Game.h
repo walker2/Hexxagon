@@ -2,12 +2,14 @@
 #define HEXXAGON_GAME_H
 
 #include <SFML/Graphics.hpp>
+#include <memory>
 #include "Board.h"
 #include "States/Game_State.h"
 #include "States/Intro_State.h"
 #include "States/Menu_State.h"
 #include "States/Multiplayer_State.h"
 #include "ResourceManager.h"
+
 
 
 static Intro_State intro_state;

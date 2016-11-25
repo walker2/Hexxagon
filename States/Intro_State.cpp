@@ -6,12 +6,12 @@ Intro_State::~Intro_State()
 
 }
 
-void Intro_State::init(int screenWidth, int screenHeight)
+void Intro_State::init(int screenWidth, int screenHeight, ResourceManager* resourceManager)
 {
     m_shouldSwitch = GameStates::NONE;
     m_timePassed = 0;
 
-    m_introTexture = m_resourceManager.getImage("media/images/HEXX_LOGO.png");
+    m_introTexture = resourceManager->getImage("media/images/HEXX_LOGO.png");
 
     m_introSprite.setTexture(m_introTexture);
     m_introSprite.setOrigin(m_introTexture.getSize().x / 2.0f, m_introTexture.getSize().y / 2.0f);
@@ -20,7 +20,7 @@ void Intro_State::init(int screenWidth, int screenHeight)
 
 
     m_text.setColor(sf::Color(236, 240, 241));
-    m_text.setFont(m_resourceManager.getFont("media/fonts/roboto_black.ttf"));
+    m_text.setFont(resourceManager->getFont("media/fonts/roboto_black.ttf"));
     m_text.setString({ " Press SPACE to continue " });
     m_text.setCharacterSize(20);
     sf::FloatRect textRect = m_text.getLocalBounds();

@@ -17,7 +17,7 @@ void Game::initSystems()
 {
     m_window.create(sf::VideoMode(m_screenWidth, m_screenHeight, 32), "GAME", sf::Style::Default);
     m_state = &intro_state;
-    m_state->init(m_screenWidth, m_screenHeight);
+    m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager);
 }
 
 void Game::processInput()
@@ -38,19 +38,19 @@ void Game::gameLoop()
         {
             case GameStates::INTRO:
                 m_state = &intro_state;
-                m_state->init(m_screenWidth, m_screenHeight);
+                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager);
                 break;
             case GameStates::MENU:
                 m_state = &menu_state;
-                m_state->init(m_screenWidth, m_screenHeight);
+                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager);
                 break;
             case GameStates::MULTIPLAYER:
                 m_state = &multiplayer_state;
-                m_state->init(m_screenWidth, m_screenHeight);
+                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager);
                 break;
             case GameStates::SINGLEPLAYER:
                 m_state = &singleplayer_state;
-                m_state->init(m_screenWidth, m_screenHeight);
+                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager);
                 break;
             case GameStates::EXIT:
                 m_window.close();

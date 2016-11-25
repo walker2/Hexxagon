@@ -3,11 +3,12 @@
 
 #include "SFML/Graphics.hpp"
 #include "GameStates.h"
+#include "../ResourceManager.h"
 
 class Game_State
 {
 public:
-    virtual void init(int screenWidth, int screenHeight) = 0;
+    virtual void init(int screenWidth, int screenHeight, ResourceManager* resourceManager) = 0;
     virtual void processInput(sf::RenderWindow &window) = 0;
     virtual void update(const sf::Time& time) = 0;
     virtual void draw(sf::RenderWindow &window) = 0;

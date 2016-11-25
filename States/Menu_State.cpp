@@ -1,15 +1,15 @@
 #include "Menu_State.h"
 
-void Menu_State::init(int screenWidth, int screenHeight)
+void Menu_State::init(int screenWidth, int screenHeight, ResourceManager* resourceManager)
 {
     m_introSprite.scale(1.2, 1.2);
 
     m_shouldSwitch = GameStates::NONE;
 
-   // m_font = m_resourceManager.getFont("media/fonts/roboto_black.ttf");//)loadFromFile("media/fonts/roboto_black.ttf");
-    //m_introTexture = m_resourceManager.getImage("media/images/HEXX_LOGO.png");//loadFromFile("media/images/HEXX_LOGO.png");
-    m_introSprite.setTexture(m_resourceManager.getImage("media/images/HEXX_LOGO.png"));
-    m_introSprite.setOrigin(m_resourceManager.getImage("media/images/HEXX_LOGO.png").getSize().x / 2.0f, m_resourceManager.getImage("media/images/HEXX_LOGO.png").getSize().y / 2.0f);
+    //m_font = resourceManager->getFont("media/fonts/roboto_black.ttf");//)loadFromFile("media/fonts/roboto_black.ttf");
+    m_introTexture = resourceManager->getImage("media/images/HEXX_LOGO.png");//loadFromFile("media/images/HEXX_LOGO.png");
+    m_introSprite.setTexture(m_introTexture);
+    m_introSprite.setOrigin(m_introTexture.getSize().x / 2.0f, m_introTexture.getSize().y / 2.0f);
     m_introSprite.scale(0.8, 0.8);
 
     m_introSprite.setPosition(400, 100);
@@ -32,7 +32,7 @@ void Menu_State::init(int screenWidth, int screenHeight)
         m_rects[i].setOrigin(m_buttonSize.x / 2.0f, m_buttonSize.y / 2.0f);
         m_rects[i].setPosition(buttonPosition);
 
-        m_labels[i].setFont(m_resourceManager.getFont("media/fonts/roboto_black.ttf"));
+        m_labels[i].setFont(resourceManager->getFont("media/fonts/roboto_black.ttf"));
         m_labels[i].setColor(sf::Color(231, 76, 60));
         m_labels[i].setString(sf::String(str[i]));
         m_labels[i].setCharacterSize(32);

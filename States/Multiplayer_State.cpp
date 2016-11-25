@@ -1,7 +1,7 @@
 #include "Multiplayer_State.h"
 #include <iostream>
 
-void Multiplayer_State::init(int screenWidth, int screenHeight)
+void Multiplayer_State::init(int screenWidth, int screenHeight, ResourceManager* resourceManager)
 {
     m_board = new Board();
     m_player1 = new Player(sf::Color(52, 152, 219), 1, "PLAYER 1");
@@ -48,8 +48,9 @@ void Multiplayer_State::init(int screenWidth, int screenHeight)
     m_labels[0].setString("1");
     m_labels[1].setString(m_player1->getName() + " TURN");
     m_labels[2].setString("1");
-    m_labels[3].setString(" Press SPACE to start again ");
-    m_font = m_resourceManager.getFont("media/fonts/roboto_black.ttf");//.loadFromFile("media/fonts/roboto_black.ttf");
+    m_labels[3].setString("FFFFFFFFFFFFFFFFFFFFFF");
+
+    m_font = resourceManager->getFont("media/fonts/roboto_black.ttf");//.loadFromFile("media/fonts/roboto_black.ttf");
     for (int i = 0; i < 4; ++i)
     {
         m_labels[i].setFont(m_font);
@@ -129,7 +130,7 @@ void Multiplayer_State::makeMove(sf::RenderWindow &window)
     {
         if (handleMove(*m_player1, *m_player2, window))
         {
-            setGUIAfterMove(*m_player1, *m_player2);
+            setGUIAfterMove(*m_player2, *m_player1);
         }
         if (isGameOver(*m_player2))
         {
@@ -226,14 +227,14 @@ void Multiplayer_State::setGUIAfterMove(Player& player, Player& enemy)
     m_turn = !m_turn;
 
     m_labels[0].setString(std::to_string(player.getPoints()));
-    m_labels[1].setString(enemy.getName() + " TURN");
-    m_labels[1].setColor(enemy.getColor());
+    m_labels[1].setString(player.getName() + " TURN");
+    m_labels[1].setColor(player.getColor());
     m_labels[2].setString(std::to_string(enemy.getPoints()));
 }
 
 void Multiplayer_State::setGUIAfterGameOver(Player& player, Player& enemy)
 {
-    if (player.getPoints() < enemy.getPoints() + (m_boardSize * m_boardSize - (enemy.getPoints() + player.getPoints())))
+    if (player.getPoints() < enemy.getPoints() + (m_boardSize * 12  - (enemy.getPoints() + player.getPoints())))
     {
         m_labels[1].setString(enemy.getName() + " WINS");
     }
@@ -242,7 +243,7 @@ void Multiplayer_State::setGUIAfterGameOver(Player& player, Player& enemy)
         m_labels[1].setString(player.getName() + " WINS");
     }
     m_labels[3].setColor(sf::Color::White);
-    m_labels[3].setString(" Press SPACE to start again ");
+    m_labels[3].setString("Press SPACE to start again");
     m_isGameOver = true;
 }
 
@@ -250,6 +251,12 @@ void Multiplayer_State::handleAIMove(Player &player, Player &enemy)
 {
     std::vector<Move> moves;
     Move aiMove = getBestAIMove(player, enemy, 3, Move(-10000), Move(10000));
+
+    if(aiMove.score == -10000)
+    {
+        aiMove = getBestAIMove(player, enemy, 1, Move(-10000), Move(10000));
+    }
+
 
     aiMove.it->second.circle.setFillColor(player.getColor());
     if (aiMove.isJump)
@@ -295,6 +302,7 @@ Move Multiplayer_State::getBestAIMove(Player &player, Player &enemy, int depth, 
 
     Move max(-10000);
     auto list = player.getList();
+
     for (auto elem : list)
     {
         std::vector<Hex> hxs = elem->first.range(2);

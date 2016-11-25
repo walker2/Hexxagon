@@ -11,7 +11,7 @@ public:
     Menu_State() {};
     ~Menu_State() {};
 
-    void init(int screenWidth, int screenHeight) override ;
+    void init(int screenWidth, int screenHeight, ResourceManager* resourceManager) override ;
     void processInput(sf::RenderWindow &window) override;
     void update(const sf::Time& time) override;
     void draw(sf::RenderWindow &window) override;
@@ -24,7 +24,7 @@ private:
 private:
     GameStates m_shouldSwitch;
     unsigned int m_buttonPadding;
-    ResourceManager m_resourceManager;
+    //ResourceManager m_resourceManager;
 
     sf::Font m_font;
     sf::Texture m_introTexture;

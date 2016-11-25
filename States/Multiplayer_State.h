@@ -23,7 +23,7 @@ class Multiplayer_State : public Game_State
 public:
     Multiplayer_State(bool isAIgame) : m_layout(LAYOUT_POINTY, sf::Vector2f(16, 16), sf::Vector2f(200, 150)), m_boardSize(3),
         m_isAIgame(isAIgame){};
-    void init(int screenWidth, int screenHeight) override;
+    void init(int screenWidth, int screenHeight, ResourceManager* resourceManager) override;
     void processInput(sf::RenderWindow &window) override;
     void update(const sf::Time &time) override;
     void draw(sf::RenderWindow &window) override;
@@ -50,7 +50,7 @@ private:
     Layout m_layout;
     Player* m_player1;
     Player* m_player2;
-    ResourceManager m_resourceManager;
+    //ResourceManager m_resourceManager;
 
     sf::Text m_labels[4];
     sf::Font m_font;
