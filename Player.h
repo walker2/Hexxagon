@@ -11,9 +11,11 @@
 class Player
 {
 public:
-    Player(sf::Color _color, int _points, std::string _name) : color(_color), points(_points), name(_name), AI(false) {};
+    Player(HexInfo::PlayerType playerType, int _points, std::string _name, bool isAI)
+            : m_playerType(playerType), points(_points), name(_name), AI(isAI) {};
 
-    sf::Color getColor() { return color; }
+
+    HexInfo::PlayerType getPlayerType() { return m_playerType; };
     int getPoints() { return points; }
     bool isAI() { return AI; }
     std::string getName() { return name; }
@@ -22,15 +24,15 @@ public:
     void extractPoints(int num) { points -= num; }
     void setToAI() { AI = true; }
 
-    std::list<std::unordered_map<Hex, HexImage>::iterator>& getList() { return hexesList; }
-    void addToList(std::unordered_map<Hex, HexImage>::iterator& it) { hexesList.push_back(it); }
-    void removeFromList(std::unordered_map<Hex, HexImage>::iterator& it) { hexesList.remove(it); }
+    std::list<std::unordered_map<Hex, HexInfo>::iterator>& getList() { return hexesList; }
+    void addToList(std::unordered_map<Hex, HexInfo>::iterator& it) { hexesList.push_back(it); }
+    void removeFromList(std::unordered_map<Hex, HexInfo>::iterator& it) { hexesList.remove(it); }
 private:
-    sf::Color color;
+    HexInfo::PlayerType  m_playerType;
     bool AI;
     int points;
     std::string name;
-    std::list<std::unordered_map<Hex, HexImage>::iterator> hexesList;
+    std::list<std::unordered_map<Hex, HexInfo>::iterator> hexesList;
 
 };
 

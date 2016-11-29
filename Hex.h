@@ -147,16 +147,20 @@ inline Hex pixel_to_hex(Layout layout, sf::Vector2f p)
     double r = (M.b2 * pt.x + M.b3 * pt.y) / 2;
     return hex_round(FractionalHex(q, r, -q - r));
 }
-struct HexImage
+struct HexInfo
 {
-    HexImage(sf::ConvexShape _convex, sf::CircleShape _circle)
+    /*HexImage(sf::ConvexShape _convex, sf::CircleShape _circle)
     {
         convex = _convex;
         circle = _circle;
     }
     sf::ConvexShape convex;
-    sf::CircleShape circle;
-
-
+    sf::CircleShape circle; */
+    HexInfo() : isFree(true), inRangeOne(false), inRangeTwo(false), attachedToPlayer(PlayerType::NONE) {};
+    enum class PlayerType { NONE = 0, PLAYER1, PLAYER2};
+    bool isFree;
+    bool inRangeOne;
+    bool inRangeTwo;
+    PlayerType attachedToPlayer;
 };
 #endif

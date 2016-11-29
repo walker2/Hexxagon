@@ -33,7 +33,7 @@ void Game::gameLoop()
 
         m_state->processInput(m_window);
         m_state->update(elapsed);
-        draw();
+
         switch (m_state->shouldSwitch())
         {
             case GameStates::INTRO:
@@ -58,6 +58,7 @@ void Game::gameLoop()
             case GameStates::NONE:
                 break;
         }
+        draw();
     }
 }
 

@@ -1,19 +1,24 @@
 #include "Multiplayer_State.h"
 #include <iostream>
 
+#define PL1CLR sf::Color(52, 152, 219)
+#define PL2CLR sf::Color(231, 76, 60)
+
 void Multiplayer_State::init(int screenWidth, int screenHeight, ResourceManager* resourceManager)
 {
     m_board = new Board();
-    m_player1 = new Player(sf::Color(52, 152, 219), 1, "PLAYER 1");
+    m_gameGUI = new GameGUI();
+
+    m_player1 = new Player(HexInfo::PlayerType::PLAYER1, 1, "PLAYER 1", 1);
 
     if (m_isAIgame)
     {
-        m_player2 = new Player(sf::Color(231, 76, 60), 1, "AI");
+        m_player2 = new Player(HexInfo::PlayerType::PLAYER2, 1, "AI", 1);
         m_player2->setToAI();
     }
     else
     {
-        m_player2 = new Player(sf::Color(231, 76, 60), 1, "PLAYER 2");
+        m_player2 = new Player(HexInfo::PlayerType::PLAYER2, 1, "PLAYER 2", 0);
     }
 
 
@@ -21,49 +26,13 @@ void Multiplayer_State::init(int screenWidth, int screenHeight, ResourceManager*
     m_turn = 0;
     m_isGameOver = false;
 
-    m_board->init(3, sf::Color(236, 240, 241), sf::Color::Black, m_layout);
-
-    Hex h1(1, 1, -2);
-    Hex h2(-1, -1, 2);
-    auto player1Hex = m_board->getBoard().find(h1);
-    auto player2Hex= m_board->getBoard().find(h2);
-
-    if (player1Hex != m_board->getBoard().end())
-    {
-        player1Hex->second.circle.setFillColor(m_player1->getColor());
-        m_player1->addToList(player1Hex);
-    }
-
-    if (player2Hex != m_board->getBoard().end())
-    {
-        player2Hex->second.circle.setFillColor(m_player2->getColor());
-        m_player2->addToList(player2Hex);
-
-    }
-    m_labels[0].setColor(m_player1->getColor());
-    m_labels[1].setColor(m_player1->getColor());
-    m_labels[2].setColor(m_player2->getColor());
-    m_labels[3].setColor(sf::Color::Transparent);
-
-    m_labels[0].setString("1");
-    m_labels[1].setString(m_player1->getName() + " TURN");
-    m_labels[2].setString("1");
-    m_labels[3].setString("FFFFFFFFFFFFFFFFFFFFFF");
-
-    m_font = resourceManager->getFont("media/fonts/roboto_black.ttf");//.loadFromFile("media/fonts/roboto_black.ttf");
-    for (int i = 0; i < 4; ++i)
-    {
-        m_labels[i].setFont(m_font);
-        m_labels[i].setCharacterSize(32);
-        sf::FloatRect rect = m_labels[i].getLocalBounds();
-        m_labels[i].setOrigin(rect.left + rect.width / 2.0f, rect.top + rect.height / 2.0f);
-    }
-
-    m_labels[0].setPosition(sf::Vector2f(50.0f, 25.0f));
-    m_labels[1].setPosition(sf::Vector2f(400.0f, 25.0f));
-    m_labels[2].setPosition(sf::Vector2f(750.0f, 25.0f));
-    m_labels[3].setPosition(sf::Vector2f(400.0f, 500.0f));
-
+    m_board->init(3, *m_player1, *m_player2);
+    sf::Color color1 = PL1CLR;
+    sf::Color color2 = PL2CLR;
+    m_gameGUI->createLabel("1", "media/fonts/roboto_black.ttf", color1, resourceManager, {50.0f, 25.0f}, 48);
+    m_gameGUI->createLabel(m_player1->getName() + " TURN", "media/fonts/roboto_black.ttf", color1, resourceManager, {400.0f, 25.0f}, 32);
+    m_gameGUI->createLabel("1", "media/fonts/roboto_black.ttf", color2, resourceManager, {750.0f, 25.0f}, 48);
+    m_gameGUI->createLabel("FFFFFFFFFFFFFFFFF", "media/fonts/roboto_black.ttf", sf::Color::Transparent, resourceManager, {400.0f, 500.0f}, 24);
 }
 
 void Multiplayer_State::processInput(sf::RenderWindow &window)
@@ -77,7 +46,7 @@ void Multiplayer_State::processInput(sf::RenderWindow &window)
                 window.close();
                 break;
             case sf::Event::MouseButtonPressed:
-                if (event.mouseButton.button == sf::Mouse::Button::Left)
+                if (event.mouseButton.button == sf::Mouse::Button::Left && !m_isGameOver)
                 {
                     makeMove(window);
                 }
@@ -88,26 +57,24 @@ void Multiplayer_State::processInput(sf::RenderWindow &window)
                     next();
                 }
                 break;
+
         }
     }
 }
 
 void Multiplayer_State::update(const sf::Time &time)
 {
-
+    m_time += time.asSeconds();
 }
 
 void Multiplayer_State::draw(sf::RenderWindow &window)
 {
-    for (auto &hex : m_board->getBoard())
-    {
-        window.draw(hex.second.convex);
-        window.draw(hex.second.circle);
-    }
-    for (int i = 0; i < 4; ++i)
-    {
-        window.draw(m_labels[i]);
-    }
+    sf::Color color1 = PL1CLR;
+    sf::Color color2 = PL2CLR;
+
+    m_gameGUI->drawBackground(window, m_time);
+    m_gameGUI->drawBoard(*m_board, sf::Color(236, 240, 241), sf::Color::Black, m_layout, color1, color2, window);
+    m_gameGUI->drawLabels(window);
 }
 
 GameStates Multiplayer_State::shouldSwitch()
@@ -117,8 +84,8 @@ GameStates Multiplayer_State::shouldSwitch()
 
 void Multiplayer_State::next()
 {
-
     delete m_board;
+    delete m_gameGUI;
     delete m_player1;
     delete m_player2;
     m_shouldSwitch = GameStates::INTRO;
@@ -126,26 +93,26 @@ void Multiplayer_State::next()
 
 void Multiplayer_State::makeMove(sf::RenderWindow &window)
 {
-    if (!m_turn)
+    if (!m_turn && !m_isGameOver)
     {
         if (handleMove(*m_player1, *m_player2, window))
         {
-            setGUIAfterMove(*m_player2, *m_player1);
+            setGUIAfterMove(*m_player2);
         }
-        if (isGameOver(*m_player2))
+        if (isGameOver(*m_player1))
         {
-            setGUIAfterGameOver(*m_player2, *m_player1);
+            setGUIAfterGameOver();
         }
     }
     else
     {
         if (handleMove(*m_player2, *m_player1, window))
         {
-            setGUIAfterMove(*m_player1, *m_player2);
+            setGUIAfterMove(*m_player1);
         }
-        if (isGameOver(*m_player1))
+        if (isGameOver(*m_player2))
         {
-            setGUIAfterGameOver(*m_player1, *m_player2);
+            setGUIAfterGameOver();
         }
     }
 }
@@ -163,32 +130,32 @@ bool Multiplayer_State::handleMove(Player &player, Player &enemy, sf::RenderWind
     auto hx = m_board->getBoard().find(pixel_to_hex(m_layout, sf::Vector2f(localPosition.x, localPosition.y)));
     if (hx != m_board->getBoard().end())
     {
-        if (hx->second.convex.getFillColor() == sf::Color(156, 155, 122) && hx->second.circle.getFillColor() == sf::Color::Transparent)
+        if (hx->second.inRangeOne && hx->second.attachedToPlayer == HexInfo::PlayerType::NONE)
         {
-            hx->second.circle.setFillColor(player.getColor());
+            hx->second.attachedToPlayer = player.getPlayerType();//.circle.setFillColor(player.getColor());
 
             player.addPoints(1);
             player.addToList(hx);
 
-            m_board->setAllConvexColor(sf::Color(236, 240, 241));
+            m_board->setAllHexesToFree();
             m_board->placeHex(hx, player, enemy);
             return true;
         }
-        else if (hx->second.convex.getFillColor() == sf::Color(255, 211, 147) && hx->second.circle.getFillColor() == sf::Color::Transparent)
+        else if (hx->second.inRangeTwo && hx->second.attachedToPlayer == HexInfo::PlayerType::NONE)
         {
-            m_prevHex->second.circle.setFillColor(sf::Color::Transparent);
-            hx->second.circle.setFillColor(player.getColor());
+            m_prevHex->second.attachedToPlayer = HexInfo::PlayerType::NONE;
+            hx->second.attachedToPlayer = player.getPlayerType();
 
             player.removeFromList(m_prevHex);
             player.addToList(hx);
 
-            m_board->setAllConvexColor(sf::Color(236, 240, 241));
+            m_board->setAllHexesToFree();
             m_board->placeHex(hx, player, enemy);
             return true;
         }
-        m_board->setAllConvexColor(sf::Color(236, 240, 241));
+        m_board->setAllHexesToFree();
 
-        if (hx->second.circle.getFillColor() != player.getColor())
+        if (hx->second.attachedToPlayer != player.getPlayerType())
         {
             return false;
         }
@@ -214,7 +181,7 @@ bool Multiplayer_State::isGameOver(Player &player)
             auto hex = m_board->getBoard().find(*itr);
             if (hex != m_board->getBoard().end())
             {
-                if (hex->second.circle.getFillColor() == sf::Color::Transparent)
+                if (hex->second.attachedToPlayer == HexInfo::PlayerType::NONE)
                     return false;
             }
         }
@@ -222,118 +189,133 @@ bool Multiplayer_State::isGameOver(Player &player)
     return true;
 }
 
-void Multiplayer_State::setGUIAfterMove(Player& player, Player& enemy)
+void Multiplayer_State::setGUIAfterMove(Player& player)
 {
     m_turn = !m_turn;
 
-    m_labels[0].setString(std::to_string(player.getPoints()));
-    m_labels[1].setString(player.getName() + " TURN");
-    m_labels[1].setColor(player.getColor());
-    m_labels[2].setString(std::to_string(enemy.getPoints()));
+    m_gameGUI->changeLabelText(0, std::to_string(m_player1->getPoints()));
+    m_gameGUI->changeLabelText(1, player.getName() + " TURN");
+    m_gameGUI->changeLabelText(2, std::to_string(m_player2->getPoints()));
+
+    switch (player.getPlayerType())
+    {
+        case HexInfo::PlayerType::PLAYER1:
+            m_gameGUI->changeLabelColor(1, PL1CLR);
+            break;
+        case HexInfo::PlayerType::PLAYER2:
+            m_gameGUI->changeLabelColor(1, PL2CLR);
+            break;
+    }
 }
 
-void Multiplayer_State::setGUIAfterGameOver(Player& player, Player& enemy)
+void Multiplayer_State::setGUIAfterGameOver()
 {
-    if (player.getPoints() < enemy.getPoints() + (m_boardSize * 12  - (enemy.getPoints() + player.getPoints())))
+
+    if (m_player1->getPoints() < m_player2->getPoints() + (m_boardSize * 12  - (m_player2->getPoints() + m_player1->getPoints())))
     {
-        m_labels[1].setString(enemy.getName() + " WINS");
+        m_gameGUI->changeLabelText(1, m_player2->getName() + " WINS");
+        m_gameGUI->changeLabelColor(1, PL2CLR);
     }
     else
     {
-        m_labels[1].setString(player.getName() + " WINS");
+        m_gameGUI->changeLabelText(1, m_player1->getName() + " WINS");
+        m_gameGUI->changeLabelColor(1, PL1CLR);
     }
-    m_labels[3].setColor(sf::Color::White);
-    m_labels[3].setString("Press SPACE to start again");
+
+    m_gameGUI->changeLabelColor(3, sf::Color::White);
+    m_gameGUI->changeLabelText(3, "Press SPACE to start again");
     m_isGameOver = true;
+
 }
 
 void Multiplayer_State::handleAIMove(Player &player, Player &enemy)
 {
     std::vector<Move> moves;
-    Move aiMove = getBestAIMove(player, enemy, 3, Move(-10000), Move(10000));
+    Move aiMove;
+    if(player.getName() == "PLAYER 1")
+    {
+        aiMove = getBestAIMove(player, enemy, 3, Move(-10000), Move(10000), player.getPoints());
+    }
+    else
+    {
+        aiMove = getBestAIMove(player, enemy, 3, Move(-10000), Move(10000), player.getPoints());
+    }
 
     if(aiMove.score == -10000)
     {
-        aiMove = getBestAIMove(player, enemy, 1, Move(-10000), Move(10000));
+        aiMove = getBestAIMove(player, enemy, 1, Move(-10000), Move(10000), player.getPoints());
     }
 
 
-    aiMove.it->second.circle.setFillColor(player.getColor());
+    aiMove.it->second.attachedToPlayer = player.getPlayerType();
     if (aiMove.isJump)
     {
-        aiMove.prev_it->second.circle.setFillColor(sf::Color::Transparent);
+        aiMove.prev_it->second.attachedToPlayer = HexInfo::PlayerType::NONE;
         player.extractPoints(1);
         player.removeFromList(aiMove.prev_it);
     }
     player.addPoints(1);
     player.addToList(aiMove.it);
 
-    std::vector<Hex> hexs = aiMove.it->first.range(1);
-    for (auto itr = hexs.begin(); itr != hexs.end(); ++itr)
-    {
-        auto hhx = m_board->getBoard().find(*itr);
-        if (hhx != m_board->getBoard().end() && hhx->second.circle.getFillColor() == enemy.getColor())
-        {
-            hhx->second.circle.setFillColor(player.getColor());
-
-            player.addPoints(1);
-            player.addToList(hhx);
-            enemy.extractPoints(1);
-            enemy.removeFromList(hhx);
-        }
-
-    }
-    std::cout << "BEST AI MOVE WITH SCORE " << aiMove.score;
+    m_board->placeHex(aiMove.it, player, enemy);
 }
 
-Move Multiplayer_State::getBestAIMove(Player &player, Player &enemy, int depth, Move alpha, Move beta)
+Move Multiplayer_State::getBestAIMove(Player &player, Player &enemy, int depth, Move alpha, Move beta, int startPoints)
 {
     if (depth == 0)
     {
-        if (player.isAI())
-        {
-            return Move(-10 * (m_player1->getPoints() - m_player2->getPoints()));
-        }
-        else
-        {
-            return Move(10 * (m_player1->getPoints() - m_player2->getPoints()));
-        }
+        return Move(10 * (player.getPoints() - startPoints));
     }
 
+    //Create Move with minimal score
     Move max(-10000);
     auto list = player.getList();
-
+    //For every element in player element list
     for (auto elem : list)
     {
+        //Take range of 2 around the current element and form vector of Hex objects
         std::vector<Hex> hxs = elem->first.range(2);
         for (auto itr = hxs.begin(); itr != hxs.end(); ++itr)
         {
+            //Find the objects in board
             auto hex = m_board->getBoard().find(*itr);
-            if (hex != m_board->getBoard().end()) {
-                if (hex->second.circle.getFillColor() == sf::Color::Transparent)
+            if (hex != m_board->getBoard().end())
+            {
+
+                //Check if we can go to the this hex
+                if (hex->second.attachedToPlayer == HexInfo::PlayerType::NONE)
                 {
+                    //Create empty move
                     Move move(0);
 
+                    //If distance between element in players list and current hex better than 1
                     if (hex->first.distance(elem->first) > 1)
                     {
+                        //It was jump, extracting points and removing element from players list
                         player.extractPoints(1);
                         player.removeFromList(elem);
                         move.prev_it = elem;
                         move.isJump = true;
                     }
 
-                    hex->second.circle.setFillColor(player.getColor());
+                    //Set current hex to players list
+                    hex->second.attachedToPlayer = player.getPlayerType();
                     player.addPoints(1);
                     player.addToList(hex);
+
+                    //After placing hex on board we should turn other hexes in range of 1 to players color
                     std::vector<Hex> hexs = hex->first.range(1);
-                    std::vector<std::unordered_map<Hex, HexImage>::iterator> used_hexes;
+                    std::vector<std::unordered_map<Hex, HexInfo>::iterator> used_hexes;
+
+                    //Iterating through all adjacent hexes
                     for (auto itr1 = hexs.begin(); itr1 != hexs.end(); ++itr1)
                     {
                         auto hes = m_board->getBoard().find(*itr1);
-                        if (hes != m_board->getBoard().end() && hes->second.circle.getFillColor() == enemy.getColor())
+                        //Check if hex is belongs to the enemy
+                        if (hes != m_board->getBoard().end() && hes->second.attachedToPlayer == enemy.getPlayerType())
                         {
-                            hes->second.circle.setFillColor(player.getColor());
-
+                            //Take all hexes around
+                            hes->second.attachedToPlayer = player.getPlayerType();
                             player.addPoints(1);
                             player.addToList(hes);
                             enemy.extractPoints(1);
@@ -342,6 +324,7 @@ Move Multiplayer_State::getBestAIMove(Player &player, Player &enemy, int depth, 
                         }
                     }
 
+                    //Compute minus alpha and minus beta moves
                     Move minus_alpha = alpha;
                     minus_alpha.score = - minus_alpha.score;
                     Move minus_beta = beta;
@@ -349,34 +332,48 @@ Move Multiplayer_State::getBestAIMove(Player &player, Player &enemy, int depth, 
 
 
                     move.it = hex;
-                    move.score = - getBestAIMove(enemy, player, depth - 1, minus_beta, minus_alpha).score;
+                    //Set current move score by starting recursion
+                    move.score = - getBestAIMove(enemy, player, depth - 1, minus_beta, minus_alpha, startPoints).score;
 
-                    if(move.score > max.score)
+                    //Maximize from all children nodes
+                    if (move.score > max.score)
                     {
                         max = move;
                     }
-                    hex->second.circle.setFillColor(sf::Color::Transparent);
+                    if (max.score == move.score && max.isJump && !move.isJump)
+                    {
+                        max = move;
+                    }
+
+
+                    //Return the board to it's previous state
+                    hex->second.attachedToPlayer = HexInfo::PlayerType::NONE;
                     player.extractPoints(1);
                     player.removeFromList(hex);
 
+                    //Iterate through list of used_hexes in this turn setting them all to previous state
                     for (auto u_hex : used_hexes)
                     {
-                        u_hex->second.circle.setFillColor(enemy.getColor());
-
+                        u_hex->second.attachedToPlayer = enemy.getPlayerType();
                         enemy.addPoints(1);
                         enemy.addToList(u_hex);
                         player.extractPoints(1);
                         player.removeFromList(u_hex);
                     }
+
+                    //Check if there was a jump and set all to normal
                     if (hex->first.distance(elem->first) > 1)
                     {
                         player.addPoints(1);
                         player.addToList(elem);
                     }
+
+                    //Check if score of current move is better than score of alpha move
                     if (move.score > alpha.score)
                         alpha = move;
 
-                    if (alpha.score >= beta.score)
+                    //Check if score of alpha move is better or equal to beta move score and return alpha
+                    if (alpha.score > beta.score)
                         return alpha;
 
                 }
@@ -385,3 +382,4 @@ Move Multiplayer_State::getBestAIMove(Player &player, Player &enemy, int depth, 
     }
     return max;
 }
+
