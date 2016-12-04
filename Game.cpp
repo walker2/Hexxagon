@@ -17,12 +17,7 @@ void Game::initSystems()
 {
     m_window.create(sf::VideoMode(m_screenWidth, m_screenHeight, 32), "GAME", sf::Style::Default);
     m_state = &intro_state;
-    m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager);
-}
-
-void Game::processInput()
-{
-
+    m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager, &m_diff1, &m_diff2);
 }
 
 void Game::gameLoop()
@@ -38,19 +33,31 @@ void Game::gameLoop()
         {
             case GameStates::INTRO:
                 m_state = &intro_state;
-                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager);
+                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager, &m_diff1, &m_diff2);
                 break;
             case GameStates::MENU:
                 m_state = &menu_state;
-                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager);
+                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager, &m_diff1, &m_diff2);
                 break;
             case GameStates::MULTIPLAYER:
                 m_state = &multiplayer_state;
-                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager);
+                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager, &m_diff1, &m_diff2);
+                break;
+            case GameStates::DIFFICULTY_SINGLEPLAYER:
+                m_state = &difficulty_singleplayer_state;
+                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager, &m_diff1, &m_diff2);
+                break;
+            case GameStates::DIFFICULTY_COMPUTERWARS:
+                m_state = &difficulty_computerwars_state;
+                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager, &m_diff1, &m_diff2);
                 break;
             case GameStates::SINGLEPLAYER:
                 m_state = &singleplayer_state;
-                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager);
+                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager, &m_diff1, &m_diff2);
+                break;
+            case GameStates::COMPUTERWARS:
+                m_state = &computer_wars;
+                m_state->init(m_screenWidth, m_screenHeight, &m_resourceManager, &m_diff1, &m_diff2);
                 break;
             case GameStates::EXIT:
                 m_window.close();

@@ -8,7 +8,7 @@
 class Game_State
 {
 public:
-    virtual void init(int screenWidth, int screenHeight, ResourceManager* resourceManager) = 0;
+    virtual void init(int screenWidth, int screenHeight, ResourceManager* resourceManager, int* diff1, int* diff2) = 0;
     virtual void processInput(sf::RenderWindow &window) = 0;
     virtual void update(const sf::Time& time) = 0;
     virtual void draw(sf::RenderWindow &window) = 0;

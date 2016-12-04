@@ -61,10 +61,10 @@ void main() {
 
 	float freqs[4];
 	//Sound
-	freqs[0] = u_music / 12.;//(mainSound(u_music) * vec2( 0.05, 0.25 )).x;
+	freqs[0] = u_music / 8.; //u_music / 12.;
 	freqs[1] = u_music / 10.;//(mainSound(u_music) * vec2( 0.17, 0.25 )).x;
-	freqs[2] = u_music / 11.;//(mainSound(u_music) * vec2( 0.15, 0.25 )).x;
-	freqs[3] = 0.5;//(mainSound(u_music) * vec2( 0.30, 0.25 )).x;
+	freqs[2] = 0.;//(mainSound(u_music) * vec2( 0.15, 0.25 )).x;
+	freqs[3] = 0.5;//(mainSound(u_music) * vec2( 0.30,  0.25 )).x;
 
 	float t = field(p,freqs[2]);
 	float v = (1. - exp((abs(uv.x) - 1.) * 6.)) * (1. - exp((abs(uv.y) - 1.) * 6.));

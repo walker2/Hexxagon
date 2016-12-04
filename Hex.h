@@ -149,13 +149,6 @@ inline Hex pixel_to_hex(Layout layout, sf::Vector2f p)
 }
 struct HexInfo
 {
-    /*HexImage(sf::ConvexShape _convex, sf::CircleShape _circle)
-    {
-        convex = _convex;
-        circle = _circle;
-    }
-    sf::ConvexShape convex;
-    sf::CircleShape circle; */
     HexInfo() : isFree(true), inRangeOne(false), inRangeTwo(false), attachedToPlayer(PlayerType::NONE) {};
     enum class PlayerType { NONE = 0, PLAYER1, PLAYER2};
     bool isFree;

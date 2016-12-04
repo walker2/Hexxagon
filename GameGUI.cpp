@@ -3,10 +3,7 @@
 
 GameGUI::GameGUI()
 {
-
-    //buffer.loadFromFile()
-
-    if (!buffer.loadFromFile("media/sounds/for_river.ogg"))
+    if (!buffer.loadFromFile("media/sounds/to_the_moon.ogg"))
     {
         std::cout << "Music can't be loaded" << std::endl;
     }
@@ -14,7 +11,7 @@ GameGUI::GameGUI()
 
     m_music.setBuffer(buffer);
     m_music.setLoop(true);
-    //m_music.play();
+    m_music.play();
 }
 
 GameGUI::~GameGUI()
@@ -49,10 +46,12 @@ void GameGUI::drawBoard(Board& hexBoard, sf::Color hexColor, sf::Color outlineCo
         if (hex.second.inRangeOne)
         {
             convexShape.setFillColor(sf::Color(156, 155, 122));
-        } else if (hex.second.inRangeTwo)
+        }
+        else if (hex.second.inRangeTwo)
         {
             convexShape.setFillColor(sf::Color(255, 211, 147));
         }
+
 
         circleShape.setOrigin(8, 8);
         circleShape.setPosition({ convexShape.getPosition().x * 2, convexShape.getPosition().y * 2 });
@@ -144,15 +143,13 @@ void GameGUI::drawBackground(sf::RenderWindow &window, float time)
     {
         frameTimeAverage += frameTimes[i];
     }
+
     frameTimeAverage /= count;
-    if (frameTimeAverage > 15)
-        std::cout << "TO HIGH";
 
 
     shader.setParameter("u_resolution", sf::Vector3f(800, 600, 0));
     shader.setParameter("u_time", time);
-    std::cout << frameTimeAverage << " ";
-    shader.setParameter("u_music", frameTimeAverage);// + 125);
+    shader.setParameter("u_music", frameTimeAverage);
 
 
     window.draw(sprite, &shader);

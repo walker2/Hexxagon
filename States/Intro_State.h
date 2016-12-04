@@ -13,7 +13,7 @@ public:
     Intro_State() {};
     ~Intro_State();
 
-    void init(int screenWidth, int screenHeight, ResourceManager* resourceManager) override;
+    void init(int screenWidth, int screenHeight, ResourceManager* resourceManager, int* diff1, int* diff2) override;
     void processInput(sf::RenderWindow &window) override;
     void update(const sf::Time& time) override;
     void draw(sf::RenderWindow &window) override;
@@ -22,7 +22,6 @@ public:
 
 private:
     GameStates m_shouldSwitch;
-    //ResourceManager m_resourceManager;
 
     sf::Texture m_introTexture;
     sf::Sprite m_introSprite;

@@ -6,7 +6,7 @@ Intro_State::~Intro_State()
 
 }
 
-void Intro_State::init(int screenWidth, int screenHeight, ResourceManager* resourceManager)
+void Intro_State::init(int screenWidth, int screenHeight, ResourceManager* resourceManager, int* diff1, int* diff2)
 {
     m_shouldSwitch = GameStates::NONE;
     m_timePassed = 0;
@@ -36,7 +36,6 @@ void Intro_State::update(const sf::Time &time)
         m_introSprite.setPosition(m_introSprite.getPosition().x,
                                   m_introSprite.getPosition().y + (200 * time.asSeconds()));
     }
-
 }
 
 void Intro_State::draw(sf::RenderWindow &window)

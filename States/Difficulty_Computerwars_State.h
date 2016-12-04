@@ -1,16 +1,14 @@
-#ifndef HEXXAGON_MENU_STATE_H
-#define HEXXAGON_MENU_STATE_H
+#ifndef HEXXAGON_DIFFICULTY_MULTIPLAYER_STATE_H
+#define HEXXAGON_DIFFICULTY_MULTIPLAYER_STATE_H
 
 
 #include "Game_State.h"
-#include "../ResourceManager.h"
 
-class Menu_State : public Game_State
+class Difficulty_Computerwars_State : public Game_State
 {
 public:
-    Menu_State()  {};
-    ~Menu_State() {};
-
+    Difficulty_Computerwars_State() {};
+    ~Difficulty_Computerwars_State() {};
     void init(int screenWidth, int screenHeight, ResourceManager* resourceManager, int* diff1, int* diff2) override ;
     void processInput(sf::RenderWindow &window) override;
     void update(const sf::Time& time) override;
@@ -22,6 +20,9 @@ private:
     void mouseClick(sf::RenderWindow &window);
 
 private:
+    int* m_diff1;
+    int* m_diff2;
+
     GameStates m_shouldSwitch;
     unsigned int m_buttonPadding;
 
@@ -30,8 +31,8 @@ private:
     sf::Sprite m_introSprite;
     sf::Vector2f m_buttonSize;
     sf::Vector2f m_buttonPos;
-    sf::RectangleShape m_rects[4];
-    sf::Text m_labels[4];
+    sf::RectangleShape m_rects[10];
+    sf::Text m_labels[10];
 };
 
 

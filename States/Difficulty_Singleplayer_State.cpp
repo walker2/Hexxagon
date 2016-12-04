@@ -1,7 +1,8 @@
-#include "Menu_State.h"
+#include "Difficulty_Singleplayer_State.h"
 
-void Menu_State::init(int screenWidth, int screenHeight, ResourceManager* resourceManager, int* diff1, int* diff2)
+void Difficulty_Singleplayer_State::init(int screenWidth, int screenHeight, ResourceManager *resourceManager, int* diff1, int* diff2)
 {
+    m_diff = diff1;
     m_shouldSwitch = GameStates::NONE;
 
     m_introTexture = resourceManager->getImage("media/images/HEXX_LOGO.png");
@@ -15,10 +16,10 @@ void Menu_State::init(int screenWidth, int screenHeight, ResourceManager* resour
     m_buttonPadding = 16;
 
     std::string str[4];
-    str[0] = "Player vs Player";
-    str[1] = "Player vs Computer";
-    str[2] = "Computer vs Computer";
-    str[3] = "Exit";
+    str[0] = "EASY";
+    str[1] = "MEDIUM";
+    str[2] = "HARD";
+    str[3] = "Back";
 
     for (int i = 0; i < 4; ++i)
     {
@@ -41,7 +42,7 @@ void Menu_State::init(int screenWidth, int screenHeight, ResourceManager* resour
     }
 }
 
-void Menu_State::processInput(sf::RenderWindow &window)
+void Difficulty_Singleplayer_State::processInput(sf::RenderWindow &window)
 {
     sf::Event event;
     while(window.pollEvent(event))
@@ -60,12 +61,12 @@ void Menu_State::processInput(sf::RenderWindow &window)
     }
 }
 
-void Menu_State::update(const sf::Time &time)
+void Difficulty_Singleplayer_State::update(const sf::Time &time)
 {
 
 }
 
-void Menu_State::draw(sf::RenderWindow &window)
+void Difficulty_Singleplayer_State::draw(sf::RenderWindow &window)
 {
     window.draw(m_introSprite);
     for (int i = 0; i < 4; ++i)
@@ -75,16 +76,17 @@ void Menu_State::draw(sf::RenderWindow &window)
     }
 }
 
-void Menu_State::next()
+void Difficulty_Singleplayer_State::next()
 {
+
 }
 
-GameStates Menu_State::shouldSwitch()
+GameStates Difficulty_Singleplayer_State::shouldSwitch()
 {
     return m_shouldSwitch;
 }
 
-void Menu_State::mouseClick(sf::RenderWindow &window)
+void Difficulty_Singleplayer_State::mouseClick(sf::RenderWindow &window)
 {
     sf::Vector2i mousePos = sf::Mouse::getPosition(window);
 
@@ -100,22 +102,24 @@ void Menu_State::mouseClick(sf::RenderWindow &window)
         {
             if (i == 0)
             {
-                m_shouldSwitch = GameStates::MULTIPLAYER;
+                *m_diff = 1;
+                m_shouldSwitch = GameStates::SINGLEPLAYER;
             }
             else if (i == 1)
             {
-                m_shouldSwitch = GameStates::DIFFICULTY_SINGLEPLAYER;
-                //m_shouldSwitch = GameStates::SINGLEPLAYER;
+                *m_diff = 2;
+                m_shouldSwitch = GameStates::SINGLEPLAYER;
             }
             else if (i == 2)
             {
-                m_shouldSwitch = GameStates::DIFFICULTY_COMPUTERWARS;
-                //m_shouldSwitch = GameStates::COMPUTERWARS;
+                *m_diff = 3;
+                m_shouldSwitch = GameStates::SINGLEPLAYER;
             }
             else if (i == 3)
             {
-                m_shouldSwitch = GameStates::EXIT;
+                m_shouldSwitch = GameStates::MENU;
             }
         }
     }
 }
+
