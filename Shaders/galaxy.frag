@@ -12,7 +12,7 @@ vec2 mainSound( float time )
 }
 
 float field(in vec3 p,float s) {
-	float strength = 7. + .03 * log(1.e-6 + fract(sin(u_time) * 4373.11));
+	float strength = 15. + .03 * log(1.e-6 + fract(sin(u_time) * 4373.11));
 	float accum = s/4.;
 	float prev = 0.;
 	float tw = 0.;
