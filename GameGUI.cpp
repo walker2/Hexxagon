@@ -68,11 +68,20 @@ void GameGUI::drawBoard(Board& hexBoard, sf::Color hexColor, sf::Color outlineCo
                 circleShape.setFillColor(sf::Color::Transparent);
                 break;
         }
-
-        window.draw(convexShape);
-        window.draw(circleShape);
+        if (hex.first == hexBoard.getSelectedHex()->first)
+        {
+            convexShape.setOutlineThickness(4);
+            convexShape.setOutlineColor(sf::Color(231, 76, 60));
+            m_selectedShape = std::make_pair(convexShape, circleShape);
+        }
+        else
+        {
+            window.draw(convexShape);
+            window.draw(circleShape);
+        }
     }
-
+    window.draw(m_selectedShape.first);
+    window.draw(m_selectedShape.second);
 }
 
 void GameGUI::createLabel(std::string text, std::string fontPath, sf::Color color, ResourceManager *resourceManager,

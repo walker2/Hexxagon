@@ -20,9 +20,9 @@ void Intro_State::init(int screenWidth, int screenHeight, ResourceManager* resou
 
 
     m_text.setColor(sf::Color(236, 240, 241));
-    m_text.setFont(resourceManager->getFont("media/fonts/roboto_black.ttf"));
-    m_text.setString({ " Press SPACE to continue " });
-    m_text.setCharacterSize(20);
+    m_text.setFont(resourceManager->getFont("media/fonts/arial.ttf"));
+    m_text.setString({ "Press SPACE to continue" });
+    m_text.setCharacterSize(24);
     sf::FloatRect textRect = m_text.getLocalBounds();
     m_text.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
     m_text.setPosition(screenWidth / 2.0f, screenHeight / 1.5f);
@@ -31,11 +31,13 @@ void Intro_State::init(int screenWidth, int screenHeight, ResourceManager* resou
 void Intro_State::update(const sf::Time &time)
 {
     if (m_timePassed < 1.0f)
-    { // Less than one second
+    {
+        // Less than one second
         m_timePassed += time.asSeconds();
         m_introSprite.setPosition(m_introSprite.getPosition().x,
                                   m_introSprite.getPosition().y + (200 * time.asSeconds()));
     }
+
 }
 
 void Intro_State::draw(sf::RenderWindow &window)

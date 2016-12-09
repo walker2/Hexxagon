@@ -18,10 +18,14 @@ public:
 
 private:
     void mouseClick(sf::RenderWindow &window);
+    void spacePressed();
 
 private:
     int* m_diff1;
     int* m_diff2;
+    int m_selected = 1;
+    int m_selCol1 = 1;
+    int m_selCol2 = 6;
 
     GameStates m_shouldSwitch;
     unsigned int m_buttonPadding;

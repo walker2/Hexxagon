@@ -35,12 +35,14 @@ private:
 private:
     int m_boardSize;
     int m_difficultyLevel;
+    bool m_keyboardInput = false;
     bool m_turn;
     bool m_isGameOver;
     float m_time;
 
     GameStates m_gameType;
     GameStates m_shouldSwitch;
+
 
     Board* m_board;
     GameGUI* m_gameGUI;

@@ -37,7 +37,7 @@ void Multiplayer_State::init(int screenWidth, int screenHeight, ResourceManager*
     m_gameGUI->createLabel("1", "media/fonts/roboto_black.ttf", color1, resourceManager, {50.0f, 25.0f}, 48);
     m_gameGUI->createLabel(m_player1->getName() + " TURN", "media/fonts/roboto_black.ttf", color1, resourceManager, {400.0f, 25.0f}, 32);
     m_gameGUI->createLabel("1", "media/fonts/roboto_black.ttf", color2, resourceManager, {750.0f, 25.0f}, 48);
-    m_gameGUI->createLabel("FFFFFFFFFFFFFFFFF", "media/fonts/roboto_black.ttf", sf::Color::Transparent, resourceManager, {400.0f, 500.0f}, 24);
+    m_gameGUI->createLabel("FFFFFFFFFFFFFFFFF", "media/fonts/arial.ttf", sf::Color::Transparent, resourceManager, {400.0f, 500.0f}, 24);
 }
 
 void Multiplayer_State::processInput(sf::RenderWindow &window)
@@ -57,12 +57,40 @@ void Multiplayer_State::processInput(sf::RenderWindow &window)
                 }
                 break;
             case sf::Event::KeyPressed:
-                if (event.key.code == sf::Keyboard::Space)
+                switch (event.key.code)
                 {
-                    if (m_isGameOver)
-                        next();
-                    else
-                        makeMove(window);
+                    case sf::Keyboard::Right:
+                        m_board->selectRightHex();
+                        break;
+                    case sf::Keyboard::Left:
+                        m_board->selectLeftHex();
+                        break;
+                    case sf::Keyboard::Up:
+                        m_board->selectUpHex();
+                        break;
+                    case sf::Keyboard::Down:
+                        m_board->selectDownHex();
+                        break;
+                    case sf::Keyboard::Space:
+                        if (m_isGameOver)
+                        {
+                            next();
+                        }
+                        else
+                        {
+                            makeMove(window);
+                            m_keyboardInput = true;
+                        }
+
+                        break;
+                    case sf::Keyboard::BackSpace:
+                    {
+                        delete m_board;
+                        delete m_gameGUI;
+                        delete m_player1;
+                        delete m_player2;
+                        m_shouldSwitch = GameStates::MENU;
+                    }
                 }
                 break;
         }
@@ -131,10 +159,14 @@ bool Multiplayer_State::handleMove(Player &player, Player &enemy, sf::RenderWind
         m_board->handleAIMove(player, enemy);
         return true;
     }
-    else
+    else if (!m_keyboardInput)
     {
         sf::Vector2i localPosition = sf::Mouse::getPosition(window);
         return m_board->handleMove(player, enemy, localPosition, m_layout);
+    }
+    else
+    {
+        return m_board->handleMove(player, enemy, sf::Vector2i(-1, -1), m_layout);
     }
 }
 

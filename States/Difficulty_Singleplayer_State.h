@@ -21,7 +21,7 @@ private:
 
 private:
     int* m_diff;
-
+    int m_selected = 0;
     GameStates m_shouldSwitch;
     unsigned int m_buttonPadding;
 

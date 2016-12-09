@@ -11,7 +11,7 @@ void Menu_State::init(int screenWidth, int screenHeight, ResourceManager* resour
     m_introSprite.setPosition(400, 100);
 
     m_buttonSize = sf::Vector2f(400.0f, 64.0f);
-    m_buttonPos = sf::Vector2f(400.0f, 200.0f);
+    m_buttonPos = sf::Vector2f(400.0f, 250.0f);
     m_buttonPadding = 16;
 
     std::string str[4];
@@ -56,6 +56,27 @@ void Menu_State::processInput(sf::RenderWindow &window)
                 {
                     mouseClick(window);
                 }
+                break;
+            case sf::Event::KeyPressed:
+                switch (event.key.code)
+                {
+                    case sf::Keyboard::Up:
+                        if (m_selected == 0)
+                            m_selected = 3;
+                        else
+                            m_selected--;
+                        break;
+                    case sf::Keyboard::Down:
+                        if (m_selected == 3)
+                            m_selected = 0;
+                        else
+                            m_selected++;
+                        break;
+                    case sf::Keyboard::Space:
+                        next();
+                        break;
+                }
+                break;
         }
     }
 }
@@ -70,13 +91,39 @@ void Menu_State::draw(sf::RenderWindow &window)
     window.draw(m_introSprite);
     for (int i = 0; i < 4; ++i)
     {
-        window.draw(m_rects[i]);
+        if (m_selected == i)
+        {
+            sf::RectangleShape shape(m_rects[i]);
+            shape.setOutlineColor(sf::Color(231, 76, 60));
+            shape.setOutlineThickness(3);
+            window.draw(shape);
+        }
+        else
+        {
+            window.draw(m_rects[i]);
+        }
+
         window.draw(m_labels[i]);
     }
 }
 
 void Menu_State::next()
 {
+    switch (m_selected)
+    {
+        case 0:
+            m_shouldSwitch = GameStates::MULTIPLAYER;
+            break;
+        case 1:
+            m_shouldSwitch = GameStates::DIFFICULTY_SINGLEPLAYER;
+            break;
+        case 2:
+            m_shouldSwitch = GameStates::DIFFICULTY_COMPUTERWARS;
+            break;
+        case 3:
+            m_shouldSwitch = GameStates::EXIT;
+            break;
+    }
 }
 
 GameStates Menu_State::shouldSwitch()
@@ -105,12 +152,10 @@ void Menu_State::mouseClick(sf::RenderWindow &window)
             else if (i == 1)
             {
                 m_shouldSwitch = GameStates::DIFFICULTY_SINGLEPLAYER;
-                //m_shouldSwitch = GameStates::SINGLEPLAYER;
             }
             else if (i == 2)
             {
                 m_shouldSwitch = GameStates::DIFFICULTY_COMPUTERWARS;
-                //m_shouldSwitch = GameStates::COMPUTERWARS;
             }
             else if (i == 3)
             {

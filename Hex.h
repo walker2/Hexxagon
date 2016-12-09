@@ -48,13 +48,8 @@ class Hex
 {
 public:
     const int q, r, s;
-    Hex(int _q, int _r, int _s) : q(_q), r(_r), s(_s) { init(); };
-    void init()
-    {
+    Hex(int _q, int _r, int _s) : q(_q), r(_r), s(_s) {};
 
-
-
-    }
     bool operator== (Hex b) const { return q == b.q && r == b.r && s == b.s; };
     bool operator!= (Hex b) const { return !(*this == b); };
     Hex operator+ (Hex b) const { return Hex(q + b.q, r + b.r, s + b.s); };

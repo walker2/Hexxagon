@@ -21,6 +21,8 @@ void Board::init(int size, Player& player1, Player& player2)
         player2Hex->second.attachedToPlayer = player2.getPlayerType();
         player2.addToList(player2Hex);
     }
+
+    m_selectedHex = player1Hex;
 }
 
 void Board::setHexagonalShape(int map_radius)
@@ -88,8 +90,14 @@ void Board::showAvailableMoves(std::unordered_map<Hex, HexInfo>::iterator hex)
 bool Board::handleMove(Player &player, Player &enemy, sf::Vector2i localPosition, Layout layout)
 {
     auto hx = m_board.find(pixel_to_hex(layout, sf::Vector2f(localPosition.x, localPosition.y)));
+    if (localPosition == sf::Vector2i(-1, -1))
+    {
+        hx = m_selectedHex;
+    }
+
     if (hx != m_board.end())
     {
+        m_selectedHex = hx;
         if (hx->second.inRangeOne && hx->second.attachedToPlayer == HexInfo::PlayerType::NONE)
         {
             hx->second.attachedToPlayer = player.getPlayerType();
@@ -296,3 +304,40 @@ Move Board::getBestAIMove(Player &player, Player &enemy, int depth, Move alpha, 
     }
     return max;
 }
+
+void Board::selectRightHex()
+{
+    auto hex = m_board.find(Hex(m_selectedHex->first.q + 1, m_selectedHex->first.r, m_selectedHex->first.s - 1));
+    if (hex != m_board.end())
+    {
+        m_selectedHex = hex;
+    }
+}
+
+void Board::selectLeftHex()
+{
+    auto hex = m_board.find(Hex(m_selectedHex->first.q - 1, m_selectedHex->first.r, m_selectedHex->first.s + 1));
+    if (hex != m_board.end())
+    {
+        m_selectedHex = hex;
+    }
+}
+
+void Board::selectUpHex()
+{
+    auto hex = m_board.find(Hex(m_selectedHex->first.q + 1, m_selectedHex->first.r - 1, m_selectedHex->first.s));
+    if (hex != m_board.end())
+    {
+        m_selectedHex = hex;
+    }
+}
+
+void Board::selectDownHex()
+{
+    auto hex = m_board.find(Hex(m_selectedHex->first.q - 1, m_selectedHex->first.r + 1, m_selectedHex->first.s));
+    if (hex != m_board.end())
+    {
+        m_selectedHex = hex;
+    }
+}
+

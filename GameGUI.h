@@ -26,6 +26,7 @@ private:
     std::vector<sf::Text> m_labels;
     sf::Sound m_music;
     sf::SoundBuffer buffer;
+    std::pair<sf::ConvexShape, sf::CircleShape> m_selectedShape; //Should be drawn on top of all
 };
 
 

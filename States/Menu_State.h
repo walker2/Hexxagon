@@ -22,6 +22,7 @@ private:
     void mouseClick(sf::RenderWindow &window);
 
 private:
+    int m_selected = 0;
     GameStates m_shouldSwitch;
     unsigned int m_buttonPadding;
 

@@ -30,8 +30,13 @@ public:
     void handleAIMove(Player &player, Player &enemy);
     Move getBestAIMove(Player &player, Player &enemy, int depth, Move alpha, Move beta, int startPoints);
     bool isGameOver(Player &player);
+    void selectRightHex();
+    void selectLeftHex();
+    void selectUpHex();
+    void selectDownHex();
 
 
+    std::unordered_map<Hex, HexInfo>::iterator getSelectedHex() { return m_selectedHex; };
     std::unordered_map<Hex, HexInfo>& getBoard() { return m_board; };
 
 private:
@@ -40,6 +45,7 @@ private:
 private:
     std::unordered_map<Hex, HexInfo> m_board;
     std::unordered_map<Hex, HexInfo>::iterator m_prevHex;
+    std::unordered_map<Hex, HexInfo>::iterator m_selectedHex;
 
 };
 

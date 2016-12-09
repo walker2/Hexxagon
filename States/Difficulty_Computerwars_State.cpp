@@ -90,6 +90,34 @@ void Difficulty_Computerwars_State::processInput(sf::RenderWindow &window)
                 {
                     mouseClick(window);
                 }
+            case sf::Event::KeyPressed:
+                switch (event.key.code)
+                {
+                    case sf::Keyboard::Up:
+                        if (m_selected == 1)
+                            m_selected = 4;
+                        else
+                            m_selected--;
+                        break;
+                    case sf::Keyboard::Down:
+                        if (m_selected == 4)
+                            m_selected = 1;
+                        else
+                            m_selected++;
+                        break;
+                    case sf::Keyboard::Right:
+                        if (m_selected < 5)
+                            m_selected += 5;
+                        break;
+                    case sf::Keyboard::Left:
+                        if (m_selected > 5)
+                            m_selected -= 5;
+                        break;
+                    case sf::Keyboard::Space:
+                        spacePressed();
+                        break;
+                }
+                break;
         }
     }
 }
@@ -105,13 +133,48 @@ void Difficulty_Computerwars_State::draw(sf::RenderWindow &window)
     window.draw(m_labels[0]);
     for (int i = 1; i < 5; ++i)
     {
-        window.draw(m_rects[i]);
+        if (m_selected == i)
+        {
+            sf::RectangleShape shape(m_rects[i]);
+            shape.setOutlineColor(sf::Color::Red);
+            shape.setOutlineThickness(3);
+            window.draw(shape);
+        }
+        else if (m_selCol1 == i || m_selCol2 == i)
+        {
+            sf::RectangleShape shape(m_rects[i]);
+            shape.setOutlineColor(sf::Color::Blue);
+            shape.setOutlineThickness(3);
+            window.draw(shape);
+        }
+        else
+        {
+            window.draw(m_rects[i]);
+        }
+
         window.draw(m_labels[i]);
     }
     window.draw(m_labels[5]);
     for (int i = 6; i < 10; ++i)
     {
-        window.draw(m_rects[i]);
+        if (m_selected == i)
+        {
+            sf::RectangleShape shape(m_rects[i]);
+            shape.setOutlineColor(sf::Color(231, 76, 60));
+            shape.setOutlineThickness(3);
+            window.draw(shape);
+        }
+        else if (m_selCol1 == i || m_selCol2 == i)
+        {
+            sf::RectangleShape shape(m_rects[i]);
+            shape.setOutlineColor(sf::Color::Blue);
+            shape.setOutlineThickness(3);
+            window.draw(shape);
+        }
+        else
+        {
+            window.draw(m_rects[i]);
+        }
         window.draw(m_labels[i]);
     }
 
@@ -148,48 +211,31 @@ void Difficulty_Computerwars_State::mouseClick(sf::RenderWindow &window)
             {
                 case 1:
                     *m_diff1 = 1;
-                    m_rects[1].setOutlineColor(sf::Color::Red);
-                    m_rects[1].setOutlineThickness(3);
-                    m_rects[2].setOutlineColor(sf::Color::Transparent);
-                    m_rects[3].setOutlineColor(sf::Color::Transparent);
+                    m_selected = 1;
                     break;
                 case 2:
                     *m_diff1 = 2;
-                    m_rects[2].setOutlineColor(sf::Color::Red);
-                    m_rects[2].setOutlineThickness(3);
-                    m_rects[1].setOutlineColor(sf::Color::Transparent);
-                    m_rects[3].setOutlineColor(sf::Color::Transparent);
+                    m_selected = 2;
                     break;
                 case 3:
                     *m_diff1 = 3;
-                    m_rects[3].setOutlineColor(sf::Color::Red);
-                    m_rects[3].setOutlineThickness(3);
-                    m_rects[1].setOutlineColor(sf::Color::Transparent);
-                    m_rects[2].setOutlineColor(sf::Color::Transparent);
+                    m_selected = 3;
                     break;
                 case 4:
+                    m_selected = 4;
                     m_shouldSwitch = GameStates::MENU;
                     break;
                 case 6:
                     *m_diff2 = 1;
-                    m_rects[6].setOutlineColor(sf::Color::Red);
-                    m_rects[6].setOutlineThickness(3);
-                    m_rects[7].setOutlineColor(sf::Color::Transparent);
-                    m_rects[8].setOutlineColor(sf::Color::Transparent);
+                    m_selected = 6;
                     break;
                 case 7:
                     *m_diff2 = 2;
-                    m_rects[7].setOutlineColor(sf::Color::Red);
-                    m_rects[7].setOutlineThickness(3);
-                    m_rects[6].setOutlineColor(sf::Color::Transparent);
-                    m_rects[8].setOutlineColor(sf::Color::Transparent);
+                    m_selected = 7;
                     break;
                 case 8:
                     *m_diff2 = 3;
-                    m_rects[8].setOutlineColor(sf::Color::Red);
-                    m_rects[8].setOutlineThickness(3);
-                    m_rects[6].setOutlineColor(sf::Color::Transparent);
-                    m_rects[7].setOutlineColor(sf::Color::Transparent);
+                    m_selected = 8;
                     break;
                 case 9:
                     next();
@@ -197,4 +243,43 @@ void Difficulty_Computerwars_State::mouseClick(sf::RenderWindow &window)
             }
         }
     }
+}
+
+void Difficulty_Computerwars_State::spacePressed()
+{
+    switch (m_selected)
+    {
+        case 1:
+            *m_diff1 = 1;
+            m_selCol1 = 1;
+            break;
+        case 2:
+            *m_diff1 = 2;
+            m_selCol1 = 2;
+            break;
+        case 3:
+            *m_diff1 = 3;
+            m_selCol1 = 3;
+            break;
+        case 4:
+            m_selected = 4;
+            m_shouldSwitch = GameStates::MENU;
+            break;
+        case 6:
+            *m_diff2 = 1;
+            m_selCol2 = 6;
+            break;
+        case 7:
+            *m_diff2 = 2;
+            m_selCol2 = 7;
+            break;
+        case 8:
+            *m_diff2 = 3;
+            m_selCol2 = 8;
+            break;
+        case 9:
+            next();
+            break;
+    }
+
 }
