@@ -25,8 +25,8 @@ void Multiplayer_State::init(int screenWidth, int screenHeight, ResourceManager*
             m_player2 = new Player(HexInfo::PlayerType::PLAYER2, 1, "COMPUTER 2", 1, *diff2);
             break;
     }
-    std::cout << *diff1 << std::endl;
-    std::cout << *diff2 << std::endl;
+    std::cout << m_player1->getDifficulty() << std::endl;
+    std::cout << m_player2->getDifficulty() << std::endl;
     m_shouldSwitch = GameStates::NONE;
     m_turn = 0;
     m_isGameOver = false;
@@ -72,16 +72,17 @@ void Multiplayer_State::processInput(sf::RenderWindow &window)
                         m_board->selectDownHex();
                         break;
                     case sf::Keyboard::Space:
-                        if (m_isGameOver)
-                        {
-                            next();
-                        }
-                        else
+                        if (!m_isGameOver)
                         {
                             makeMove(window);
                             m_keyboardInput = true;
                         }
-
+                        break;
+                    case sf::Keyboard::Escape:
+                        if (m_isGameOver)
+                        {
+                            next();
+                        }
                         break;
                     case sf::Keyboard::BackSpace:
                     {

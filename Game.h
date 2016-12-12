@@ -36,8 +36,8 @@ private:
 private:
     int m_screenWidth;
     int m_screenHeight;
-    int m_diff1;
-    int m_diff2;
+    int m_diff1 = 1;
+    int m_diff2 = 1;
 
     sf::Clock m_clock;
     sf::RenderWindow m_window;

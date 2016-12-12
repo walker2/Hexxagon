@@ -1,3 +1,5 @@
+#include <chrono>
+#include <iostream>
 #include "Board.h"
 #include "States/Multiplayer_State.h"
 
@@ -159,7 +161,10 @@ bool Board::isGameOver(Player &player)
 
 void Board::handleAIMove(Player &player, Player &enemy)
 {
-    std::vector<Move> moves;
+    std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+
+
+
     Move aiMove;
     aiMove = getBestAIMove(player, enemy, player.getDifficulty(), Move(-10000), Move(10000), player.getPoints());
 
@@ -180,13 +185,16 @@ void Board::handleAIMove(Player &player, Player &enemy)
     player.addToList(aiMove.it);
 
     placeHex(aiMove.it, player, enemy);
+    std::chrono::steady_clock::time_point end= std::chrono::steady_clock::now();
+    std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() << std::endl;
 }
 
 Move Board::getBestAIMove(Player &player, Player &enemy, int depth, Move alpha, Move beta, int startPoints)
 {
     if (depth == 0)
     {
-        return Move(10 * (player.getPoints() - startPoints));
+        //return Move(10 * (player.getPoints() - startPoints));
+        return Move(player.getPoints() - enemy.getPoints());
     }
 
     //Create Move with minimal score
@@ -262,6 +270,7 @@ Move Board::getBestAIMove(Player &player, Player &enemy, int depth, Move alpha, 
                     {
                         max = move;
                     }
+
                     if (max.score == move.score && max.isJump && !move.isJump)
                     {
                         max = move;
