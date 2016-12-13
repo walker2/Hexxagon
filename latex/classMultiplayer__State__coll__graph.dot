@@ -1,0 +1,18 @@
+digraph "Multiplayer_State"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Multiplayer_State",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Game_State",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGame__State.html",tooltip="Interface for all states. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_board" ];
+  Node3 [label="Board",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBoard.html",tooltip="Class for storing and calculation game board. "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_gameGUI" ];
+  Node4 [label="GameGUI",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGameGUI.html",tooltip="Class for handling all the game GUI. "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_layout" ];
+  Node5 [label="Layout",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structLayout.html",tooltip="Structure for handling layouts. "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" orientation" ];
+  Node6 [label="Orientation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structOrientation.html",tooltip="Structure for current orientation. "];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_player1\nm_player2" ];
+  Node7 [label="Player",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPlayer.html",tooltip="Class for player&#39;s info, like points, difficulty and current hexes. "];
+}

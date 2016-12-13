@@ -1,0 +1,211 @@
+\hypertarget{classDifficulty__Computerwars__State}{}\section{Difficulty\+\_\+\+Computerwars\+\_\+\+State Class Reference}
+\label{classDifficulty__Computerwars__State}\index{Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}}
+
+
+Class for choosing difficulties for two computer players.  
+
+
+
+
+{\ttfamily \#include $<$Difficulty\+\_\+\+Computerwars\+\_\+\+State.\+h$>$}
+
+
+
+Inheritance diagram for Difficulty\+\_\+\+Computerwars\+\_\+\+State\+:
+% FIG 0
+
+
+Collaboration diagram for Difficulty\+\_\+\+Computerwars\+\_\+\+State\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDifficulty__Computerwars__State_a77ce628135ea63085a8b17b68f3d60b3}{init} (int screen\+Width, int screen\+Height, \hyperlink{classResourceManager}{Resource\+Manager} $\ast$resource\+Manager, int $\ast$diff1, int $\ast$diff2) override
+\begin{DoxyCompactList}\small\item\em Function that inits the current game state. \end{DoxyCompactList}\item 
+void \hyperlink{classDifficulty__Computerwars__State_a82aca3bb83c558379574c29f93214997}{process\+Input} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em Function that processes input from the player. \end{DoxyCompactList}\item 
+void \hyperlink{classDifficulty__Computerwars__State_a69f6f5f4b52a9fc69b1ec47343ed3375}{update} (const sf\+::\+Time \&time) override
+\begin{DoxyCompactList}\small\item\em Function that updates objects in state based on time. \end{DoxyCompactList}\item 
+void \hyperlink{classDifficulty__Computerwars__State_a3d8dd7343e0aa4e4ac0fff5dedaeeec4}{draw} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em Function for rendering to the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classDifficulty__Computerwars__State_a8ea27b0a38b6582c48f5861983e00629}{next} () override\hypertarget{classDifficulty__Computerwars__State_a8ea27b0a38b6582c48f5861983e00629}{}\label{classDifficulty__Computerwars__State_a8ea27b0a38b6582c48f5861983e00629}
+
+\begin{DoxyCompactList}\small\item\em Function for setting up for the next state. \end{DoxyCompactList}\item 
+Game\+States \hyperlink{classDifficulty__Computerwars__State_a6dd5abd9cea06fa73df3ada8a6ad9b6f}{should\+Switch} () override
+\begin{DoxyCompactList}\small\item\em Function that checks if should switch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries mouse\+Click} (sf\+::\+Render\+Window \&window)\hypertarget{classDifficulty__Computerwars__State_ad9ac6a32437932d8e787d483bb053fa8}{}\label{classDifficulty__Computerwars__State_ad9ac6a32437932d8e787d483bb053fa8}
+
+\item 
+void {\bfseries space\+Pressed} ()\hypertarget{classDifficulty__Computerwars__State_a8fc94b37739fdf304c015c032767d56e}{}\label{classDifficulty__Computerwars__State_a8fc94b37739fdf304c015c032767d56e}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ {\bfseries m\+\_\+diff1}\hypertarget{classDifficulty__Computerwars__State_a66dc29f4f5a489483f0c391a2512d20b}{}\label{classDifficulty__Computerwars__State_a66dc29f4f5a489483f0c391a2512d20b}
+
+\item 
+int $\ast$ {\bfseries m\+\_\+diff2}\hypertarget{classDifficulty__Computerwars__State_a251a71772093f15f0e66f3af72a00579}{}\label{classDifficulty__Computerwars__State_a251a71772093f15f0e66f3af72a00579}
+
+\item 
+int {\bfseries m\+\_\+selected} = 1\hypertarget{classDifficulty__Computerwars__State_aae8a5acec3cdbcc99782cb9d6abbaf85}{}\label{classDifficulty__Computerwars__State_aae8a5acec3cdbcc99782cb9d6abbaf85}
+
+\item 
+int {\bfseries m\+\_\+sel\+Col1} = 1\hypertarget{classDifficulty__Computerwars__State_aa175c95d763163e9b2d5236c42c0b004}{}\label{classDifficulty__Computerwars__State_aa175c95d763163e9b2d5236c42c0b004}
+
+\item 
+int {\bfseries m\+\_\+sel\+Col2} = 6\hypertarget{classDifficulty__Computerwars__State_ae477ea363a667aeb45b7c03618404602}{}\label{classDifficulty__Computerwars__State_ae477ea363a667aeb45b7c03618404602}
+
+\item 
+Game\+States {\bfseries m\+\_\+should\+Switch}\hypertarget{classDifficulty__Computerwars__State_a49b2250842374ac844c3b778f1cbb3c6}{}\label{classDifficulty__Computerwars__State_a49b2250842374ac844c3b778f1cbb3c6}
+
+\item 
+unsigned int {\bfseries m\+\_\+button\+Padding}\hypertarget{classDifficulty__Computerwars__State_a139683d15574f14d508f1d6412dac590}{}\label{classDifficulty__Computerwars__State_a139683d15574f14d508f1d6412dac590}
+
+\item 
+sf\+::\+Font {\bfseries m\+\_\+font}\hypertarget{classDifficulty__Computerwars__State_ad89763d3c5735b1d1dabb42883a592a3}{}\label{classDifficulty__Computerwars__State_ad89763d3c5735b1d1dabb42883a592a3}
+
+\item 
+sf\+::\+Texture {\bfseries m\+\_\+intro\+Texture}\hypertarget{classDifficulty__Computerwars__State_a153d7c256a7aa58493fa6de109c64aea}{}\label{classDifficulty__Computerwars__State_a153d7c256a7aa58493fa6de109c64aea}
+
+\item 
+sf\+::\+Sprite {\bfseries m\+\_\+intro\+Sprite}\hypertarget{classDifficulty__Computerwars__State_adfc4562d9dc238d3afab19da4e078579}{}\label{classDifficulty__Computerwars__State_adfc4562d9dc238d3afab19da4e078579}
+
+\item 
+sf\+::\+Vector2f {\bfseries m\+\_\+button\+Size}\hypertarget{classDifficulty__Computerwars__State_aa9d9afd8b7f0286aec182ac8de47be23}{}\label{classDifficulty__Computerwars__State_aa9d9afd8b7f0286aec182ac8de47be23}
+
+\item 
+sf\+::\+Vector2f {\bfseries m\+\_\+button\+Pos}\hypertarget{classDifficulty__Computerwars__State_ad22f0fae63cad4c6e13e5c477e497ed8}{}\label{classDifficulty__Computerwars__State_ad22f0fae63cad4c6e13e5c477e497ed8}
+
+\item 
+sf\+::\+Rectangle\+Shape {\bfseries m\+\_\+rects} \mbox{[}10\mbox{]}\hypertarget{classDifficulty__Computerwars__State_ae69d6842828d133865db9b199dbbf378}{}\label{classDifficulty__Computerwars__State_ae69d6842828d133865db9b199dbbf378}
+
+\item 
+sf\+::\+Text {\bfseries m\+\_\+labels} \mbox{[}10\mbox{]}\hypertarget{classDifficulty__Computerwars__State_a5e5572cac59b69c9d2bf382a27981bd2}{}\label{classDifficulty__Computerwars__State_a5e5572cac59b69c9d2bf382a27981bd2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for choosing difficulties for two computer players. 
+
+\subsection{Member Function Documentation}
+\index{Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}!draw@{draw}}
+\index{draw@{draw}!Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{draw(sf\+::\+Render\+Window \&window) override}{draw(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Difficulty\+\_\+\+Computerwars\+\_\+\+State\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDifficulty__Computerwars__State_a3d8dd7343e0aa4e4ac0fff5dedaeeec4}{}\label{classDifficulty__Computerwars__State_a3d8dd7343e0aa4e4ac0fff5dedaeeec4}
+
+
+Function for rendering to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window to render \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_a4db9121068121425e89170b5cb151664}{Game\+\_\+\+State}.
+
+\index{Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}!init@{init}}
+\index{init@{init}!Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{init(int screen\+Width, int screen\+Height, Resource\+Manager $\ast$resource\+Manager, int $\ast$diff1, int $\ast$diff2) override}{init(int screenWidth, int screenHeight, ResourceManager *resourceManager, int *diff1, int *diff2) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Difficulty\+\_\+\+Computerwars\+\_\+\+State\+::init (
+\begin{DoxyParamCaption}
+\item[{int}]{screen\+Width, }
+\item[{int}]{screen\+Height, }
+\item[{{\bf Resource\+Manager} $\ast$}]{resource\+Manager, }
+\item[{int $\ast$}]{diff1, }
+\item[{int $\ast$}]{diff2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDifficulty__Computerwars__State_a77ce628135ea63085a8b17b68f3d60b3}{}\label{classDifficulty__Computerwars__State_a77ce628135ea63085a8b17b68f3d60b3}
+
+
+Function that inits the current game state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen\+Width} & Width of the screen \\
+\hline
+{\em screen\+Height} & Height of the screen \\
+\hline
+{\em resource\+Manager} & \hyperlink{classResourceManager}{Resource\+Manager} object pointer for handling loading and caching textures and fonts \\
+\hline
+{\em diff1} & Difficulty of the first computer player \\
+\hline
+{\em diff2} & Difficulty of the second computer player \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_a582ce3c0cddf042569bf3e08827a377c}{Game\+\_\+\+State}.
+
+\index{Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}!process\+Input@{process\+Input}}
+\index{process\+Input@{process\+Input}!Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{process\+Input(sf\+::\+Render\+Window \&window) override}{processInput(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Difficulty\+\_\+\+Computerwars\+\_\+\+State\+::process\+Input (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDifficulty__Computerwars__State_a82aca3bb83c558379574c29f93214997}{}\label{classDifficulty__Computerwars__State_a82aca3bb83c558379574c29f93214997}
+
+
+Function that processes input from the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window to get input from \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_ab6d698d94c4e8ec24a1ac1ca97ae3d98}{Game\+\_\+\+State}.
+
+\index{Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}!should\+Switch@{should\+Switch}}
+\index{should\+Switch@{should\+Switch}!Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{should\+Switch() override}{shouldSwitch() override}}]{\setlength{\rightskip}{0pt plus 5cm}Game\+States Difficulty\+\_\+\+Computerwars\+\_\+\+State\+::should\+Switch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDifficulty__Computerwars__State_a6dd5abd9cea06fa73df3ada8a6ad9b6f}{}\label{classDifficulty__Computerwars__State_a6dd5abd9cea06fa73df3ada8a6ad9b6f}
+
+
+Function that checks if should switch. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classGame}{Game} State we should switch 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classGame__State_aa4cca539f3f67b59c789b4528fb4d55c}{Game\+\_\+\+State}.
+
+\index{Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}!update@{update}}
+\index{update@{update}!Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{update(const sf\+::\+Time \&time) override}{update(const sf::Time &time) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Difficulty\+\_\+\+Computerwars\+\_\+\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Time \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDifficulty__Computerwars__State_a69f6f5f4b52a9fc69b1ec47343ed3375}{}\label{classDifficulty__Computerwars__State_a69f6f5f4b52a9fc69b1ec47343ed3375}
+
+
+Function that updates objects in state based on time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_a7e5776891b8a09f133c35dd156a7f882}{Game\+\_\+\+State}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+States/Difficulty\+\_\+\+Computerwars\+\_\+\+State.\+h\item 
+States/Difficulty\+\_\+\+Computerwars\+\_\+\+State.\+cpp\end{DoxyCompactItemize}

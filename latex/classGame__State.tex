@@ -1,0 +1,152 @@
+\hypertarget{classGame__State}{}\section{Game\+\_\+\+State Class Reference}
+\label{classGame__State}\index{Game\+\_\+\+State@{Game\+\_\+\+State}}
+
+
+Interface for all states.  
+
+
+
+
+{\ttfamily \#include $<$Game\+\_\+\+State.\+h$>$}
+
+
+
+Inheritance diagram for Game\+\_\+\+State\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classGame__State_a582ce3c0cddf042569bf3e08827a377c}{init} (int screen\+Width, int screen\+Height, \hyperlink{classResourceManager}{Resource\+Manager} $\ast$resource\+Manager, int $\ast$diff1, int $\ast$diff2)=0
+\begin{DoxyCompactList}\small\item\em Function that inits the current game state. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGame__State_ab6d698d94c4e8ec24a1ac1ca97ae3d98}{process\+Input} (sf\+::\+Render\+Window \&window)=0
+\begin{DoxyCompactList}\small\item\em Function that processes input from the player. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGame__State_a7e5776891b8a09f133c35dd156a7f882}{update} (const sf\+::\+Time \&time)=0
+\begin{DoxyCompactList}\small\item\em Function that updates objects in state based on time. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGame__State_a4db9121068121425e89170b5cb151664}{draw} (sf\+::\+Render\+Window \&window)=0
+\begin{DoxyCompactList}\small\item\em Function for rendering to the screen. \end{DoxyCompactList}\item 
+virtual Game\+States \hyperlink{classGame__State_aa4cca539f3f67b59c789b4528fb4d55c}{should\+Switch} ()=0
+\begin{DoxyCompactList}\small\item\em Function that checks if should switch. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGame__State_a4140a2b4ca08b206c6fd50e3e7818aa0}{next} ()=0\hypertarget{classGame__State_a4140a2b4ca08b206c6fd50e3e7818aa0}{}\label{classGame__State_a4140a2b4ca08b206c6fd50e3e7818aa0}
+
+\begin{DoxyCompactList}\small\item\em Function for setting up for the next state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for all states. 
+
+\subsection{Member Function Documentation}
+\index{Game\+\_\+\+State@{Game\+\_\+\+State}!draw@{draw}}
+\index{draw@{draw}!Game\+\_\+\+State@{Game\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{draw(sf\+::\+Render\+Window \&window)=0}{draw(sf::RenderWindow &window)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+\_\+\+State\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGame__State_a4db9121068121425e89170b5cb151664}{}\label{classGame__State_a4db9121068121425e89170b5cb151664}
+
+
+Function for rendering to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window to render \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classMultiplayer__State_a7103a5b0cf5730f1b1d002693d7c14f6}{Multiplayer\+\_\+\+State}, \hyperlink{classIntro__State_a4bdfc33a18600e10d41989faa39ee41d}{Intro\+\_\+\+State}, \hyperlink{classMenu__State_a46ad8da266c214fcf086adde3092d263}{Menu\+\_\+\+State}, \hyperlink{classDifficulty__Computerwars__State_a3d8dd7343e0aa4e4ac0fff5dedaeeec4}{Difficulty\+\_\+\+Computerwars\+\_\+\+State}, and \hyperlink{classDifficulty__Singleplayer__State_aa356f8eb87d2be9f4f4180af3abc5662}{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}.
+
+\index{Game\+\_\+\+State@{Game\+\_\+\+State}!init@{init}}
+\index{init@{init}!Game\+\_\+\+State@{Game\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{init(int screen\+Width, int screen\+Height, Resource\+Manager $\ast$resource\+Manager, int $\ast$diff1, int $\ast$diff2)=0}{init(int screenWidth, int screenHeight, ResourceManager *resourceManager, int *diff1, int *diff2)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+\_\+\+State\+::init (
+\begin{DoxyParamCaption}
+\item[{int}]{screen\+Width, }
+\item[{int}]{screen\+Height, }
+\item[{{\bf Resource\+Manager} $\ast$}]{resource\+Manager, }
+\item[{int $\ast$}]{diff1, }
+\item[{int $\ast$}]{diff2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGame__State_a582ce3c0cddf042569bf3e08827a377c}{}\label{classGame__State_a582ce3c0cddf042569bf3e08827a377c}
+
+
+Function that inits the current game state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen\+Width} & Width of the screen \\
+\hline
+{\em screen\+Height} & Height of the screen \\
+\hline
+{\em resource\+Manager} & \hyperlink{classResourceManager}{Resource\+Manager} object pointer for handling loading and caching textures and fonts \\
+\hline
+{\em diff1} & Difficulty of the first computer player \\
+\hline
+{\em diff2} & Difficulty of the second computer player \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classMultiplayer__State_a17a0471f40aa58b6a280f848f5cdf011}{Multiplayer\+\_\+\+State}, \hyperlink{classIntro__State_a354f772fa3f6077d19cb5de9f176905b}{Intro\+\_\+\+State}, \hyperlink{classMenu__State_a63140e8ab87009a23c98f8cc6c5a0e0d}{Menu\+\_\+\+State}, \hyperlink{classDifficulty__Computerwars__State_a77ce628135ea63085a8b17b68f3d60b3}{Difficulty\+\_\+\+Computerwars\+\_\+\+State}, and \hyperlink{classDifficulty__Singleplayer__State_a9295de99494fb61a1aa852fca197ef7a}{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}.
+
+\index{Game\+\_\+\+State@{Game\+\_\+\+State}!process\+Input@{process\+Input}}
+\index{process\+Input@{process\+Input}!Game\+\_\+\+State@{Game\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{process\+Input(sf\+::\+Render\+Window \&window)=0}{processInput(sf::RenderWindow &window)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+\_\+\+State\+::process\+Input (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGame__State_ab6d698d94c4e8ec24a1ac1ca97ae3d98}{}\label{classGame__State_ab6d698d94c4e8ec24a1ac1ca97ae3d98}
+
+
+Function that processes input from the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window to get input from \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classMultiplayer__State_a3b37f5f4a0f93df74a26bb963f66f656}{Multiplayer\+\_\+\+State}, \hyperlink{classIntro__State_a78936f89809b91e5308704c6be58f884}{Intro\+\_\+\+State}, \hyperlink{classMenu__State_aa89081baa3385d37ce7e7d32ca6936b1}{Menu\+\_\+\+State}, \hyperlink{classDifficulty__Computerwars__State_a82aca3bb83c558379574c29f93214997}{Difficulty\+\_\+\+Computerwars\+\_\+\+State}, and \hyperlink{classDifficulty__Singleplayer__State_a112a98dfcd0faf74f66d5faaf0487219}{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}.
+
+\index{Game\+\_\+\+State@{Game\+\_\+\+State}!should\+Switch@{should\+Switch}}
+\index{should\+Switch@{should\+Switch}!Game\+\_\+\+State@{Game\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{should\+Switch()=0}{shouldSwitch()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Game\+States Game\+\_\+\+State\+::should\+Switch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGame__State_aa4cca539f3f67b59c789b4528fb4d55c}{}\label{classGame__State_aa4cca539f3f67b59c789b4528fb4d55c}
+
+
+Function that checks if should switch. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classGame}{Game} State we should switch 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classMultiplayer__State_a5dc3a250487c9c009c64b60f1be2b635}{Multiplayer\+\_\+\+State}, \hyperlink{classIntro__State_a403c4168d9e9f913657b1a9fb972e522}{Intro\+\_\+\+State}, \hyperlink{classMenu__State_a6cfda60a96ab9bdf9c03a1cb66fc8ef2}{Menu\+\_\+\+State}, \hyperlink{classDifficulty__Computerwars__State_a6dd5abd9cea06fa73df3ada8a6ad9b6f}{Difficulty\+\_\+\+Computerwars\+\_\+\+State}, and \hyperlink{classDifficulty__Singleplayer__State_ab414111faff96268a2397c7356eeff41}{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}.
+
+\index{Game\+\_\+\+State@{Game\+\_\+\+State}!update@{update}}
+\index{update@{update}!Game\+\_\+\+State@{Game\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{update(const sf\+::\+Time \&time)=0}{update(const sf::Time &time)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Game\+\_\+\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Time \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGame__State_a7e5776891b8a09f133c35dd156a7f882}{}\label{classGame__State_a7e5776891b8a09f133c35dd156a7f882}
+
+
+Function that updates objects in state based on time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classMultiplayer__State_ad0c3372f28d6e7d277f1de6ed23a7647}{Multiplayer\+\_\+\+State}, \hyperlink{classIntro__State_a4ac6ebe7add817dbf8c95f538ffe812f}{Intro\+\_\+\+State}, \hyperlink{classMenu__State_a353b8ecf678310fc1148e42d1024f76c}{Menu\+\_\+\+State}, \hyperlink{classDifficulty__Computerwars__State_a69f6f5f4b52a9fc69b1ec47343ed3375}{Difficulty\+\_\+\+Computerwars\+\_\+\+State}, and \hyperlink{classDifficulty__Singleplayer__State_ada72cc17eadfba0f8cd458655858cce4}{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+States/Game\+\_\+\+State.\+h\end{DoxyCompactItemize}

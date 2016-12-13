@@ -1,0 +1,199 @@
+\hypertarget{classDifficulty__Singleplayer__State}{}\section{Difficulty\+\_\+\+Singleplayer\+\_\+\+State Class Reference}
+\label{classDifficulty__Singleplayer__State}\index{Difficulty\+\_\+\+Singleplayer\+\_\+\+State@{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}}
+
+
+Class for choosing difficulty for singleplayer game.  
+
+
+
+
+{\ttfamily \#include $<$Difficulty\+\_\+\+Singleplayer\+\_\+\+State.\+h$>$}
+
+
+
+Inheritance diagram for Difficulty\+\_\+\+Singleplayer\+\_\+\+State\+:
+% FIG 0
+
+
+Collaboration diagram for Difficulty\+\_\+\+Singleplayer\+\_\+\+State\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDifficulty__Singleplayer__State_a9295de99494fb61a1aa852fca197ef7a}{init} (int screen\+Width, int screen\+Height, \hyperlink{classResourceManager}{Resource\+Manager} $\ast$resource\+Manager, int $\ast$diff1, int $\ast$diff2) override
+\begin{DoxyCompactList}\small\item\em Function that inits the current game state. \end{DoxyCompactList}\item 
+void \hyperlink{classDifficulty__Singleplayer__State_a112a98dfcd0faf74f66d5faaf0487219}{process\+Input} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em Function that processes input from the player. \end{DoxyCompactList}\item 
+void \hyperlink{classDifficulty__Singleplayer__State_ada72cc17eadfba0f8cd458655858cce4}{update} (const sf\+::\+Time \&time) override
+\begin{DoxyCompactList}\small\item\em Function that updates objects in state based on time. \end{DoxyCompactList}\item 
+void \hyperlink{classDifficulty__Singleplayer__State_aa356f8eb87d2be9f4f4180af3abc5662}{draw} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em Function for rendering to the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classDifficulty__Singleplayer__State_ac0f2b63a78063ccff252911b0aa04811}{next} () override\hypertarget{classDifficulty__Singleplayer__State_ac0f2b63a78063ccff252911b0aa04811}{}\label{classDifficulty__Singleplayer__State_ac0f2b63a78063ccff252911b0aa04811}
+
+\begin{DoxyCompactList}\small\item\em Function for setting up for the next state. \end{DoxyCompactList}\item 
+Game\+States \hyperlink{classDifficulty__Singleplayer__State_ab414111faff96268a2397c7356eeff41}{should\+Switch} () override
+\begin{DoxyCompactList}\small\item\em Function that checks if should switch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries mouse\+Click} (sf\+::\+Render\+Window \&window)\hypertarget{classDifficulty__Singleplayer__State_a9c25ab4675b3af15ab3077e9c757e1e1}{}\label{classDifficulty__Singleplayer__State_a9c25ab4675b3af15ab3077e9c757e1e1}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ {\bfseries m\+\_\+diff}\hypertarget{classDifficulty__Singleplayer__State_a1c47bdacc47cc3792f546f2a97a0e61c}{}\label{classDifficulty__Singleplayer__State_a1c47bdacc47cc3792f546f2a97a0e61c}
+
+\item 
+int {\bfseries m\+\_\+selected} = 0\hypertarget{classDifficulty__Singleplayer__State_ad4104e51d5fa96ad87a2138361e454b7}{}\label{classDifficulty__Singleplayer__State_ad4104e51d5fa96ad87a2138361e454b7}
+
+\item 
+Game\+States {\bfseries m\+\_\+should\+Switch}\hypertarget{classDifficulty__Singleplayer__State_ade8dbb222808f8833faf51f00dedcc6a}{}\label{classDifficulty__Singleplayer__State_ade8dbb222808f8833faf51f00dedcc6a}
+
+\item 
+unsigned int {\bfseries m\+\_\+button\+Padding}\hypertarget{classDifficulty__Singleplayer__State_ad22ff49ccf8637fdece38e802964ec19}{}\label{classDifficulty__Singleplayer__State_ad22ff49ccf8637fdece38e802964ec19}
+
+\item 
+sf\+::\+Font {\bfseries m\+\_\+font}\hypertarget{classDifficulty__Singleplayer__State_a5fe067706b5c94d0ab16bf60ac8cf7d7}{}\label{classDifficulty__Singleplayer__State_a5fe067706b5c94d0ab16bf60ac8cf7d7}
+
+\item 
+sf\+::\+Texture {\bfseries m\+\_\+intro\+Texture}\hypertarget{classDifficulty__Singleplayer__State_a50b5cb9364fddc011f944574d6215bd0}{}\label{classDifficulty__Singleplayer__State_a50b5cb9364fddc011f944574d6215bd0}
+
+\item 
+sf\+::\+Sprite {\bfseries m\+\_\+intro\+Sprite}\hypertarget{classDifficulty__Singleplayer__State_aeca48137c3a4c57ea2927157895ab2a0}{}\label{classDifficulty__Singleplayer__State_aeca48137c3a4c57ea2927157895ab2a0}
+
+\item 
+sf\+::\+Vector2f {\bfseries m\+\_\+button\+Size}\hypertarget{classDifficulty__Singleplayer__State_ace34b59098054a0a25c650d11ef1697a}{}\label{classDifficulty__Singleplayer__State_ace34b59098054a0a25c650d11ef1697a}
+
+\item 
+sf\+::\+Vector2f {\bfseries m\+\_\+button\+Pos}\hypertarget{classDifficulty__Singleplayer__State_a110abcc8af3f2094e9565e8a7752db9a}{}\label{classDifficulty__Singleplayer__State_a110abcc8af3f2094e9565e8a7752db9a}
+
+\item 
+sf\+::\+Rectangle\+Shape {\bfseries m\+\_\+rects} \mbox{[}10\mbox{]}\hypertarget{classDifficulty__Singleplayer__State_aef1a8cfbbe77a71d22215997090c355a}{}\label{classDifficulty__Singleplayer__State_aef1a8cfbbe77a71d22215997090c355a}
+
+\item 
+sf\+::\+Text {\bfseries m\+\_\+labels} \mbox{[}8\mbox{]}\hypertarget{classDifficulty__Singleplayer__State_acdb8982e8f00a54f690429244b5a0961}{}\label{classDifficulty__Singleplayer__State_acdb8982e8f00a54f690429244b5a0961}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for choosing difficulty for singleplayer game. 
+
+\subsection{Member Function Documentation}
+\index{Difficulty\+\_\+\+Singleplayer\+\_\+\+State@{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}!draw@{draw}}
+\index{draw@{draw}!Difficulty\+\_\+\+Singleplayer\+\_\+\+State@{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{draw(sf\+::\+Render\+Window \&window) override}{draw(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Difficulty\+\_\+\+Singleplayer\+\_\+\+State\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDifficulty__Singleplayer__State_aa356f8eb87d2be9f4f4180af3abc5662}{}\label{classDifficulty__Singleplayer__State_aa356f8eb87d2be9f4f4180af3abc5662}
+
+
+Function for rendering to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window to render \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_a4db9121068121425e89170b5cb151664}{Game\+\_\+\+State}.
+
+\index{Difficulty\+\_\+\+Singleplayer\+\_\+\+State@{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}!init@{init}}
+\index{init@{init}!Difficulty\+\_\+\+Singleplayer\+\_\+\+State@{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{init(int screen\+Width, int screen\+Height, Resource\+Manager $\ast$resource\+Manager, int $\ast$diff1, int $\ast$diff2) override}{init(int screenWidth, int screenHeight, ResourceManager *resourceManager, int *diff1, int *diff2) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Difficulty\+\_\+\+Singleplayer\+\_\+\+State\+::init (
+\begin{DoxyParamCaption}
+\item[{int}]{screen\+Width, }
+\item[{int}]{screen\+Height, }
+\item[{{\bf Resource\+Manager} $\ast$}]{resource\+Manager, }
+\item[{int $\ast$}]{diff1, }
+\item[{int $\ast$}]{diff2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDifficulty__Singleplayer__State_a9295de99494fb61a1aa852fca197ef7a}{}\label{classDifficulty__Singleplayer__State_a9295de99494fb61a1aa852fca197ef7a}
+
+
+Function that inits the current game state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen\+Width} & Width of the screen \\
+\hline
+{\em screen\+Height} & Height of the screen \\
+\hline
+{\em resource\+Manager} & \hyperlink{classResourceManager}{Resource\+Manager} object pointer for handling loading and caching textures and fonts \\
+\hline
+{\em diff1} & Difficulty of the first computer player \\
+\hline
+{\em diff2} & Difficulty of the second computer player \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_a582ce3c0cddf042569bf3e08827a377c}{Game\+\_\+\+State}.
+
+\index{Difficulty\+\_\+\+Singleplayer\+\_\+\+State@{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}!process\+Input@{process\+Input}}
+\index{process\+Input@{process\+Input}!Difficulty\+\_\+\+Singleplayer\+\_\+\+State@{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{process\+Input(sf\+::\+Render\+Window \&window) override}{processInput(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Difficulty\+\_\+\+Singleplayer\+\_\+\+State\+::process\+Input (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDifficulty__Singleplayer__State_a112a98dfcd0faf74f66d5faaf0487219}{}\label{classDifficulty__Singleplayer__State_a112a98dfcd0faf74f66d5faaf0487219}
+
+
+Function that processes input from the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window to get input from \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_ab6d698d94c4e8ec24a1ac1ca97ae3d98}{Game\+\_\+\+State}.
+
+\index{Difficulty\+\_\+\+Singleplayer\+\_\+\+State@{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}!should\+Switch@{should\+Switch}}
+\index{should\+Switch@{should\+Switch}!Difficulty\+\_\+\+Singleplayer\+\_\+\+State@{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{should\+Switch() override}{shouldSwitch() override}}]{\setlength{\rightskip}{0pt plus 5cm}Game\+States Difficulty\+\_\+\+Singleplayer\+\_\+\+State\+::should\+Switch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDifficulty__Singleplayer__State_ab414111faff96268a2397c7356eeff41}{}\label{classDifficulty__Singleplayer__State_ab414111faff96268a2397c7356eeff41}
+
+
+Function that checks if should switch. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classGame}{Game} State we should switch 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classGame__State_aa4cca539f3f67b59c789b4528fb4d55c}{Game\+\_\+\+State}.
+
+\index{Difficulty\+\_\+\+Singleplayer\+\_\+\+State@{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}!update@{update}}
+\index{update@{update}!Difficulty\+\_\+\+Singleplayer\+\_\+\+State@{Difficulty\+\_\+\+Singleplayer\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{update(const sf\+::\+Time \&time) override}{update(const sf::Time &time) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Difficulty\+\_\+\+Singleplayer\+\_\+\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Time \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classDifficulty__Singleplayer__State_ada72cc17eadfba0f8cd458655858cce4}{}\label{classDifficulty__Singleplayer__State_ada72cc17eadfba0f8cd458655858cce4}
+
+
+Function that updates objects in state based on time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_a7e5776891b8a09f133c35dd156a7f882}{Game\+\_\+\+State}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+States/Difficulty\+\_\+\+Singleplayer\+\_\+\+State.\+h\item 
+States/Difficulty\+\_\+\+Singleplayer\+\_\+\+State.\+cpp\end{DoxyCompactItemize}

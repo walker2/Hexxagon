@@ -4,7 +4,9 @@
 
 #include "Game_State.h"
 #include "../ResourceManager.h"
-
+/**
+ * Class for handling decision making of the player, can switch to all other states except intro
+ */
 class Menu_State : public Game_State
 {
 public:

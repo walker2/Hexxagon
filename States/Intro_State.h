@@ -6,7 +6,9 @@
 #include "GameStates.h"
 #include "../ResourceManager.h"
 
-
+/**
+ * Class for showing intro, switches to Menu_State
+ */
 class Intro_State : public Game_State
 {
 public:

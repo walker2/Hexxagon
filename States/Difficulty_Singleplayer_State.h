@@ -3,7 +3,9 @@
 
 
 #include "Game_State.h"
-
+/**
+ * Class for choosing difficulty for singleplayer game
+ */
 class Difficulty_Singleplayer_State : public Game_State
 {
 public:

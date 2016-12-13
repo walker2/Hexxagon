@@ -1,0 +1,191 @@
+\hypertarget{classGameGUI}{}\section{Game\+G\+UI Class Reference}
+\label{classGameGUI}\index{Game\+G\+UI@{Game\+G\+UI}}
+
+
+Class for handling all the game G\+UI.  
+
+
+
+
+{\ttfamily \#include $<$Game\+G\+U\+I.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classGameGUI_aa2df4e73b49a4cd5655e0e6c18275664}{draw\+Board} (\hyperlink{classBoard}{Board} \&hex\+Board, sf\+::\+Color hex\+Color, sf\+::\+Color outline\+Color, \hyperlink{structLayout}{Layout} \&layout, sf\+::\+Color \&player1\+Color, sf\+::\+Color \&player2\+Color, sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Function for drawing the board. \end{DoxyCompactList}\item 
+void \hyperlink{classGameGUI_a45f4e19738741b51cc0558767e16360c}{create\+Label} (std\+::string text, std\+::string font\+Path, sf\+::\+Color color, \hyperlink{classResourceManager}{Resource\+Manager} $\ast$resource\+Manager, sf\+::\+Vector2f position, int char\+Size)
+\begin{DoxyCompactList}\small\item\em Function for creating label from text and path to font. \end{DoxyCompactList}\item 
+void \hyperlink{classGameGUI_a0e479f6c675e7f65549c76364c29af0a}{change\+Label\+Text} (int num, std\+::string text)
+\begin{DoxyCompactList}\small\item\em Function for changing text of label. \end{DoxyCompactList}\item 
+void \hyperlink{classGameGUI_a561bdff163226813e95f84c9b4720dd0}{change\+Label\+Color} (int num, sf\+::\+Color color)
+\begin{DoxyCompactList}\small\item\em Function for changing label color. \end{DoxyCompactList}\item 
+void \hyperlink{classGameGUI_a8ae01b61120a2ced28870b1dee114013}{draw\+Labels} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Function for drawing all labels on screen. \end{DoxyCompactList}\item 
+void \hyperlink{classGameGUI_aa15ba3d892cacafe2beca0e60e4d23b6}{draw\+Background} (sf\+::\+Render\+Window \&window, float time)
+\begin{DoxyCompactList}\small\item\em Function for drawing background. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ sf\+::\+Text $>$ {\bfseries m\+\_\+labels}\hypertarget{classGameGUI_af9c3ff8190a66d2a437c18f13d63db46}{}\label{classGameGUI_af9c3ff8190a66d2a437c18f13d63db46}
+
+\item 
+sf\+::\+Sound {\bfseries m\+\_\+music}\hypertarget{classGameGUI_a6ad18c6cecb44eb2187c521791ab0fc2}{}\label{classGameGUI_a6ad18c6cecb44eb2187c521791ab0fc2}
+
+\item 
+sf\+::\+Sound\+Buffer {\bfseries buffer}\hypertarget{classGameGUI_a19d023daa1c61a962b3862c84a11f012}{}\label{classGameGUI_a19d023daa1c61a962b3862c84a11f012}
+
+\item 
+std\+::pair$<$ sf\+::\+Convex\+Shape, sf\+::\+Circle\+Shape $>$ {\bfseries m\+\_\+selected\+Shape}\hypertarget{classGameGUI_a9211e2c9849a45768f697f690d35dd12}{}\label{classGameGUI_a9211e2c9849a45768f697f690d35dd12}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for handling all the game G\+UI. 
+
+\subsection{Member Function Documentation}
+\index{Game\+G\+UI@{Game\+G\+UI}!change\+Label\+Color@{change\+Label\+Color}}
+\index{change\+Label\+Color@{change\+Label\+Color}!Game\+G\+UI@{Game\+G\+UI}}
+\subsubsection[{\texorpdfstring{change\+Label\+Color(int num, sf\+::\+Color color)}{changeLabelColor(int num, sf::Color color)}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+G\+U\+I\+::change\+Label\+Color (
+\begin{DoxyParamCaption}
+\item[{int}]{num, }
+\item[{sf\+::\+Color}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{classGameGUI_a561bdff163226813e95f84c9b4720dd0}{}\label{classGameGUI_a561bdff163226813e95f84c9b4720dd0}
+
+
+Function for changing label color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Number of label \\
+\hline
+{\em color} & Color that will be shown \\
+\hline
+\end{DoxyParams}
+\index{Game\+G\+UI@{Game\+G\+UI}!change\+Label\+Text@{change\+Label\+Text}}
+\index{change\+Label\+Text@{change\+Label\+Text}!Game\+G\+UI@{Game\+G\+UI}}
+\subsubsection[{\texorpdfstring{change\+Label\+Text(int num, std\+::string text)}{changeLabelText(int num, std::string text)}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+G\+U\+I\+::change\+Label\+Text (
+\begin{DoxyParamCaption}
+\item[{int}]{num, }
+\item[{std\+::string}]{text}
+\end{DoxyParamCaption}
+)}\hypertarget{classGameGUI_a0e479f6c675e7f65549c76364c29af0a}{}\label{classGameGUI_a0e479f6c675e7f65549c76364c29af0a}
+
+
+Function for changing text of label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Number of label \\
+\hline
+{\em text} & Text that will be shown \\
+\hline
+\end{DoxyParams}
+\index{Game\+G\+UI@{Game\+G\+UI}!create\+Label@{create\+Label}}
+\index{create\+Label@{create\+Label}!Game\+G\+UI@{Game\+G\+UI}}
+\subsubsection[{\texorpdfstring{create\+Label(std\+::string text, std\+::string font\+Path, sf\+::\+Color color, Resource\+Manager $\ast$resource\+Manager, sf\+::\+Vector2f position, int char\+Size)}{createLabel(std::string text, std::string fontPath, sf::Color color, ResourceManager *resourceManager, sf::Vector2f position, int charSize)}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+G\+U\+I\+::create\+Label (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{text, }
+\item[{std\+::string}]{font\+Path, }
+\item[{sf\+::\+Color}]{color, }
+\item[{{\bf Resource\+Manager} $\ast$}]{resource\+Manager, }
+\item[{sf\+::\+Vector2f}]{position, }
+\item[{int}]{char\+Size}
+\end{DoxyParamCaption}
+)}\hypertarget{classGameGUI_a45f4e19738741b51cc0558767e16360c}{}\label{classGameGUI_a45f4e19738741b51cc0558767e16360c}
+
+
+Function for creating label from text and path to font. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Text for label \\
+\hline
+{\em font\+Path} & Font that will be used \\
+\hline
+{\em color} & Color of label \\
+\hline
+{\em resource\+Manager} & \hyperlink{classResourceManager}{Resource\+Manager} object pointer for getting fonts \\
+\hline
+{\em position} & Position in screen coordinates \\
+\hline
+{\em char\+Size} & Size of characters \\
+\hline
+\end{DoxyParams}
+\index{Game\+G\+UI@{Game\+G\+UI}!draw\+Background@{draw\+Background}}
+\index{draw\+Background@{draw\+Background}!Game\+G\+UI@{Game\+G\+UI}}
+\subsubsection[{\texorpdfstring{draw\+Background(sf\+::\+Render\+Window \&window, float time)}{drawBackground(sf::RenderWindow &window, float time)}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+G\+U\+I\+::draw\+Background (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window, }
+\item[{float}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classGameGUI_aa15ba3d892cacafe2beca0e60e4d23b6}{}\label{classGameGUI_aa15ba3d892cacafe2beca0e60e4d23b6}
+
+
+Function for drawing background. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window for rendering \\
+\hline
+{\em time} & Float of time\+Passed since last envoking of this function \\
+\hline
+\end{DoxyParams}
+\index{Game\+G\+UI@{Game\+G\+UI}!draw\+Board@{draw\+Board}}
+\index{draw\+Board@{draw\+Board}!Game\+G\+UI@{Game\+G\+UI}}
+\subsubsection[{\texorpdfstring{draw\+Board(\+Board \&hex\+Board, sf\+::\+Color hex\+Color, sf\+::\+Color outline\+Color, Layout \&layout, sf\+::\+Color \&player1\+Color, sf\+::\+Color \&player2\+Color, sf\+::\+Render\+Window \&window)}{drawBoard(Board &hexBoard, sf::Color hexColor, sf::Color outlineColor, Layout &layout, sf::Color &player1Color, sf::Color &player2Color, sf::RenderWindow &window)}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+G\+U\+I\+::draw\+Board (
+\begin{DoxyParamCaption}
+\item[{{\bf Board} \&}]{hex\+Board, }
+\item[{sf\+::\+Color}]{hex\+Color, }
+\item[{sf\+::\+Color}]{outline\+Color, }
+\item[{{\bf Layout} \&}]{layout, }
+\item[{sf\+::\+Color \&}]{player1\+Color, }
+\item[{sf\+::\+Color \&}]{player2\+Color, }
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)}\hypertarget{classGameGUI_aa2df4e73b49a4cd5655e0e6c18275664}{}\label{classGameGUI_aa2df4e73b49a4cd5655e0e6c18275664}
+
+
+Function for drawing the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex\+Board} & \hyperlink{classBoard}{Board} that should be drawn \\
+\hline
+{\em hex\+Color} & Background color of hexes \\
+\hline
+{\em outline\+Color} & Color of ouline around hexes \\
+\hline
+{\em layout} & \hyperlink{structLayout}{Layout} type \\
+\hline
+{\em player1\+Color} & Color of the first player \\
+\hline
+{\em player2\+Color} & Color of the second player \\
+\hline
+{\em window} & Window for rendering \\
+\hline
+\end{DoxyParams}
+\index{Game\+G\+UI@{Game\+G\+UI}!draw\+Labels@{draw\+Labels}}
+\index{draw\+Labels@{draw\+Labels}!Game\+G\+UI@{Game\+G\+UI}}
+\subsubsection[{\texorpdfstring{draw\+Labels(sf\+::\+Render\+Window \&window)}{drawLabels(sf::RenderWindow &window)}}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+G\+U\+I\+::draw\+Labels (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)}\hypertarget{classGameGUI_a8ae01b61120a2ced28870b1dee114013}{}\label{classGameGUI_a8ae01b61120a2ced28870b1dee114013}
+
+
+Function for drawing all labels on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window for rendering \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game\+G\+U\+I.\+h\item 
+Game\+G\+U\+I.\+cpp\end{DoxyCompactItemize}

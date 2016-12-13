@@ -11,7 +11,9 @@
 
 class Board;
 class GameGUI;
-
+/**
+ * Class for handling all the players input during the game
+ */
 class Multiplayer_State : public Game_State
 {
 public:

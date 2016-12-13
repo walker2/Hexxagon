@@ -1,0 +1,5 @@
+/home/andrewshipilo/CLion/clion-2016.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/andrewshipilo/Projects/Hexxagon
+-- Found SFML 2.3.2 in /usr/include
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/andrewshipilo/Projects/Hexxagon/cmake-build-debug

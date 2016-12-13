@@ -6,7 +6,9 @@
 #include <SFML/Graphics.hpp>
 
 
-
+/**
+ * Structure for current orientation
+ */
 struct Orientation
 {
     const double f0, f1, f2, f3;
@@ -28,7 +30,9 @@ const Orientation LAYOUT_FLAT
         = Orientation(3.0 / 2.0, 0.0, sqrt(3.0) / 2.0, sqrt(3.0),
                       2.0 / 3.0, 0.0, -1.0 / 3.0, sqrt(3.0) / 3.0,
                       0.0);
-
+/**
+ * Structure for handling layouts
+ */
 struct Layout
 {
     const Orientation orientation;
@@ -37,13 +41,18 @@ struct Layout
     Layout(Orientation orientation_, sf::Vector2f size_, sf::Vector2f origin_)
             : orientation(orientation_), size(size_), origin(origin_) {}
 };
-
+/**
+ * Class for handling Hexes with double precision
+ */
 class FractionalHex
 {
 public:
     const double q, r, s;
     FractionalHex(double _q, double _r, double _s) : q(_q), r(_r), s(_s) {};
 };
+/**
+ * Class for handling Hexes, contains useful functions for Hexes transformation
+ */
 class Hex
 {
 public:
@@ -60,7 +69,11 @@ public:
     int distance(const Hex b) const { return length(*this - b); };
 
 
-
+    /**
+     * Function for getting vector of hexes around current hex
+     * @param range Range from current hexes
+     * @return Vector of Hexes around current hex
+     */
     std::vector<Hex> range(int range) const
     {
         std::vector<Hex> result;
@@ -78,6 +91,11 @@ public:
         return result;
     }
 
+    /**
+     * Function that transforms hex coordinates to screen coordinates
+     * @param layout Layout type
+     * @return Two-dimensional vector of screen coordinates
+     */
     sf::Vector2f toPixel(Layout layout) const
     {
         const Orientation& M = layout.orientation;
@@ -85,7 +103,11 @@ public:
         double y = (M.f2 * q + M.f3 * r) * layout.size.y;
         return sf::Vector2f(x + layout.origin.x, y + layout.origin.y);
     }
-
+    /**
+     * Function for getting all 6 of hex corners in screen coordinates
+     * @param layout Layout type
+     * @return Vector of two-dimensional coordinates
+     */
     std::vector<sf::Vector2f> polygon_corners(Layout layout) const
     {
         std::vector<sf::Vector2f> corners = {};
@@ -132,7 +154,6 @@ inline Hex hex_round(FractionalHex h)
     return Hex(q, r, s);
 }
 
-
 inline Hex pixel_to_hex(Layout layout, sf::Vector2f p)
 {
     const Orientation& M = layout.orientation;
@@ -142,6 +163,9 @@ inline Hex pixel_to_hex(Layout layout, sf::Vector2f p)
     double r = (M.b2 * pt.x + M.b3 * pt.y) / 2;
     return hex_round(FractionalHex(q, r, -q - r));
 }
+/**
+ * Structure that stores info about hexes for drawing purposes
+ */
 struct HexInfo
 {
     HexInfo() : isFree(true), inRangeOne(false), inRangeTwo(false), attachedToPlayer(PlayerType::NONE) {};

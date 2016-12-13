@@ -1,0 +1,178 @@
+\hypertarget{classIntro__State}{}\section{Intro\+\_\+\+State Class Reference}
+\label{classIntro__State}\index{Intro\+\_\+\+State@{Intro\+\_\+\+State}}
+
+
+Class for showing intro, switches to \hyperlink{classMenu__State}{Menu\+\_\+\+State}.  
+
+
+
+
+{\ttfamily \#include $<$Intro\+\_\+\+State.\+h$>$}
+
+
+
+Inheritance diagram for Intro\+\_\+\+State\+:
+% FIG 0
+
+
+Collaboration diagram for Intro\+\_\+\+State\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classIntro__State_a354f772fa3f6077d19cb5de9f176905b}{init} (int screen\+Width, int screen\+Height, \hyperlink{classResourceManager}{Resource\+Manager} $\ast$resource\+Manager, int $\ast$diff1, int $\ast$diff2) override
+\begin{DoxyCompactList}\small\item\em Function that inits the current game state. \end{DoxyCompactList}\item 
+void \hyperlink{classIntro__State_a78936f89809b91e5308704c6be58f884}{process\+Input} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em Function that processes input from the player. \end{DoxyCompactList}\item 
+void \hyperlink{classIntro__State_a4ac6ebe7add817dbf8c95f538ffe812f}{update} (const sf\+::\+Time \&time) override
+\begin{DoxyCompactList}\small\item\em Function that updates objects in state based on time. \end{DoxyCompactList}\item 
+void \hyperlink{classIntro__State_a4bdfc33a18600e10d41989faa39ee41d}{draw} (sf\+::\+Render\+Window \&window) override
+\begin{DoxyCompactList}\small\item\em Function for rendering to the screen. \end{DoxyCompactList}\item 
+void \hyperlink{classIntro__State_a50f74ac2c305465f5d389f4003cef58b}{next} () override\hypertarget{classIntro__State_a50f74ac2c305465f5d389f4003cef58b}{}\label{classIntro__State_a50f74ac2c305465f5d389f4003cef58b}
+
+\begin{DoxyCompactList}\small\item\em Function for setting up for the next state. \end{DoxyCompactList}\item 
+Game\+States \hyperlink{classIntro__State_a403c4168d9e9f913657b1a9fb972e522}{should\+Switch} () override
+\begin{DoxyCompactList}\small\item\em Function that checks if should switch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+States {\bfseries m\+\_\+should\+Switch}\hypertarget{classIntro__State_a8c8063e0c23f3601e1471d4197bad9a6}{}\label{classIntro__State_a8c8063e0c23f3601e1471d4197bad9a6}
+
+\item 
+sf\+::\+Texture {\bfseries m\+\_\+intro\+Texture}\hypertarget{classIntro__State_a45c9554c2c34aa36cd1492dbe499850a}{}\label{classIntro__State_a45c9554c2c34aa36cd1492dbe499850a}
+
+\item 
+sf\+::\+Sprite {\bfseries m\+\_\+intro\+Sprite}\hypertarget{classIntro__State_af58027643e0637f5252ec99bc5610143}{}\label{classIntro__State_af58027643e0637f5252ec99bc5610143}
+
+\item 
+sf\+::\+Font {\bfseries m\+\_\+font}\hypertarget{classIntro__State_ad67c3e07107485f1c1190d8005e22f93}{}\label{classIntro__State_ad67c3e07107485f1c1190d8005e22f93}
+
+\item 
+sf\+::\+Text {\bfseries m\+\_\+text}\hypertarget{classIntro__State_a73491e0d8bd1677568f6cfa92eb06ca2}{}\label{classIntro__State_a73491e0d8bd1677568f6cfa92eb06ca2}
+
+\item 
+float {\bfseries m\+\_\+time\+Passed}\hypertarget{classIntro__State_a86f099460aac2b8945c485bc824bf0ec}{}\label{classIntro__State_a86f099460aac2b8945c485bc824bf0ec}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for showing intro, switches to \hyperlink{classMenu__State}{Menu\+\_\+\+State}. 
+
+\subsection{Member Function Documentation}
+\index{Intro\+\_\+\+State@{Intro\+\_\+\+State}!draw@{draw}}
+\index{draw@{draw}!Intro\+\_\+\+State@{Intro\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{draw(sf\+::\+Render\+Window \&window) override}{draw(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+\_\+\+State\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classIntro__State_a4bdfc33a18600e10d41989faa39ee41d}{}\label{classIntro__State_a4bdfc33a18600e10d41989faa39ee41d}
+
+
+Function for rendering to the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window to render \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_a4db9121068121425e89170b5cb151664}{Game\+\_\+\+State}.
+
+\index{Intro\+\_\+\+State@{Intro\+\_\+\+State}!init@{init}}
+\index{init@{init}!Intro\+\_\+\+State@{Intro\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{init(int screen\+Width, int screen\+Height, Resource\+Manager $\ast$resource\+Manager, int $\ast$diff1, int $\ast$diff2) override}{init(int screenWidth, int screenHeight, ResourceManager *resourceManager, int *diff1, int *diff2) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+\_\+\+State\+::init (
+\begin{DoxyParamCaption}
+\item[{int}]{screen\+Width, }
+\item[{int}]{screen\+Height, }
+\item[{{\bf Resource\+Manager} $\ast$}]{resource\+Manager, }
+\item[{int $\ast$}]{diff1, }
+\item[{int $\ast$}]{diff2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classIntro__State_a354f772fa3f6077d19cb5de9f176905b}{}\label{classIntro__State_a354f772fa3f6077d19cb5de9f176905b}
+
+
+Function that inits the current game state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen\+Width} & Width of the screen \\
+\hline
+{\em screen\+Height} & Height of the screen \\
+\hline
+{\em resource\+Manager} & \hyperlink{classResourceManager}{Resource\+Manager} object pointer for handling loading and caching textures and fonts \\
+\hline
+{\em diff1} & Difficulty of the first computer player \\
+\hline
+{\em diff2} & Difficulty of the second computer player \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_a582ce3c0cddf042569bf3e08827a377c}{Game\+\_\+\+State}.
+
+\index{Intro\+\_\+\+State@{Intro\+\_\+\+State}!process\+Input@{process\+Input}}
+\index{process\+Input@{process\+Input}!Intro\+\_\+\+State@{Intro\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{process\+Input(sf\+::\+Render\+Window \&window) override}{processInput(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+\_\+\+State\+::process\+Input (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classIntro__State_a78936f89809b91e5308704c6be58f884}{}\label{classIntro__State_a78936f89809b91e5308704c6be58f884}
+
+
+Function that processes input from the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window to get input from \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_ab6d698d94c4e8ec24a1ac1ca97ae3d98}{Game\+\_\+\+State}.
+
+\index{Intro\+\_\+\+State@{Intro\+\_\+\+State}!should\+Switch@{should\+Switch}}
+\index{should\+Switch@{should\+Switch}!Intro\+\_\+\+State@{Intro\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{should\+Switch() override}{shouldSwitch() override}}]{\setlength{\rightskip}{0pt plus 5cm}Game\+States Intro\+\_\+\+State\+::should\+Switch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classIntro__State_a403c4168d9e9f913657b1a9fb972e522}{}\label{classIntro__State_a403c4168d9e9f913657b1a9fb972e522}
+
+
+Function that checks if should switch. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classGame}{Game} State we should switch 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classGame__State_aa4cca539f3f67b59c789b4528fb4d55c}{Game\+\_\+\+State}.
+
+\index{Intro\+\_\+\+State@{Intro\+\_\+\+State}!update@{update}}
+\index{update@{update}!Intro\+\_\+\+State@{Intro\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{update(const sf\+::\+Time \&time) override}{update(const sf::Time &time) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Intro\+\_\+\+State\+::update (
+\begin{DoxyParamCaption}
+\item[{const sf\+::\+Time \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classIntro__State_a4ac6ebe7add817dbf8c95f538ffe812f}{}\label{classIntro__State_a4ac6ebe7add817dbf8c95f538ffe812f}
+
+
+Function that updates objects in state based on time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Delta time \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classGame__State_a7e5776891b8a09f133c35dd156a7f882}{Game\+\_\+\+State}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+States/Intro\+\_\+\+State.\+h\item 
+States/Intro\+\_\+\+State.\+cpp\end{DoxyCompactItemize}

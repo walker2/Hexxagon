@@ -3,7 +3,9 @@
 
 
 #include "Game_State.h"
-
+/**
+ * Class for choosing difficulties for two computer players
+ */
 class Difficulty_Computerwars_State : public Game_State
 {
 public:

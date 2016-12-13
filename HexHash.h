@@ -4,6 +4,9 @@
 
 namespace std
 {
+    /**
+     * Hash function for using in unordered_map in class Board
+     */
     template <> struct hash<Hex>
     {
         size_t operator()(const Hex& h) const
