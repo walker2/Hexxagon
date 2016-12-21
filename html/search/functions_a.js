@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['selectdownhex',['selectDownHex',['../classBoard.html#a6d45d92b74061bc3f96930400971f405',1,'Board']]],
-  ['selectlefthex',['selectLeftHex',['../classBoard.html#ae6bb9e11880db637317626c9f64af199',1,'Board']]],
-  ['selectrighthex',['selectRightHex',['../classBoard.html#a50010e64ff87ce497aea5f2739ba3884',1,'Board']]],
-  ['selectuphex',['selectUpHex',['../classBoard.html#afc8936abe71f811d57228aae3c4884f6',1,'Board']]],
-  ['setallhexestofree',['setAllHexesToFree',['../classBoard.html#ab9a3899c28b8951f7d50cdd35c3e0672',1,'Board']]],
-  ['shouldswitch',['shouldSwitch',['../classDifficulty__Computerwars__State.html#a6dd5abd9cea06fa73df3ada8a6ad9b6f',1,'Difficulty_Computerwars_State::shouldSwitch()'],['../classDifficulty__Singleplayer__State.html#ab414111faff96268a2397c7356eeff41',1,'Difficulty_Singleplayer_State::shouldSwitch()'],['../classGame__State.html#aa4cca539f3f67b59c789b4528fb4d55c',1,'Game_State::shouldSwitch()'],['../classIntro__State.html#a403c4168d9e9f913657b1a9fb972e522',1,'Intro_State::shouldSwitch()'],['../classMenu__State.html#a6cfda60a96ab9bdf9c03a1cb66fc8ef2',1,'Menu_State::shouldSwitch()'],['../classMultiplayer__State.html#a5dc3a250487c9c009c64b60f1be2b635',1,'Multiplayer_State::shouldSwitch()']]],
-  ['showavailablemoves',['showAvailableMoves',['../classBoard.html#a6ed22f5f63b783b5b9143a1cf0f8774a',1,'Board']]]
+  ['operator_21_3d',['operator!=',['../classHex.html#a6a94e713daf6d64fa3a4b51c387842a0',1,'Hex']]],
+  ['operator_2a',['operator*',['../classHex.html#a93760b2e9ecdecff1e4780b5299dc83a',1,'Hex']]],
+  ['operator_2b',['operator+',['../classHex.html#a9c560b8ecc36dc56bca3ad473e3b5916',1,'Hex']]],
+  ['operator_2d',['operator-',['../classHex.html#ac591a09448fb9ab6a90e33bb7099757c',1,'Hex']]],
+  ['operator_3d_3d',['operator==',['../classHex.html#a91a4aaf6c05a7daf2fa4b37274f1cc07',1,'Hex']]]
 ];

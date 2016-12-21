@@ -14,10 +14,10 @@ struct Move
 {
     Move() {};
     Move(int _score) : score(_score) {};
-    int score;
-    std::unordered_map<Hex, HexInfo>::iterator it;
-    std::unordered_map<Hex, HexInfo>::iterator prev_it;
-    bool isJump = false;
+    int score;  ///< Move score
+    std::unordered_map<Hex, HexInfo>::iterator it;  ///< Iterator to hex for performing this move
+    std::unordered_map<Hex, HexInfo>::iterator prev_it;  ///< Iterator to previous hex
+    bool isJump = false; ///< Flag if move is jump
 };
 /**
  * Class for storing and calculation game board
@@ -111,9 +111,9 @@ private:
     void setHexagonalShape(int map_radius);
 
 private:
-    std::unordered_map<Hex, HexInfo> m_board;
-    std::unordered_map<Hex, HexInfo>::iterator m_prevHex;
-    std::unordered_map<Hex, HexInfo>::iterator m_selectedHex;
+    std::unordered_map<Hex, HexInfo> m_board; ///< Game board container
+    std::unordered_map<Hex, HexInfo>::iterator m_prevHex; ///< Iterator to previous hex
+    std::unordered_map<Hex, HexInfo>::iterator m_selectedHex; ///< Iterator to currently selected hex
 
 };
 

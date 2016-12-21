@@ -23,13 +23,13 @@ public:
     GameStates shouldSwitch() override;
 
 private:
-    GameStates m_shouldSwitch;
+    GameStates m_shouldSwitch; ///< State we should switch to
 
     sf::Texture m_introTexture;
     sf::Sprite m_introSprite;
     sf::Font m_font;
     sf::Text m_text;
-    float m_timePassed;
+    float m_timePassed; ///< Time passed since first init of the object
 };
 
 

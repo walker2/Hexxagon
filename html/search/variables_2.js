@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['directions',['directions',['../Hex_8h.html#aec50df6507f3283694da0b807e443665',1,'Hex.h']]]
+  ['prev_5fit',['prev_it',['../structMove.html#a26c6ef8f57d5c09a7d8460e845c03d51',1,'Move']]]
 ];

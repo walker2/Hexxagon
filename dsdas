@@ -1,0 +1,1112 @@
+[1mdiff --git a/.idea/workspace.xml b/.idea/workspace.xml[m
+[1mindex 2573671..ab3dd2c 100644[m
+[1m--- a/.idea/workspace.xml[m
+[1m+++ b/.idea/workspace.xml[m
+[36m@@ -12,19 +12,83 @@[m
+   </component>[m
+   <component name="ChangeListManager">[m
+     <list default="true" id="31455fdf-e222-4125-9f81-20754370d6f7" name="Default" comment="">[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />[m
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Board.h" afterPath="$PROJECT_DIR$/Board.h" />[m
+[31m-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.h" afterPath="$PROJECT_DIR$/Game.h" />[m
+[31m-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameGUI.h" afterPath="$PROJECT_DIR$/GameGUI.h" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />[m
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Hex.h" afterPath="$PROJECT_DIR$/Hex.h" />[m
+[31m-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HexHash.h" afterPath="$PROJECT_DIR$/HexHash.h" />[m
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Player.h" afterPath="$PROJECT_DIR$/Player.h" />[m
+[31m-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceManager.h" afterPath="$PROJECT_DIR$/ResourceManager.h" />[m
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/States/Difficulty_Computerwars_State.h" afterPath="$PROJECT_DIR$/States/Difficulty_Computerwars_State.h" />[m
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/States/Difficulty_Singleplayer_State.h" afterPath="$PROJECT_DIR$/States/Difficulty_Singleplayer_State.h" />[m
+[31m-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/States/Game_State.h" afterPath="$PROJECT_DIR$/States/Game_State.h" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/States/GameStates.h" afterPath="$PROJECT_DIR$/States/GameStates.h" />[m
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/States/Intro_State.h" afterPath="$PROJECT_DIR$/States/Intro_State.h" />[m
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/States/Menu_State.h" afterPath="$PROJECT_DIR$/States/Menu_State.h" />[m
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/States/Multiplayer_State.h" afterPath="$PROJECT_DIR$/States/Multiplayer_State.h" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/clion-log.txt" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Board_8h_source.html" afterPath="$PROJECT_DIR$/html/Board_8h_source.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Difficulty__Computerwars__State_8h_source.html" afterPath="$PROJECT_DIR$/html/Difficulty__Computerwars__State_8h_source.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Difficulty__Singleplayer__State_8h_source.html" afterPath="$PROJECT_DIR$/html/Difficulty__Singleplayer__State_8h_source.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/GameStates_8h_source.html" afterPath="$PROJECT_DIR$/html/GameStates_8h_source.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Hex_8h_source.html" afterPath="$PROJECT_DIR$/html/Hex_8h_source.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Intro__State_8h_source.html" afterPath="$PROJECT_DIR$/html/Intro__State_8h_source.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Menu__State_8h_source.html" afterPath="$PROJECT_DIR$/html/Menu__State_8h_source.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Multiplayer__State_8h_source.html" afterPath="$PROJECT_DIR$/html/Multiplayer__State_8h_source.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/Player_8h_source.html" afterPath="$PROJECT_DIR$/html/Player_8h_source.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classBoard-members.html" afterPath="$PROJECT_DIR$/html/classBoard-members.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classBoard.html" afterPath="$PROJECT_DIR$/html/classBoard.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classDifficulty__Computerwars__State-members.html" afterPath="$PROJECT_DIR$/html/classDifficulty__Computerwars__State-members.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classDifficulty__Computerwars__State.html" afterPath="$PROJECT_DIR$/html/classDifficulty__Computerwars__State.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classDifficulty__Singleplayer__State-members.html" afterPath="$PROJECT_DIR$/html/classDifficulty__Singleplayer__State-members.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classDifficulty__Singleplayer__State.html" afterPath="$PROJECT_DIR$/html/classDifficulty__Singleplayer__State.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classHex-members.html" afterPath="$PROJECT_DIR$/html/classHex-members.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classHex.html" afterPath="$PROJECT_DIR$/html/classHex.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classIntro__State-members.html" afterPath="$PROJECT_DIR$/html/classIntro__State-members.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classIntro__State.html" afterPath="$PROJECT_DIR$/html/classIntro__State.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classMenu__State-members.html" afterPath="$PROJECT_DIR$/html/classMenu__State-members.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classMenu__State.html" afterPath="$PROJECT_DIR$/html/classMenu__State.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classMultiplayer__State-members.html" afterPath="$PROJECT_DIR$/html/classMultiplayer__State-members.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classMultiplayer__State.html" afterPath="$PROJECT_DIR$/html/classMultiplayer__State.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classPlayer-members.html" afterPath="$PROJECT_DIR$/html/classPlayer-members.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/classPlayer.html" afterPath="$PROJECT_DIR$/html/classPlayer.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/functions.html" afterPath="$PROJECT_DIR$/html/functions.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/functions_func.html" afterPath="$PROJECT_DIR$/html/functions_func.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/functions_vars.html" afterPath="$PROJECT_DIR$/html/functions_vars.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/all_2.js" afterPath="$PROJECT_DIR$/html/search/all_2.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/all_3.js" afterPath="$PROJECT_DIR$/html/search/all_3.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/all_7.js" afterPath="$PROJECT_DIR$/html/search/all_7.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/all_8.js" afterPath="$PROJECT_DIR$/html/search/all_8.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/all_9.js" afterPath="$PROJECT_DIR$/html/search/all_9.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/all_a.js" afterPath="$PROJECT_DIR$/html/search/all_a.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/all_c.js" afterPath="$PROJECT_DIR$/html/search/all_c.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/all_d.js" afterPath="$PROJECT_DIR$/html/search/all_d.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/all_f.js" afterPath="$PROJECT_DIR$/html/search/all_f.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_1.js" afterPath="$PROJECT_DIR$/html/search/functions_1.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_2.js" afterPath="$PROJECT_DIR$/html/search/functions_2.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_5.js" afterPath="$PROJECT_DIR$/html/search/functions_5.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_7.js" afterPath="$PROJECT_DIR$/html/search/functions_7.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_8.js" afterPath="$PROJECT_DIR$/html/search/functions_8.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_9.js" afterPath="$PROJECT_DIR$/html/search/functions_9.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_a.js" afterPath="$PROJECT_DIR$/html/search/functions_a.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_b.js" afterPath="$PROJECT_DIR$/html/search/functions_b.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_c.js" afterPath="$PROJECT_DIR$/html/search/functions_c.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_d.js" afterPath="$PROJECT_DIR$/html/search/functions_d.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_e.js" afterPath="$PROJECT_DIR$/html/search/functions_e.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/functions_f.js" afterPath="$PROJECT_DIR$/html/search/functions_f.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/searchdata.js" afterPath="$PROJECT_DIR$/html/search/searchdata.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/variables_0.js" afterPath="$PROJECT_DIR$/html/search/variables_0.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/variables_1.js" afterPath="$PROJECT_DIR$/html/search/variables_1.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/variables_2.js" afterPath="$PROJECT_DIR$/html/search/variables_2.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/search/variables_3.js" afterPath="$PROJECT_DIR$/html/search/variables_3.js" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/structMove-members.html" afterPath="$PROJECT_DIR$/html/structMove-members.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/structMove.html" afterPath="$PROJECT_DIR$/html/structMove.html" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/classBoard.tex" afterPath="$PROJECT_DIR$/latex/classBoard.tex" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/classDifficulty__Computerwars__State.tex.tmp" afterPath="$PROJECT_DIR$/latex/classDifficulty__Computerwars__State.tex.tmp" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/classDifficulty__Singleplayer__State.tex" afterPath="$PROJECT_DIR$/latex/classDifficulty__Singleplayer__State.tex" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/classHex.tex" afterPath="$PROJECT_DIR$/latex/classHex.tex" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/classIntro__State.tex" afterPath="$PROJECT_DIR$/latex/classIntro__State.tex" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/classMenu__State.tex" afterPath="$PROJECT_DIR$/latex/classMenu__State.tex" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/classMultiplayer__State.tex" afterPath="$PROJECT_DIR$/latex/classMultiplayer__State.tex" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/classPlayer.tex" afterPath="$PROJECT_DIR$/latex/classPlayer.tex" />[m
+[32m+[m[32m      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latex/structMove.tex" afterPath="$PROJECT_DIR$/latex/structMove.tex" />[m
+     </list>[m
+     <ignored path="Hexxagon.iws" />[m
+     <ignored path=".idea/workspace.xml" />[m
+[36m@@ -44,101 +108,101 @@[m
+   </component>[m
+   <component name="FileEditorManager">[m
+     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">[m
+[31m-      <file leaf-file-name="Difficulty_Singleplayer_State.h" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/States/Difficulty_Singleplayer_State.h">[m
+[32m+[m[32m      <file leaf-file-name="Player.h" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/Player.h">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="102">[m
+[31m-              <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />[m
+[32m+[m[32m            <state relative-caret-position="-344">[m
+[32m+[m[32m              <caret line="42" column="50" lean-forward="false" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="Player.h" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/Player.h">[m
+[32m+[m[32m      <file leaf-file-name="Difficulty_Computerwars_State.h" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/States/Difficulty_Computerwars_State.h">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="578">[m
+[31m-              <caret line="74" column="5" lean-forward="false" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />[m
+[32m+[m[32m            <state relative-caret-position="268">[m
+[32m+[m[32m              <caret line="39" column="62" lean-forward="false" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="Difficulty_Computerwars_State.h" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/States/Difficulty_Computerwars_State.h">[m
+[32m+[m[32m      <file leaf-file-name="Game.h" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/Game.h">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="102">[m
+[31m-              <caret line="6" column="59" lean-forward="false" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />[m
+[32m+[m[32m            <state relative-caret-position="-308">[m
+[32m+[m[32m              <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="Multiplayer_State.h" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/States/Multiplayer_State.h">[m
+[32m+[m[32m      <file leaf-file-name="Hex.h" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/Hex.h">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="23">[m
+[31m-              <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="10" />[m
+[32m+[m[32m            <state relative-caret-position="18">[m
+[32m+[m[32m              <caret line="188" column="38" lean-forward="false" selection-start-line="188" selection-start-column="38" selection-end-line="188" selection-end-column="38" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="Game_State.h" pinned="false" current-in-tab="true">[m
+[31m-        <entry file="file://$PROJECT_DIR$/States/Game_State.h">[m
+[32m+[m[32m      <file leaf-file-name="ResourceManager.h" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/ResourceManager.h">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="85">[m
+[31m-              <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />[m
+[32m+[m[32m            <state relative-caret-position="846">[m
+[32m+[m[32m              <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="Intro_State.cpp" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/States/Intro_State.cpp">[m
+[32m+[m[32m      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/main.cpp">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="357">[m
+[31m-              <caret line="22" column="62" lean-forward="false" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="62" />[m
+[32m+[m[32m            <state relative-caret-position="72">[m
+[32m+[m[32m              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="Intro_State.h" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/States/Intro_State.h">[m
+[32m+[m[32m      <file leaf-file-name="Board.h" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/Board.h">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="119">[m
+[31m-              <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />[m
+[32m+[m[32m            <state relative-caret-position="574">[m
+[32m+[m[32m              <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="ResourceManager.h" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/ResourceManager.h">[m
+[32m+[m[32m      <file leaf-file-name="Board.cpp" pinned="false" current-in-tab="true">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/Board.cpp">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="629">[m
+[31m-              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />[m
+[32m+[m[32m            <state relative-caret-position="574">[m
+[32m+[m[32m              <caret line="192" column="1" lean-forward="true" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="Menu_State.cpp" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/States/Menu_State.cpp">[m
+[32m+[m[32m      <file leaf-file-name="GameGUI.h" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/GameGUI.h">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="686">[m
+[31m-              <caret line="96" column="56" lean-forward="false" selection-start-line="96" selection-start-column="56" selection-end-line="96" selection-end-column="56" />[m
+[32m+[m[32m            <state relative-caret-position="-704">[m
+[32m+[m[32m              <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="Menu_State.h" pinned="false" current-in-tab="false">[m
+[31m-        <entry file="file://$PROJECT_DIR$/States/Menu_State.h">[m
+[32m+[m[32m      <file leaf-file-name="HexHash.h" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/HexHash.h">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="119">[m
+[31m-              <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />[m
+[32m+[m[32m            <state relative-caret-position="126">[m
+[32m+[m[32m              <caret line="7" column="62" lean-forward="false" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+[36m@@ -188,13 +252,11 @@[m
+         <option value="$PROJECT_DIR$/Shaders/colorShading.frag" />[m
+         <option value="$PROJECT_DIR$/Shaders/pixelate.vert" />[m
+         <option value="$PROJECT_DIR$/Shaders/pixelate.frag" />[m
+[31m-        <option value="$PROJECT_DIR$/CMakeLists.txt" />[m
+         <option value="$PROJECT_DIR$/Player.cpp" />[m
+         <option value="$PROJECT_DIR$/States/Difficulty_State.h" />[m
+         <option value="$PROJECT_DIR$/States/Difficulty_State.cpp" />[m
+         <option value="$PROJECT_DIR$/States/Difficulty_Multiplayer_State.cpp" />[m
+         <option value="$PROJECT_DIR$/States/Difficulty_Multiplayer_State.h" />[m
+[31m-        <option value="$PROJECT_DIR$/States/GameStates.h" />[m
+         <option value="$PROJECT_DIR$/Game.cpp" />[m
+         <option value="$PROJECT_DIR$/Shaders/galaxy.frag" />[m
+         <option value="$PROJECT_DIR$/States/Intro_State.cpp" />[m
+[36m@@ -206,17 +268,19 @@[m
+         <option value="$PROJECT_DIR$/GameGUI.cpp" />[m
+         <option value="$PROJECT_DIR$/Game.h" />[m
+         <option value="$PROJECT_DIR$/ResourceManager.h" />[m
+[31m-        <option value="$PROJECT_DIR$/Player.h" />[m
+         <option value="$PROJECT_DIR$/HexHash.h" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/States/Game_State.h" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/Board.h" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/States/GameStates.h" />[m
+         <option value="$PROJECT_DIR$/Hex.h" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/CMakeLists.txt" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/Player.h" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/States/Multiplayer_State.h" />[m
+         <option value="$PROJECT_DIR$/GameGUI.h" />[m
+[31m-        <option value="$PROJECT_DIR$/Board.h" />[m
+[31m-        <option value="$PROJECT_DIR$/States/Intro_State.h" />[m
+         <option value="$PROJECT_DIR$/States/Menu_State.h" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/States/Intro_State.h" />[m
+         <option value="$PROJECT_DIR$/States/Difficulty_Singleplayer_State.h" />[m
+         <option value="$PROJECT_DIR$/States/Difficulty_Computerwars_State.h" />[m
+[31m-        <option value="$PROJECT_DIR$/States/Multiplayer_State.h" />[m
+[31m-        <option value="$PROJECT_DIR$/States/Game_State.h" />[m
+       </list>[m
+     </option>[m
+   </component>[m
+[36m@@ -228,9 +292,10 @@[m
+   </component>[m
+   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />[m
+   <component name="ProjectFrameBounds">[m
+[31m-    <option name="y" value="30" />[m
+[31m-    <option name="width" value="1440" />[m
+[31m-    <option name="height" value="870" />[m
+[32m+[m[32m    <option name="x" value="-1" />[m
+[32m+[m[32m    <option name="y" value="24" />[m
+[32m+[m[32m    <option name="width" value="1368" />[m
+[32m+[m[32m    <option name="height" value="744" />[m
+   </component>[m
+   <component name="ProjectInspectionProfilesVisibleTreeState">[m
+     <entry key="Project Default">[m
+[36m@@ -377,12 +442,26 @@[m
+               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+             </PATH_ELEMENT>[m
+           </PATH>[m
+[32m+[m[32m          <PATH>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="Hexxagon" />[m
+[32m+[m[32m              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="Hexxagon" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m            <PATH_ELEMENT>[m
+[32m+[m[32m              <option name="myItemId" value="cmake" />[m
+[32m+[m[32m              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            </PATH_ELEMENT>[m
+[32m+[m[32m          </PATH>[m
+         </subPane>[m
+       </pane>[m
+     </panes>[m
+   </component>[m
+   <component name="PropertiesComponent">[m
+[31m-    <property name="settings.editor.selected.configurable" value="CMakeSettings" />[m
+[32m+[m[32m    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />[m
+     <property name="WebServerToolWindowFactoryState" value="false" />[m
+     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TEST_SFML" />[m
+     <property name="js.eslint.eslintPackage" value="" />[m
+[36m@@ -617,11 +696,12 @@[m
+       <workItem from="1481287708550" duration="14000" />[m
+       <workItem from="1481562220241" duration="8256000" />[m
+       <workItem from="1481656648397" duration="5376000" />[m
+[32m+[m[32m      <workItem from="1481708747642" duration="3831000" />[m
+     </task>[m
+     <servers />[m
+   </component>[m
+   <component name="TimeTrackingManager">[m
+[31m-    <option name="totallyTimeSpent" value="144153000" />[m
+[32m+[m[32m    <option name="totallyTimeSpent" value="147984000" />[m
+   </component>[m
+   <component name="TodoView">[m
+     <todo-panel id="selected-file">[m
+[36m@@ -633,13 +713,14 @@[m
+     </todo-panel>[m
+   </component>[m
+   <component name="ToolWindowManager">[m
+[31m-    <frame x="0" y="30" width="1440" height="870" extended-state="0" />[m
+[31m-    <editor active="true" />[m
+[32m+[m[32m    <frame x="-1" y="24" width="1368" height="744" extended-state="6" />[m
+[32m+[m[32m    <editor active="false" />[m
+     <layout>[m
+[31m-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15949188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />[m
+[32m+[m[32m      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />[m
+       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33778372" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />[m
+[31m-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.50247" order="8" side_tool="true" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />[m
+[36m@@ -651,7 +732,6 @@[m
+       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843792" sideWeight="0.49752998" order="2" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />[m
+[31m-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39919892" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />[m
+     </layout>[m
+[36m@@ -672,7 +752,7 @@[m
+   </component>[m
+   <component name="XDebuggerManager">[m
+     <breakpoint-manager>[m
+[31m-      <option name="time" value="117" />[m
+[32m+[m[32m      <option name="time" value="118" />[m
+     </breakpoint-manager>[m
+     <watches-manager />[m
+   </component>[m
+[36m@@ -778,13 +858,6 @@[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">[m
+[31m-      <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="102">[m
+[31m-          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />[m
+[31m-        </state>[m
+[31m-      </provider>[m
+[31m-    </entry>[m
+     <entry file="file:///usr/include/c++/5/bits/hashtable.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state relative-caret-position="140">[m
+[36m@@ -799,13 +872,6 @@[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/main.cpp">[m
+[31m-      <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="68">[m
+[31m-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />[m
+[31m-        </state>[m
+[31m-      </provider>[m
+[31m-    </entry>[m
+     <entry file="file://$PROJECT_DIR$/Shaders/galaxy.frag">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state relative-caret-position="346">[m
+[36m@@ -817,7 +883,6 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state relative-caret-position="440">[m
+           <caret line="96" column="56" lean-forward="false" selection-start-line="96" selection-start-column="56" selection-end-line="96" selection-end-column="56" />[m
+[31m-          <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -825,20 +890,6 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state relative-caret-position="1394">[m
+           <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />[m
+[31m-          <folding>[m
+[31m-            <element signature="e#0#30#0" expanded="true" />[m
+[31m-            <element signature="e#3821#3909#0" expanded="false" />[m
+[31m-            <element signature="e#3911#4228#0" expanded="false" />[m
+[31m-            <element signature="e#4230#4305#0" expanded="false" />[m
+[31m-          </folding>[m
+[31m-        </state>[m
+[31m-      </provider>[m
+[31m-    </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/States/GameStates.h">[m
+[31m-      <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="255">[m
+[31m-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />[m
+[31m-          <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -846,9 +897,6 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state relative-caret-position="85">[m
+           <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="19" />[m
+[31m-          <folding>[m
+[31m-            <element signature="e#0#19#0" expanded="true" />[m
+[31m-          </folding>[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -856,7 +904,6 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state relative-caret-position="255">[m
+           <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />[m
+[31m-          <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[36m@@ -864,144 +911,164 @@[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state relative-caret-position="204">[m
+           <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/GameGUI.cpp">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="-249">[m
+[32m+[m[32m          <caret line="120" column="14" lean-forward="false" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/States/Menu_State.cpp">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="0">[m
+[32m+[m[32m          <caret line="96" column="56" lean-forward="false" selection-start-line="96" selection-start-column="56" selection-end-line="96" selection-end-column="56" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/Hex.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="465">[m
+[31m-          <caret line="166" column="62" lean-forward="false" selection-start-line="166" selection-start-column="62" selection-end-line="166" selection-end-column="62" />[m
+[32m+[m[32m        <state relative-caret-position="252">[m
+[32m+[m[32m          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/GameGUI.cpp">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/States/Multiplayer_State.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="-249">[m
+[31m-          <caret line="120" column="14" lean-forward="false" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />[m
+[32m+[m[32m        <state relative-caret-position="394">[m
+[32m+[m[32m          <caret line="69" column="56" lean-forward="false" selection-start-line="69" selection-start-column="56" selection-end-line="69" selection-end-column="56" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/Board.cpp">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/States/GameStates.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="240">[m
+[31m-          <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />[m
+[31m-          <folding>[m
+[31m-            <element signature="e#0#17#0" expanded="true" />[m
+[31m-          </folding>[m
+[32m+[m[32m        <state relative-caret-position="90">[m
+[32m+[m[32m          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />[m
+[32m+[m[32m          <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/Board.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/States/Game_State.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="346">[m
+[31m-          <caret line="105" column="25" lean-forward="false" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />[m
+[32m+[m[32m        <state relative-caret-position="340">[m
+[32m+[m[32m          <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/Game.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/States/Menu_State.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="680">[m
+[31m-          <caret line="58" column="118" lean-forward="false" selection-start-line="58" selection-start-column="70" selection-end-line="58" selection-end-column="118" />[m
+[32m+[m[32m        <state relative-caret-position="522">[m
+[32m+[m[32m          <caret line="39" column="63" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="63" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/GameGUI.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/States/Intro_State.cpp">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="397">[m
+[31m-          <caret line="60" column="75" lean-forward="false" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />[m
+[32m+[m[32m        <state relative-caret-position="18">[m
+[32m+[m[32m          <caret line="22" column="62" lean-forward="false" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="62" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/HexHash.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/States/Intro_State.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="119">[m
+[31m-          <caret line="7" column="62" lean-forward="false" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />[m
+[32m+[m[32m        <state relative-caret-position="304">[m
+[32m+[m[32m          <caret line="25" column="61" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="61" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/Player.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/States/Difficulty_Singleplayer_State.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="578">[m
+[31m-          <caret line="74" column="5" lean-forward="false" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />[m
+[32m+[m[32m        <state relative-caret-position="394">[m
+[32m+[m[32m          <caret line="38" column="65" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="65" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/ResourceManager.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/States/Difficulty_Computerwars_State.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="629">[m
+[31m-          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />[m
+[32m+[m[32m        <state relative-caret-position="268">[m
+[32m+[m[32m          <caret line="39" column="62" lean-forward="false" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/States/Intro_State.cpp">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/Game.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="357">[m
+[31m-          <caret line="22" column="62" lean-forward="false" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="62" />[m
+[32m+[m[32m        <state relative-caret-position="-308">[m
+[32m+[m[32m          <caret line="19" column="56" lean-forward="false" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/States/Intro_State.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/Hex.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="119">[m
+[31m-          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />[m
+[32m+[m[32m        <state relative-caret-position="18">[m
+[32m+[m[32m          <caret line="188" column="38" lean-forward="false" selection-start-line="188" selection-start-column="38" selection-end-line="188" selection-end-column="38" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/States/Menu_State.cpp">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/GameGUI.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="686">[m
+[31m-          <caret line="96" column="56" lean-forward="false" selection-start-line="96" selection-start-column="56" selection-end-line="96" selection-end-column="56" />[m
+[32m+[m[32m        <state relative-caret-position="-704">[m
+[32m+[m[32m          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/States/Menu_State.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/HexHash.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="119">[m
+[31m-          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />[m
+[32m+[m[32m        <state relative-caret-position="126">[m
+[32m+[m[32m          <caret line="7" column="62" lean-forward="false" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/States/Difficulty_Singleplayer_State.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/Player.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="102">[m
+[31m-          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />[m
+[32m+[m[32m        <state relative-caret-position="-344">[m
+[32m+[m[32m          <caret line="42" column="50" lean-forward="false" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/States/Difficulty_Computerwars_State.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/ResourceManager.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="102">[m
+[31m-          <caret line="6" column="59" lean-forward="false" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />[m
+[32m+[m[32m        <state relative-caret-position="846">[m
+[32m+[m[32m          <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/States/Multiplayer_State.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/main.cpp">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="23">[m
+[31m-          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="10" />[m
+[32m+[m[32m        <state relative-caret-position="72">[m
+[32m+[m[32m          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/States/Game_State.h">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/Board.h">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="85">[m
+[31m-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />[m
+[32m+[m[32m        <state relative-caret-position="574">[m
+[32m+[m[32m          <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/Board.cpp">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="574">[m
+[32m+[m[32m          <caret line="192" column="1" lean-forward="true" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+[1mdiff --git a/Board.h b/Board.h[m
+[1mindex 497b96f..9cb2771 100644[m
+[1m--- a/Board.h[m
+[1m+++ b/Board.h[m
+[36m@@ -14,10 +14,10 @@[m [mstruct Move[m
+ {[m
+     Move() {};[m
+     Move(int _score) : score(_score) {};[m
+[31m-    int score;[m
+[31m-    std::unordered_map<Hex, HexInfo>::iterator it;[m
+[31m-    std::unordered_map<Hex, HexInfo>::iterator prev_it;[m
+[31m-    bool isJump = false;[m
+[32m+[m[32m    int score;  ///< Move score[m
+[32m+[m[32m    std::unordered_map<Hex, HexInfo>::iterator it;  ///< Iterator to hex for performing this move[m
+[32m+[m[32m    std::unordered_map<Hex, HexInfo>::iterator prev_it;  ///< Iterator to previous hex[m
+[32m+[m[32m    bool isJump = false; ///< Flag if move is jump[m
+ };[m
+ /**[m
+  * Class for storing and calculation game board[m
+[36m@@ -111,9 +111,9 @@[m [mprivate:[m
+     void setHexagonalShape(int map_radius);[m
+ [m
+ private:[m
+[31m-    std::unordered_map<Hex, HexInfo> m_board;[m
+[31m-    std::unordered_map<Hex, HexInfo>::iterator m_prevHex;[m
+[31m-    std::unordered_map<Hex, HexInfo>::iterator m_selectedHex;[m
+[32m+[m[32m    std::unordered_map<Hex, HexInfo> m_board; ///< Game board container[m
+[32m+[m[32m    std::unordered_map<Hex, HexInfo>::iterator m_prevHex; ///< Iterator to previous hex[m
+[32m+[m[32m    std::unordered_map<Hex, HexInfo>::iterator m_selectedHex; ///< Iterator to currently selected hex[m
+ [m
+ };[m
+ [m
+[1mdiff --git a/CMakeLists.txt b/CMakeLists.txt[m
+[1mindex e452072..4ab3709 100644[m
+[1m--- a/CMakeLists.txt[m
+[1m+++ b/CMakeLists.txt[m
+[36m@@ -10,7 +10,9 @@[m [minclude_directories(${SFML_INCLUDE_DIR})[m
+ [m
+ set(SOURCE_FILES main.cpp Hex.h Game.h Game.cpp HexHash.h Board.cpp Board.h States/Game_State.h States/Intro_State.cpp[m
+         States/Intro_State.h States/Menu_State.cpp States/Menu_State.h States/GameStates.h States/Multiplayer_State.cpp[m
+[31m-        States/Multiplayer_State.h Player.cpp Player.h ResourceManager.cpp ResourceManager.h GameGUI.cpp GameGUI.h States/Difficulty_Singleplayer_State.cpp States/Difficulty_Singleplayer_State.h States/Difficulty_Computerwars_State.cpp States/Difficulty_Computerwars_State.h)[m
+[32m+[m[32m        States/Multiplayer_State.h Player.cpp Player.h ResourceManager.cpp ResourceManager.h GameGUI.cpp GameGUI.h[m
+[32m+[m[32m        States/Difficulty_Singleplayer_State.cpp States/Difficulty_Singleplayer_State.h[m
+[32m+[m[32m        States/Difficulty_Computerwars_State.cpp States/Difficulty_Computerwars_State.h)[m
+ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")[m
+ add_executable(Hexxagon ${SOURCE_FILES})[m
+ target_link_libraries(Hexxagon ${SFML_LIBRARIES})[m
+\ No newline at end of file[m
+[1mdiff --git a/Hex.h b/Hex.h[m
+[1mindex a13a3f0..515f97c 100644[m
+[1m--- a/Hex.h[m
+[1m+++ b/Hex.h[m
+[36m@@ -56,16 +56,50 @@[m [mpublic:[m
+ class Hex[m
+ {[m
+ public:[m
+[31m-    const int q, r, s;[m
+[32m+[m[32m    const int q, r, s; ///< Hex coordinates[m
+     Hex(int _q, int _r, int _s) : q(_q), r(_r), s(_s) {};[m
+[31m-[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Overloaded operator == for comparing two objects[m
+[32m+[m[32m     * @param b Other hex[m
+[32m+[m[32m     * @return true if objects are equal[m
+[32m+[m[32m     */[m
+     bool operator== (Hex b) const { return q == b.q && r == b.r && s == b.s; };[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Overloaded operator != for comparing two objects[m
+[32m+[m[32m     * @param b Other hex[m
+[32m+[m[32m     * @return true if objects are equal[m
+[32m+[m[32m     */[m
+     bool operator!= (Hex b) const { return !(*this == b); };[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Overloaded operator + for adding two objects[m
+[32m+[m[32m     * @param b Other hex[m
+[32m+[m[32m     * @return Resulting hex[m
+[32m+[m[32m     */[m
+     Hex operator+ (Hex b) const { return Hex(q + b.q, r + b.r, s + b.s); };[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Overloaded operator - for subtracting two objects[m
+[32m+[m[32m     * @param b Other hex[m
+[32m+[m[32m     * @return Resulting hex[m
+[32m+[m[32m     */[m
+     Hex operator- (Hex b) const { return Hex(q - b.q, r - b.r, s - b.s); };[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Overloaded operator * for multiplying two objects[m
+[32m+[m[32m     * @param b Other hex[m
+[32m+[m[32m     * @return Resulting hex[m
+[32m+[m[32m     */[m
+     Hex operator* (int k) const { return Hex(q * k, r * k, s * k); };[m
+ [m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Function that returns length between two hexes: current and param[m
+[32m+[m[32m     * @param h Other hex[m
+[32m+[m[32m     * @return length between two hexes[m
+[32m+[m[32m     */[m
+     int length(Hex h) const { return int((abs(h.q) + abs(h.r) + abs(h.s)) / 2); };[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Function that return distance between two hexes: current and param[m
+[32m+[m[32m     * @param b Other hex[m
+[32m+[m[32m     * @return distance between to hexes[m
+[32m+[m[32m     */[m
+     int distance(const Hex b) const { return length(*this - b); };[m
+ [m
+ [m
+[36m@@ -120,7 +154,12 @@[m [mpublic:[m
+         return corners;[m
+     }[m
+ private:[m
+[31m-[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Function for offsetting corners for current layout[m
+[32m+[m[32m     * @param layout[m
+[32m+[m[32m     * @param corner[m
+[32m+[m[32m     * @return[m
+[32m+[m[32m     */[m
+     sf::Vector2f corner_offset(Layout layout, int corner) const[m
+     {[m
+         sf::Vector2f size = sf::Vector2f(layout.size.x * 2, layout.size.y * 2);[m
+[36m@@ -131,9 +170,25 @@[m [mprivate:[m
+ };[m
+ [m
+ const std::vector<Hex> directions = { Hex(1, 0, -1), Hex(1, -1, 0), Hex(0, -1, 1), Hex(-1, 0, 1), Hex(-1, 1, 0), Hex(0, 1, -1) };[m
+[32m+[m[32m/**[m
+[32m+[m[32m * Inline function that returns direction from directions vector[m
+[32m+[m[32m * @param _direction direction number from 0 to 5[m
+[32m+[m[32m * @return Direction hex[m
+[32m+[m[32m */[m
+ inline Hex direction(int _direction) { return directions[_direction]; };[m
+[32m+[m[32m/**[m
+[32m+[m[32m * Inline function for getting neighbor hex in some direction[m
+[32m+[m[32m * @param h Hex we should get neighbor from[m
+[32m+[m[32m * @param _direction direction number from 0 to 5[m
+[32m+[m[32m * @return Neighbor hex in some direction[m
+[32m+[m[32m */[m
+ inline Hex neighbor(Hex h, int _direction) { return (h + direction(_direction)); };[m
+ [m
+[32m+[m[32m/**[m
+[32m+[m[32m * Functio that rounds FractionalHex to simple Hex[m
+[32m+[m[32m * @param h Fractional hex we should round[m
+[32m+[m[32m * @return Simple hex with int coordinates[m
+[32m+[m[32m */[m
+ inline Hex hex_round(FractionalHex h)[m
+ {[m
+     int q = int(round(h.q));[m
+[36m@@ -153,7 +208,12 @@[m [minline Hex hex_round(FractionalHex h)[m
+     }[m
+     return Hex(q, r, s);[m
+ }[m
+[31m-[m
+[32m+[m[32m/**[m
+[32m+[m[32m * Function that interprets screen coordinates to some Hex[m
+[32m+[m[32m * @param layout Layout type[m
+[32m+[m[32m * @param p Point in screen coordinates[m
+[32m+[m[32m * @return Hex from screen coordinates[m
+[32m+[m[32m */[m
+ inline Hex pixel_to_hex(Layout layout, sf::Vector2f p)[m
+ {[m
+     const Orientation& M = layout.orientation;[m
+[1mdiff --git a/Player.h b/Player.h[m
+[1mindex 50f08f6..0018ca4 100644[m
+[1m--- a/Player.h[m
+[1m+++ b/Player.h[m
+[36m@@ -30,7 +30,7 @@[m [mpublic:[m
+     void addPoints(int num) { m_points += num; };[m
+     /**[m
+      * Function for adding new hex iterator to list of players hexes[m
+[31m-     * @param it[m
+[32m+[m[32m     * @param it Iterator for hex we should add[m
+      */[m
+     void addToList(std::unordered_map<Hex, HexInfo>::iterator& it) { m_hexesList.push_back(it); };[m
+     /**[m
+[36m@@ -40,7 +40,7 @@[m [mpublic:[m
+     void extractPoints(int num) { m_points -= num; }[m
+     /**[m
+      * Function for removing existing hex iterator from list of players hexes[m
+[31m-     * @param it[m
+[32m+[m[32m     * @param it Iterator for hex we should remove[m
+      */[m
+     void removeFromList(std::unordered_map<Hex, HexInfo>::iterator& it) { m_hexesList.remove(it); };[m
+ [m
+[36m@@ -76,13 +76,13 @@[m [mpublic:[m
+     std::string getName() { return m_name; };[m
+ [m
+ private:[m
+[31m-    bool m_AI;[m
+[31m-    int m_points;[m
+[31m-    int m_difficulty;[m
+[32m+[m[32m    bool m_AI; ///< Flag for setting player to AI[m
+[32m+[m[32m    int m_points; ///< Current points of the player[m
+[32m+[m[32m    int m_difficulty; ///< Current difficulty (depth of the recursion) for computer player[m
+ [m
+[31m-    std::string m_name;[m
+[31m-    std::list<std::unordered_map<Hex, HexInfo>::iterator> m_hexesList;[m
+[31m-    HexInfo::PlayerType  m_playerType;[m
+[32m+[m[32m    std::string m_name; ///< Name of the player[m
+[32m+[m[32m    std::list<std::unordered_map<Hex, HexInfo>::iterator> m_hexesList; ///< List of all hexes that player has[m
+[32m+[m[32m    HexInfo::PlayerType  m_playerType; ///< Player type[m
+ [m
+ };[m
+ [m
+[1mdiff --git a/States/Difficulty_Computerwars_State.h b/States/Difficulty_Computerwars_State.h[m
+[1mindex bbc7346..afbd19b 100644[m
+[1m--- a/States/Difficulty_Computerwars_State.h[m
+[1m+++ b/States/Difficulty_Computerwars_State.h[m
+[36m@@ -19,26 +19,33 @@[m [mpublic:[m
+     GameStates shouldSwitch() override;[m
+ [m
+ private:[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Function that handles mouse clicking on current RenderWindow[m
+[32m+[m[32m     * @param window Window to get input from[m
+[32m+[m[32m     */[m
+     void mouseClick(sf::RenderWindow &window);[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Function for handling space button presses[m
+[32m+[m[32m     */[m
+     void spacePressed();[m
+ [m
+ private:[m
+[31m-    int* m_diff1;[m
+[31m-    int* m_diff2;[m
+[32m+[m[32m    int* m_diff1; ///< Difficulty level for first computer player[m
+[32m+[m[32m    int* m_diff2; ///< Difficulty level for second computer player[m
+     int m_selected = 1;[m
+[31m-    int m_selCol1 = 1;[m
+[31m-    int m_selCol2 = 6;[m
+[32m+[m[32m    int m_selCol1 = 1; ///< Rect currently selected in left column[m
+[32m+[m[32m    int m_selCol2 = 6; ///< Rect currently selected in right column[m
+ [m
+[31m-    GameStates m_shouldSwitch;[m
+[31m-    unsigned int m_buttonPadding;[m
+[32m+[m[32m    GameStates m_shouldSwitch; ///< State we should switch to[m
+[32m+[m[32m    unsigned int m_buttonPadding; ///< Padding between buttons[m
+ [m
+     sf::Font m_font;[m
+     sf::Texture m_introTexture;[m
+     sf::Sprite m_introSprite;[m
+     sf::Vector2f m_buttonSize;[m
+     sf::Vector2f m_buttonPos;[m
+[31m-    sf::RectangleShape m_rects[10];[m
+[31m-    sf::Text m_labels[10];[m
+[32m+[m[32m    sf::RectangleShape m_rects[10]; ///< Array of all rect shapes[m
+[32m+[m[32m    sf::Text m_labels[10]; ///< Array of all text labels[m
+ };[m
+ [m
+ [m
+[1mdiff --git a/States/Difficulty_Singleplayer_State.h b/States/Difficulty_Singleplayer_State.h[m
+[1mindex 6cd1707..ddcbc20 100644[m
+[1m--- a/States/Difficulty_Singleplayer_State.h[m
+[1m+++ b/States/Difficulty_Singleplayer_State.h[m
+[36m@@ -19,21 +19,25 @@[m [mpublic:[m
+     GameStates shouldSwitch() override;[m
+ [m
+ private:[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Function that handles mouse clicking on current RenderWindow[m
+[32m+[m[32m     * @param window Window to get input from[m
+[32m+[m[32m     */[m
+     void mouseClick(sf::RenderWindow &window);[m
+ [m
+ private:[m
+[31m-    int* m_diff;[m
+[31m-    int m_selected = 0;[m
+[31m-    GameStates m_shouldSwitch;[m
+[31m-    unsigned int m_buttonPadding;[m
+[32m+[m[32m    int* m_diff; ///< Difficulty level for computer player[m
+[32m+[m[32m    int m_selected = 0; ///< Number of currently selected rect[m
+[32m+[m[32m    GameStates m_shouldSwitch; ///< State we should switch to[m
+[32m+[m[32m    unsigned int m_buttonPadding; ///< Padding between buttons[m
+ [m
+     sf::Font m_font;[m
+     sf::Texture m_introTexture;[m
+     sf::Sprite m_introSprite;[m
+     sf::Vector2f m_buttonSize;[m
+     sf::Vector2f m_buttonPos;[m
+[31m-    sf::RectangleShape m_rects[10];[m
+[31m-    sf::Text m_labels[8];[m
+[32m+[m[32m    sf::RectangleShape m_rects[10]; ///< Array of all rect shapes[m
+[32m+[m[32m    sf::Text m_labels[8]; ///< Array of all text labels[m
+ };[m
+ [m
+ [m
+[1mdiff --git a/States/GameStates.h b/States/GameStates.h[m
+[1mindex 04a8b10..e31e782 100644[m
+[1m--- a/States/GameStates.h[m
+[1m+++ b/States/GameStates.h[m
+[36m@@ -1,5 +1,8 @@[m
+ #ifndef HEXXAGON_GAMESTATES_H[m
+ #define HEXXAGON_GAMESTATES_H[m
+[32m+[m[32m/**[m
+[32m+[m[32m * Enumerate class for all type of game state[m
+[32m+[m[32m */[m
+ enum class GameStates[m
+ {[m
+     INTRO = 0,[m
+[1mdiff --git a/States/Intro_State.h b/States/Intro_State.h[m
+[1mindex 9bc9a17..cbe33da 100644[m
+[1m--- a/States/Intro_State.h[m
+[1m+++ b/States/Intro_State.h[m
+[36m@@ -23,13 +23,13 @@[m [mpublic:[m
+     GameStates shouldSwitch() override;[m
+ [m
+ private:[m
+[31m-    GameStates m_shouldSwitch;[m
+[32m+[m[32m    GameStates m_shouldSwitch; ///< State we should switch to[m
+ [m
+     sf::Texture m_introTexture;[m
+     sf::Sprite m_introSprite;[m
+     sf::Font m_font;[m
+     sf::Text m_text;[m
+[31m-    float m_timePassed;[m
+[32m+[m[32m    float m_timePassed; ///< Time passed since first init of the object[m
+ };[m
+ [m
+ [m
+[1mdiff --git a/States/Menu_State.h b/States/Menu_State.h[m
+[1mindex cead00c..5a96310 100644[m
+[1m--- a/States/Menu_State.h[m
+[1m+++ b/States/Menu_State.h[m
+[36m@@ -21,20 +21,24 @@[m [mpublic:[m
+     GameStates shouldSwitch() override;[m
+ [m
+ private:[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Function that handles mouse clicking on current RenderWindow[m
+[32m+[m[32m     * @param window Window to get input from[m
+[32m+[m[32m     */[m
+     void mouseClick(sf::RenderWindow &window);[m
+ [m
+ private:[m
+[31m-    int m_selected = 0;[m
+[31m-    GameStates m_shouldSwitch;[m
+[31m-    unsigned int m_buttonPadding;[m
+[32m+[m[32m    int m_selected = 0; ///< Selected rect number[m
+[32m+[m[32m    GameStates m_shouldSwitch; ///< State we should switch to[m
+[32m+[m[32m    unsigned int m_buttonPadding; ///< Padding between buttons[m
+ [m
+[31m-    sf::Font m_font;[m
+[32m+[m[32m    sf::Font m_font; ///< Font for all the labels[m
+     sf::Texture m_introTexture;[m
+     sf::Sprite m_introSprite;[m
+     sf::Vector2f m_buttonSize;[m
+     sf::Vector2f m_buttonPos;[m
+[31m-    sf::RectangleShape m_rects[4];[m
+[31m-    sf::Text m_labels[4];[m
+[32m+[m[32m    sf::RectangleShape m_rects[4]; ///< Array of all rect shapes[m
+[32m+[m[32m    sf::Text m_labels[4]; ///< Array of all text labels[m
+ };[m
+ [m
+ [m
+[1mdiff --git a/States/Multiplayer_State.h b/States/Multiplayer_State.h[m
+[1mindex edeaa61..fe81e90 100644[m
+[1m--- a/States/Multiplayer_State.h[m
+[1m+++ b/States/Multiplayer_State.h[m
+[36m@@ -29,28 +29,45 @@[m [mpublic:[m
+     GameStates shouldSwitch() override;[m
+ [m
+ private:[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Function that controls all players turns[m
+[32m+[m[32m     * @param window Window to get input from[m
+[32m+[m[32m     */[m
+     void makeMove(sf::RenderWindow &window);[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Function that handles current input based on if Player is AI or not[m
+[32m+[m[32m     * @param player Friendly player[m
+[32m+[m[32m     * @param enemy Enemy player[m
+[32m+[m[32m     * @param window Window to get input from[m
+[32m+[m[32m     * @return true if move is done[m
+[32m+[m[32m     */[m
+     bool handleMove(Player& player, Player& enemy, sf::RenderWindow &window);[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Function that controls GUI behaviour after successful move[m
+[32m+[m[32m     * @param player Player who just done the move[m
+[32m+[m[32m     */[m
+     void setGUIAfterMove(Player& player);[m
+[32m+[m[32m    /**[m
+[32m+[m[32m     * Function that sets and control GUI behaviour after the game is over[m
+[32m+[m[32m     */[m
+     void setGUIAfterGameOver();[m
+ [m
+ private:[m
+[31m-    int m_boardSize;[m
+[31m-    int m_difficultyLevel;[m
+[31m-    bool m_keyboardInput = false;[m
+[31m-    bool m_turn;[m
+[31m-    bool m_isGameOver;[m
+[31m-    float m_time;[m
+[31m-[m
+[31m-    GameStates m_gameType;[m
+[31m-    GameStates m_shouldSwitch;[m
+[31m-[m
+[31m-[m
+[31m-    Board* m_board;[m
+[31m-    GameGUI* m_gameGUI;[m
+[31m-    Layout m_layout;[m
+[31m-    Player* m_player1;[m
+[31m-    Player* m_player2;[m
+[32m+[m[32m    int m_boardSize; ///< Size of the game board[m
+[32m+[m[32m    int m_difficultyLevel; ///< Difficulty level for our computer player[m
+[32m+[m[32m    bool m_keyboardInput = false; ///< Flag that shows if we getting input from keyboard[m
+[32m+[m[32m    bool m_turn; ///< Flag for current turn[m
+[32m+[m[32m    bool m_isGameOver; ///< Flag, true if game is over[m
+[32m+[m[32m    float m_time; ///< Elapsed time[m
+[32m+[m
+[32m+[m[32m    GameStates m_gameType; ///< Current type of game (singleplayer, multiplayer etc.)[m
+[32m+[m[32m    GameStates m_shouldSwitch; ///< State we should switch to[m
+[32m+[m
+[32m+[m[32m    Board* m_board; ///< Pointer to board[m
+[32m+[m[32m    GameGUI* m_gameGUI; ///< Pointer to game gui[m
+[32m+[m[32m    Layout m_layout; ///< Layout type[m
+[32m+[m[32m    Player* m_player1; ///< Pointer to the first player[m
+[32m+[m[32m    Player* m_player2; ///< Pointer to the second player[m
+ [m
+ };[m
+ [m
+[1mdiff --git a/cmake-build-release/CMakeFiles/clion-log.txt b/cmake-build-release/CMakeFiles/clion-log.txt[m
+[1mindex f98e09e..3f655de 100644[m
+[1m--- a/cmake-build-release/CMakeFiles/clion-log.txt[m
+[1m+++ b/cmake-build-release/CMakeFiles/clion-log.txt[m
+[36m@@ -1,19 +1 @@[m
+[31m-/home/andrewshipilo/CLion/clion-2016.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /home/andrewshipilo/Projects/Hexxagon[m
+[31m--- The C compiler identification is GNU 5.4.1[m
+[31m--- The CXX compiler identification is GNU 5.4.1[m
+[31m--- Check for working C compiler: /usr/bin/cc[m
+[31m--- Check for working C compiler: /usr/bin/cc -- works[m
+[31m--- Detecting C compiler ABI info[m
+[31m--- Detecting C compiler ABI info - done[m
+[31m--- Detecting C compile features[m
+[31m--- Detecting C compile features - done[m
+[31m--- Check for working CXX compiler: /usr/bin/c++[m
+[31m--- Check for working CXX compiler: /usr/bin/c++ -- works[m
+[31m--- Detecting CXX compiler ABI info[m
+[31m--- Detecting CXX compiler ABI info - done[m
+[31m--- Detecting CXX compile features[m
+[31m--- Detecting CXX compile features - done[m
+[31m--- Found SFML 2.3.2 in /usr/include[m
+[31m--- Configuring done[m
+[31m--- Generating done[m
+[31m--- Build files have been written to: /home/andrewshipilo/Projects/Hexxagon/cmake-build-release[m
+[32m+[m[32mCannot load CMake project: CMake executable is incorrect[m
+[1mdiff --git a/html/Board_8h_source.html b/html/Board_8h_source.html[m
+[1mindex 2bcd18c..56cd9dc 100644[m
+[1m--- a/html/Board_8h_source.html[m
+[1m+++ b/html/Board_8h_source.html[m
+[36m@@ -85,12 +85,19 @@[m [mvar searchBox = new SearchBox("searchBox", "search",false,'Search');[m
+ <div class="title">Board.h</div>  </div>[m
+ </div><!--header-->[m
+ <div class="contents">[m
+[31m-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef HEXXAGON_BOARD_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define HEXXAGON_BOARD_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Hex.h&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;HexHash.h&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Player.h&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;States/Multiplayer_State.h&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structMove.html">   13</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structMove.html">Move</a></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="structMove.html">Move</a>() {};</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="structMove.html">Move</a>(<span class="keywordtype">int</span> _score) : score(_score) {};</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> score;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::unordered_map&lt;Hex, HexInfo&gt;::iterator it;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::unordered_map&lt;Hex, HexInfo&gt;::iterator prev_it;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">bool</span> isJump = <span class="keyword">false</span>;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classBoard.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBoard.html">Board</a></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> init(<span class="keywordtype">int</span> size, <a class="code" href="classPlayer.html">Player</a>&amp; player1, <a class="code" href="classPlayer.html">Player</a>&amp; player2);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> setAllHexesToFree();</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> placeHex(std::unordered_map&lt;Hex, HexInfo&gt;::iterator, <a class="code" href="classPlayer.html">Player</a>&amp; player, <a class="code" href="classPlayer.html">Player</a>&amp; enemy);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> showAvailableMoves(std::unordered_map&lt;Hex, HexInfo&gt;::iterator hex);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> handleMove(<a class="code" href="classPlayer.html">Player</a> &amp;player, <a class="code" href="classPlayer.html">Player</a> &amp;enemy, sf::Vector2i localPosition, <a class="code" href="structLayout.html">Layout</a> layout);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> handleAIMove(<a class="code" href="classPlayer.html">Player</a> &amp;player, <a class="code" href="classPlayer.html">Player</a> &amp;enemy);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="structMove.html">Move</a> getBestAIMove(<a class="code" href="classPlayer.html">Player</a> &amp;player, <a class="code" href="classPlayer.html">Player</a> &amp;enemy, <span class="keywordtype">int</span> depth, <a class="code" href="structMove.html">Move</a> alpha, <a class="code" href="structMove.html">Move</a> beta, <span class="keywordtype">int</span> startPoints);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">bool</span> isGameOver(<a class="code" href="classPlayer.html">Player</a> &amp;player);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> selectRightHex();</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> selectLeftHex();</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> selectUpHex();</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> selectDownHex();</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classBoard.html#ad8eb316c6eb56a92ba3760fe898e7387">  103</a></span>&#160;    std::unordered_map&lt;Hex, HexInfo&gt;::iterator <a class="code" href="classBoard.html#ad8eb316c6eb56a92ba3760fe898e7387">getSelectedHex</a>() { <span class="keywordflow">return</span> m_selectedHex; };</div><div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classBoard.html#a7fd500374a12179b5be2842add8e23ce">  108</a></span>&#160;    std::unordered_map&lt;Hex, HexInfo&gt;&amp; <a class="code" href="classBoard.html#a7fd500374a12179b5be2842add8e23ce">getBoard</a>() { <span class="keywordflow">return</span> m_board; };</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> setHexagonalShape(<span class="keywordtype">int</span> map_radius);</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    std::unordered_map&lt;Hex, HexInfo&gt; m_board;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::unordered_map&lt;Hex, HexInfo&gt;::iterator m_prevHex;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    std::unordered_map&lt;Hex, HexInfo&gt;::iterator m_selectedHex;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;};</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif //HEXXAGON_BOARD_H</span></div><div class="ttc" id="structLayout_html"><div class="ttname"><a href="structLayout.html">Layout</a></div><div class="ttdoc">Structure for handling layouts. </div><div class="ttdef"><b>Definition:</b> Hex.h:36</div></div>[m
+[32m+[m[32m<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef HEXXAGON_BOARD_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define HEXXAGON_BOARD_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;

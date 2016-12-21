@@ -36,30 +36,29 @@ Game\+States \hyperlink{classDifficulty__Computerwars__State_a6dd5abd9cea06fa73d
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries mouse\+Click} (sf\+::\+Render\+Window \&window)\hypertarget{classDifficulty__Computerwars__State_ad9ac6a32437932d8e787d483bb053fa8}{}\label{classDifficulty__Computerwars__State_ad9ac6a32437932d8e787d483bb053fa8}
+void \hyperlink{classDifficulty__Computerwars__State_ad9ac6a32437932d8e787d483bb053fa8}{mouse\+Click} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Function that handles mouse clicking on current Render\+Window. \end{DoxyCompactList}\item 
+void \hyperlink{classDifficulty__Computerwars__State_a8fc94b37739fdf304c015c032767d56e}{space\+Pressed} ()\hypertarget{classDifficulty__Computerwars__State_a8fc94b37739fdf304c015c032767d56e}{}\label{classDifficulty__Computerwars__State_a8fc94b37739fdf304c015c032767d56e}
 
-\item 
-void {\bfseries space\+Pressed} ()\hypertarget{classDifficulty__Computerwars__State_a8fc94b37739fdf304c015c032767d56e}{}\label{classDifficulty__Computerwars__State_a8fc94b37739fdf304c015c032767d56e}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function for handling space button presses. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int $\ast$ {\bfseries m\+\_\+diff1}\hypertarget{classDifficulty__Computerwars__State_a66dc29f4f5a489483f0c391a2512d20b}{}\label{classDifficulty__Computerwars__State_a66dc29f4f5a489483f0c391a2512d20b}
+int $\ast$ \hyperlink{classDifficulty__Computerwars__State_a66dc29f4f5a489483f0c391a2512d20b}{m\+\_\+diff1}\hypertarget{classDifficulty__Computerwars__State_a66dc29f4f5a489483f0c391a2512d20b}{}\label{classDifficulty__Computerwars__State_a66dc29f4f5a489483f0c391a2512d20b}
 
-\item 
-int $\ast$ {\bfseries m\+\_\+diff2}\hypertarget{classDifficulty__Computerwars__State_a251a71772093f15f0e66f3af72a00579}{}\label{classDifficulty__Computerwars__State_a251a71772093f15f0e66f3af72a00579}
+\begin{DoxyCompactList}\small\item\em Difficulty level for first computer player. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{classDifficulty__Computerwars__State_a251a71772093f15f0e66f3af72a00579}{m\+\_\+diff2}\hypertarget{classDifficulty__Computerwars__State_a251a71772093f15f0e66f3af72a00579}{}\label{classDifficulty__Computerwars__State_a251a71772093f15f0e66f3af72a00579}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Difficulty level for second computer player. \end{DoxyCompactList}\item 
 int {\bfseries m\+\_\+selected} = 1\hypertarget{classDifficulty__Computerwars__State_aae8a5acec3cdbcc99782cb9d6abbaf85}{}\label{classDifficulty__Computerwars__State_aae8a5acec3cdbcc99782cb9d6abbaf85}
 
 \item 
-int {\bfseries m\+\_\+sel\+Col1} = 1\hypertarget{classDifficulty__Computerwars__State_aa175c95d763163e9b2d5236c42c0b004}{}\label{classDifficulty__Computerwars__State_aa175c95d763163e9b2d5236c42c0b004}
+int \hyperlink{classDifficulty__Computerwars__State_aa175c95d763163e9b2d5236c42c0b004}{m\+\_\+sel\+Col1} = 1\hypertarget{classDifficulty__Computerwars__State_aa175c95d763163e9b2d5236c42c0b004}{}\label{classDifficulty__Computerwars__State_aa175c95d763163e9b2d5236c42c0b004}
 
-\item 
-int {\bfseries m\+\_\+sel\+Col2} = 6\hypertarget{classDifficulty__Computerwars__State_ae477ea363a667aeb45b7c03618404602}{}\label{classDifficulty__Computerwars__State_ae477ea363a667aeb45b7c03618404602}
+\begin{DoxyCompactList}\small\item\em Rect currently selected in left column. \end{DoxyCompactList}\item 
+int \hyperlink{classDifficulty__Computerwars__State_ae477ea363a667aeb45b7c03618404602}{m\+\_\+sel\+Col2} = 6\hypertarget{classDifficulty__Computerwars__State_ae477ea363a667aeb45b7c03618404602}{}\label{classDifficulty__Computerwars__State_ae477ea363a667aeb45b7c03618404602}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Rect currently selected in right column. \end{DoxyCompactList}\item 
 Game\+States {\bfseries m\+\_\+should\+Switch}\hypertarget{classDifficulty__Computerwars__State_a49b2250842374ac844c3b778f1cbb3c6}{}\label{classDifficulty__Computerwars__State_a49b2250842374ac844c3b778f1cbb3c6}
 
 \item 
@@ -81,12 +80,12 @@ sf\+::\+Vector2f {\bfseries m\+\_\+button\+Size}\hypertarget{classDifficulty__Co
 sf\+::\+Vector2f {\bfseries m\+\_\+button\+Pos}\hypertarget{classDifficulty__Computerwars__State_ad22f0fae63cad4c6e13e5c477e497ed8}{}\label{classDifficulty__Computerwars__State_ad22f0fae63cad4c6e13e5c477e497ed8}
 
 \item 
-sf\+::\+Rectangle\+Shape {\bfseries m\+\_\+rects} \mbox{[}10\mbox{]}\hypertarget{classDifficulty__Computerwars__State_ae69d6842828d133865db9b199dbbf378}{}\label{classDifficulty__Computerwars__State_ae69d6842828d133865db9b199dbbf378}
+sf\+::\+Rectangle\+Shape \hyperlink{classDifficulty__Computerwars__State_ae69d6842828d133865db9b199dbbf378}{m\+\_\+rects} \mbox{[}10\mbox{]}\hypertarget{classDifficulty__Computerwars__State_ae69d6842828d133865db9b199dbbf378}{}\label{classDifficulty__Computerwars__State_ae69d6842828d133865db9b199dbbf378}
 
-\item 
-sf\+::\+Text {\bfseries m\+\_\+labels} \mbox{[}10\mbox{]}\hypertarget{classDifficulty__Computerwars__State_a5e5572cac59b69c9d2bf382a27981bd2}{}\label{classDifficulty__Computerwars__State_a5e5572cac59b69c9d2bf382a27981bd2}
+\begin{DoxyCompactList}\small\item\em Array of all rect shapes. \end{DoxyCompactList}\item 
+sf\+::\+Text \hyperlink{classDifficulty__Computerwars__State_a5e5572cac59b69c9d2bf382a27981bd2}{m\+\_\+labels} \mbox{[}10\mbox{]}\hypertarget{classDifficulty__Computerwars__State_a5e5572cac59b69c9d2bf382a27981bd2}{}\label{classDifficulty__Computerwars__State_a5e5572cac59b69c9d2bf382a27981bd2}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Array of all text labels. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -145,6 +144,22 @@ Function that inits the current game state.
 
 Implements \hyperlink{classGame__State_a582ce3c0cddf042569bf3e08827a377c}{Game\+\_\+\+State}.
 
+\index{Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}!mouse\+Click@{mouse\+Click}}
+\index{mouse\+Click@{mouse\+Click}!Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{mouse\+Click(sf\+::\+Render\+Window \&window)}{mouseClick(sf::RenderWindow &window)}}]{\setlength{\rightskip}{0pt plus 5cm}void Difficulty\+\_\+\+Computerwars\+\_\+\+State\+::mouse\+Click (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classDifficulty__Computerwars__State_ad9ac6a32437932d8e787d483bb053fa8}{}\label{classDifficulty__Computerwars__State_ad9ac6a32437932d8e787d483bb053fa8}
+
+
+Function that handles mouse clicking on current Render\+Window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window to get input from \\
+\hline
+\end{DoxyParams}
 \index{Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}!process\+Input@{process\+Input}}
 \index{process\+Input@{process\+Input}!Difficulty\+\_\+\+Computerwars\+\_\+\+State@{Difficulty\+\_\+\+Computerwars\+\_\+\+State}}
 \subsubsection[{\texorpdfstring{process\+Input(sf\+::\+Render\+Window \&window) override}{processInput(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Difficulty\+\_\+\+Computerwars\+\_\+\+State\+::process\+Input (

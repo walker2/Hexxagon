@@ -56,16 +56,50 @@ public:
 class Hex
 {
 public:
-    const int q, r, s;
+    const int q, r, s; ///< Hex coordinates
     Hex(int _q, int _r, int _s) : q(_q), r(_r), s(_s) {};
-
+    /**
+     * Overloaded operator == for comparing two objects
+     * @param b Other hex
+     * @return true if objects are equal
+     */
     bool operator== (Hex b) const { return q == b.q && r == b.r && s == b.s; };
+    /**
+     * Overloaded operator != for comparing two objects
+     * @param b Other hex
+     * @return true if objects are equal
+     */
     bool operator!= (Hex b) const { return !(*this == b); };
+    /**
+     * Overloaded operator + for adding two objects
+     * @param b Other hex
+     * @return Resulting hex
+     */
     Hex operator+ (Hex b) const { return Hex(q + b.q, r + b.r, s + b.s); };
+    /**
+     * Overloaded operator - for subtracting two objects
+     * @param b Other hex
+     * @return Resulting hex
+     */
     Hex operator- (Hex b) const { return Hex(q - b.q, r - b.r, s - b.s); };
+    /**
+     * Overloaded operator * for multiplying two objects
+     * @param b Other hex
+     * @return Resulting hex
+     */
     Hex operator* (int k) const { return Hex(q * k, r * k, s * k); };
 
+    /**
+     * Function that returns length between two hexes: current and param
+     * @param h Other hex
+     * @return length between two hexes
+     */
     int length(Hex h) const { return int((abs(h.q) + abs(h.r) + abs(h.s)) / 2); };
+    /**
+     * Function that return distance between two hexes: current and param
+     * @param b Other hex
+     * @return distance between to hexes
+     */
     int distance(const Hex b) const { return length(*this - b); };
 
 
@@ -120,7 +154,12 @@ public:
         return corners;
     }
 private:
-
+    /**
+     * Function for offsetting corners for current layout
+     * @param layout
+     * @param corner
+     * @return
+     */
     sf::Vector2f corner_offset(Layout layout, int corner) const
     {
         sf::Vector2f size = sf::Vector2f(layout.size.x * 2, layout.size.y * 2);
@@ -131,9 +170,25 @@ private:
 };
 
 const std::vector<Hex> directions = { Hex(1, 0, -1), Hex(1, -1, 0), Hex(0, -1, 1), Hex(-1, 0, 1), Hex(-1, 1, 0), Hex(0, 1, -1) };
+/**
+ * Inline function that returns direction from directions vector
+ * @param _direction direction number from 0 to 5
+ * @return Direction hex
+ */
 inline Hex direction(int _direction) { return directions[_direction]; };
+/**
+ * Inline function for getting neighbor hex in some direction
+ * @param h Hex we should get neighbor from
+ * @param _direction direction number from 0 to 5
+ * @return Neighbor hex in some direction
+ */
 inline Hex neighbor(Hex h, int _direction) { return (h + direction(_direction)); };
 
+/**
+ * Functio that rounds FractionalHex to simple Hex
+ * @param h Fractional hex we should round
+ * @return Simple hex with int coordinates
+ */
 inline Hex hex_round(FractionalHex h)
 {
     int q = int(round(h.q));
@@ -153,7 +208,12 @@ inline Hex hex_round(FractionalHex h)
     }
     return Hex(q, r, s);
 }
-
+/**
+ * Function that interprets screen coordinates to some Hex
+ * @param layout Layout type
+ * @param p Point in screen coordinates
+ * @return Hex from screen coordinates
+ */
 inline Hex pixel_to_hex(Layout layout, sf::Vector2f p)
 {
     const Orientation& M = layout.orientation;

@@ -30,7 +30,7 @@ public:
     void addPoints(int num) { m_points += num; };
     /**
      * Function for adding new hex iterator to list of players hexes
-     * @param it
+     * @param it Iterator for hex we should add
      */
     void addToList(std::unordered_map<Hex, HexInfo>::iterator& it) { m_hexesList.push_back(it); };
     /**
@@ -40,7 +40,7 @@ public:
     void extractPoints(int num) { m_points -= num; }
     /**
      * Function for removing existing hex iterator from list of players hexes
-     * @param it
+     * @param it Iterator for hex we should remove
      */
     void removeFromList(std::unordered_map<Hex, HexInfo>::iterator& it) { m_hexesList.remove(it); };
 
@@ -76,13 +76,13 @@ public:
     std::string getName() { return m_name; };
 
 private:
-    bool m_AI;
-    int m_points;
-    int m_difficulty;
+    bool m_AI; ///< Flag for setting player to AI
+    int m_points; ///< Current points of the player
+    int m_difficulty; ///< Current difficulty (depth of the recursion) for computer player
 
-    std::string m_name;
-    std::list<std::unordered_map<Hex, HexInfo>::iterator> m_hexesList;
-    HexInfo::PlayerType  m_playerType;
+    std::string m_name; ///< Name of the player
+    std::list<std::unordered_map<Hex, HexInfo>::iterator> m_hexesList; ///< List of all hexes that player has
+    HexInfo::PlayerType  m_playerType; ///< Player type
 
 };
 

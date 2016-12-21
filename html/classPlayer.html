@@ -137,22 +137,28 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a4e71a5aa397a446e2aa4a8c8b087416d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e71a5aa397a446e2aa4a8c8b087416d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_AI</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a4e71a5aa397a446e2aa4a8c8b087416d">m_AI</a></td></tr>
+<tr class="memdesc:a4e71a5aa397a446e2aa4a8c8b087416d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for setting player to AI. <br /></td></tr>
 <tr class="separator:a4e71a5aa397a446e2aa4a8c8b087416d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af40b202e39d34b244b882aeead951552"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af40b202e39d34b244b882aeead951552"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_points</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#af40b202e39d34b244b882aeead951552">m_points</a></td></tr>
+<tr class="memdesc:af40b202e39d34b244b882aeead951552"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current points of the player. <br /></td></tr>
 <tr class="separator:af40b202e39d34b244b882aeead951552"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c837a997ed609bc7934bb2a610d8092"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c837a997ed609bc7934bb2a610d8092"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_difficulty</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a1c837a997ed609bc7934bb2a610d8092">m_difficulty</a></td></tr>
+<tr class="memdesc:a1c837a997ed609bc7934bb2a610d8092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current difficulty (depth of the recursion) for computer player. <br /></td></tr>
 <tr class="separator:a1c837a997ed609bc7934bb2a610d8092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add634962cf5d664d2f7616af00082d80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add634962cf5d664d2f7616af00082d80"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b></td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#add634962cf5d664d2f7616af00082d80">m_name</a></td></tr>
+<tr class="memdesc:add634962cf5d664d2f7616af00082d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the player. <br /></td></tr>
 <tr class="separator:add634962cf5d664d2f7616af00082d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0726bfedf6ae4656f9fe07e5da6afb8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0726bfedf6ae4656f9fe07e5da6afb8a"></a>
-std::list&lt; std::unordered_map&lt; <a class="el" href="classHex.html">Hex</a>, <a class="el" href="structHexInfo.html">HexInfo</a> &gt;::iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_hexesList</b></td></tr>
+std::list&lt; std::unordered_map&lt; <a class="el" href="classHex.html">Hex</a>, <a class="el" href="structHexInfo.html">HexInfo</a> &gt;::iterator &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a0726bfedf6ae4656f9fe07e5da6afb8a">m_hexesList</a></td></tr>
+<tr class="memdesc:a0726bfedf6ae4656f9fe07e5da6afb8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of all hexes that player has. <br /></td></tr>
 <tr class="separator:a0726bfedf6ae4656f9fe07e5da6afb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd23734528589fdbd3ed958e296f1f9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd23734528589fdbd3ed958e296f1f9b"></a>
-HexInfo::PlayerType&#160;</td><td class="memItemRight" valign="bottom"><b>m_playerType</b></td></tr>
+HexInfo::PlayerType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#abd23734528589fdbd3ed958e296f1f9b">m_playerType</a></td></tr>
+<tr class="memdesc:abd23734528589fdbd3ed958e296f1f9b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPlayer.html" title="Class for player&#39;s info, like points, difficulty and current hexes. ">Player</a> type. <br /></td></tr>
 <tr class="separator:abd23734528589fdbd3ed958e296f1f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -280,7 +286,7 @@ HexInfo::PlayerType&#160;</td><td class="memItemRight" valign="bottom"><b>m_play
 <p>Function for adding new hex iterator to list of players hexes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">it</td><td></td></tr>
+    <tr><td class="paramname">it</td><td>Iterator for hex we should add </td></tr>
   </table>
   </dd>
 </dl>
@@ -500,7 +506,7 @@ HexInfo::PlayerType&#160;</td><td class="memItemRight" valign="bottom"><b>m_play
 <p>Function for removing existing hex iterator from list of players hexes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">it</td><td></td></tr>
+    <tr><td class="paramname">it</td><td>Iterator for hex we should remove </td></tr>
   </table>
   </dd>
 </dl>

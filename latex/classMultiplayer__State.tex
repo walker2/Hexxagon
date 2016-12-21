@@ -39,60 +39,57 @@ Game\+States \hyperlink{classMultiplayer__State_a5dc3a250487c9c009c64b60f1be2b63
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries make\+Move} (sf\+::\+Render\+Window \&window)\hypertarget{classMultiplayer__State_a21ecdd3177fd35cba51603d1d17d53c1}{}\label{classMultiplayer__State_a21ecdd3177fd35cba51603d1d17d53c1}
+void \hyperlink{classMultiplayer__State_a21ecdd3177fd35cba51603d1d17d53c1}{make\+Move} (sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Function that controls all players turns. \end{DoxyCompactList}\item 
+bool \hyperlink{classMultiplayer__State_a6797a4f7a4c3ab4fa18b357156073274}{handle\+Move} (\hyperlink{classPlayer}{Player} \&player, \hyperlink{classPlayer}{Player} \&enemy, sf\+::\+Render\+Window \&window)
+\begin{DoxyCompactList}\small\item\em Function that handles current input based on if \hyperlink{classPlayer}{Player} is AI or not. \end{DoxyCompactList}\item 
+void \hyperlink{classMultiplayer__State_afeede160f90a08044468b107432d388d}{set\+G\+U\+I\+After\+Move} (\hyperlink{classPlayer}{Player} \&player)
+\begin{DoxyCompactList}\small\item\em Function that controls G\+UI behaviour after successful move. \end{DoxyCompactList}\item 
+void \hyperlink{classMultiplayer__State_ac2cbc737ae1ae37ef04f47bf52333633}{set\+G\+U\+I\+After\+Game\+Over} ()\hypertarget{classMultiplayer__State_ac2cbc737ae1ae37ef04f47bf52333633}{}\label{classMultiplayer__State_ac2cbc737ae1ae37ef04f47bf52333633}
 
-\item 
-bool {\bfseries handle\+Move} (\hyperlink{classPlayer}{Player} \&player, \hyperlink{classPlayer}{Player} \&enemy, sf\+::\+Render\+Window \&window)\hypertarget{classMultiplayer__State_a6797a4f7a4c3ab4fa18b357156073274}{}\label{classMultiplayer__State_a6797a4f7a4c3ab4fa18b357156073274}
-
-\item 
-void {\bfseries set\+G\+U\+I\+After\+Move} (\hyperlink{classPlayer}{Player} \&player)\hypertarget{classMultiplayer__State_afeede160f90a08044468b107432d388d}{}\label{classMultiplayer__State_afeede160f90a08044468b107432d388d}
-
-\item 
-void {\bfseries set\+G\+U\+I\+After\+Game\+Over} ()\hypertarget{classMultiplayer__State_ac2cbc737ae1ae37ef04f47bf52333633}{}\label{classMultiplayer__State_ac2cbc737ae1ae37ef04f47bf52333633}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function that sets and control G\+UI behaviour after the game is over. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int {\bfseries m\+\_\+board\+Size}\hypertarget{classMultiplayer__State_abc280a368f8de367bc8caa1f511ec520}{}\label{classMultiplayer__State_abc280a368f8de367bc8caa1f511ec520}
+int \hyperlink{classMultiplayer__State_abc280a368f8de367bc8caa1f511ec520}{m\+\_\+board\+Size}\hypertarget{classMultiplayer__State_abc280a368f8de367bc8caa1f511ec520}{}\label{classMultiplayer__State_abc280a368f8de367bc8caa1f511ec520}
 
-\item 
-int {\bfseries m\+\_\+difficulty\+Level}\hypertarget{classMultiplayer__State_aed03f15bfad1f0dc57fc30d5bf67db88}{}\label{classMultiplayer__State_aed03f15bfad1f0dc57fc30d5bf67db88}
+\begin{DoxyCompactList}\small\item\em Size of the game board. \end{DoxyCompactList}\item 
+int \hyperlink{classMultiplayer__State_aed03f15bfad1f0dc57fc30d5bf67db88}{m\+\_\+difficulty\+Level}\hypertarget{classMultiplayer__State_aed03f15bfad1f0dc57fc30d5bf67db88}{}\label{classMultiplayer__State_aed03f15bfad1f0dc57fc30d5bf67db88}
 
-\item 
-bool {\bfseries m\+\_\+keyboard\+Input} = false\hypertarget{classMultiplayer__State_aacb48c484b1e83b78d5d8aaed712246b}{}\label{classMultiplayer__State_aacb48c484b1e83b78d5d8aaed712246b}
+\begin{DoxyCompactList}\small\item\em Difficulty level for our computer player. \end{DoxyCompactList}\item 
+bool \hyperlink{classMultiplayer__State_aacb48c484b1e83b78d5d8aaed712246b}{m\+\_\+keyboard\+Input} = false\hypertarget{classMultiplayer__State_aacb48c484b1e83b78d5d8aaed712246b}{}\label{classMultiplayer__State_aacb48c484b1e83b78d5d8aaed712246b}
 
-\item 
-bool {\bfseries m\+\_\+turn}\hypertarget{classMultiplayer__State_a506fbc150b4706da74424880c9efd6fd}{}\label{classMultiplayer__State_a506fbc150b4706da74424880c9efd6fd}
+\begin{DoxyCompactList}\small\item\em Flag that shows if we getting input from keyboard. \end{DoxyCompactList}\item 
+bool \hyperlink{classMultiplayer__State_a506fbc150b4706da74424880c9efd6fd}{m\+\_\+turn}\hypertarget{classMultiplayer__State_a506fbc150b4706da74424880c9efd6fd}{}\label{classMultiplayer__State_a506fbc150b4706da74424880c9efd6fd}
 
-\item 
-bool {\bfseries m\+\_\+is\+Game\+Over}\hypertarget{classMultiplayer__State_a0fd9a5903bb71111a30e51019ee7995c}{}\label{classMultiplayer__State_a0fd9a5903bb71111a30e51019ee7995c}
+\begin{DoxyCompactList}\small\item\em Flag for current turn. \end{DoxyCompactList}\item 
+bool \hyperlink{classMultiplayer__State_a0fd9a5903bb71111a30e51019ee7995c}{m\+\_\+is\+Game\+Over}\hypertarget{classMultiplayer__State_a0fd9a5903bb71111a30e51019ee7995c}{}\label{classMultiplayer__State_a0fd9a5903bb71111a30e51019ee7995c}
 
-\item 
-float {\bfseries m\+\_\+time}\hypertarget{classMultiplayer__State_aeb3f99f3a6f9393dfad441a5d59a97db}{}\label{classMultiplayer__State_aeb3f99f3a6f9393dfad441a5d59a97db}
+\begin{DoxyCompactList}\small\item\em Flag, true if game is over. \end{DoxyCompactList}\item 
+float \hyperlink{classMultiplayer__State_aeb3f99f3a6f9393dfad441a5d59a97db}{m\+\_\+time}\hypertarget{classMultiplayer__State_aeb3f99f3a6f9393dfad441a5d59a97db}{}\label{classMultiplayer__State_aeb3f99f3a6f9393dfad441a5d59a97db}
 
-\item 
-Game\+States {\bfseries m\+\_\+game\+Type}\hypertarget{classMultiplayer__State_a119977c4f338bc835523ceb16d45729a}{}\label{classMultiplayer__State_a119977c4f338bc835523ceb16d45729a}
+\begin{DoxyCompactList}\small\item\em Elapsed time. \end{DoxyCompactList}\item 
+Game\+States \hyperlink{classMultiplayer__State_a119977c4f338bc835523ceb16d45729a}{m\+\_\+game\+Type}\hypertarget{classMultiplayer__State_a119977c4f338bc835523ceb16d45729a}{}\label{classMultiplayer__State_a119977c4f338bc835523ceb16d45729a}
 
-\item 
-Game\+States {\bfseries m\+\_\+should\+Switch}\hypertarget{classMultiplayer__State_af7bba604ecf1a47833746ea7e2218b22}{}\label{classMultiplayer__State_af7bba604ecf1a47833746ea7e2218b22}
+\begin{DoxyCompactList}\small\item\em Current type of game (singleplayer, multiplayer etc.) \end{DoxyCompactList}\item 
+Game\+States \hyperlink{classMultiplayer__State_af7bba604ecf1a47833746ea7e2218b22}{m\+\_\+should\+Switch}\hypertarget{classMultiplayer__State_af7bba604ecf1a47833746ea7e2218b22}{}\label{classMultiplayer__State_af7bba604ecf1a47833746ea7e2218b22}
 
-\item 
-\hyperlink{classBoard}{Board} $\ast$ {\bfseries m\+\_\+board}\hypertarget{classMultiplayer__State_a6f08900f79e099996db28046b32a7af5}{}\label{classMultiplayer__State_a6f08900f79e099996db28046b32a7af5}
+\begin{DoxyCompactList}\small\item\em State we should switch to. \end{DoxyCompactList}\item 
+\hyperlink{classBoard}{Board} $\ast$ \hyperlink{classMultiplayer__State_a6f08900f79e099996db28046b32a7af5}{m\+\_\+board}\hypertarget{classMultiplayer__State_a6f08900f79e099996db28046b32a7af5}{}\label{classMultiplayer__State_a6f08900f79e099996db28046b32a7af5}
 
-\item 
-\hyperlink{classGameGUI}{Game\+G\+UI} $\ast$ {\bfseries m\+\_\+game\+G\+UI}\hypertarget{classMultiplayer__State_a057227b0d6e3b56bdeaad2f76b400be1}{}\label{classMultiplayer__State_a057227b0d6e3b56bdeaad2f76b400be1}
+\begin{DoxyCompactList}\small\item\em Pointer to board. \end{DoxyCompactList}\item 
+\hyperlink{classGameGUI}{Game\+G\+UI} $\ast$ \hyperlink{classMultiplayer__State_a057227b0d6e3b56bdeaad2f76b400be1}{m\+\_\+game\+G\+UI}\hypertarget{classMultiplayer__State_a057227b0d6e3b56bdeaad2f76b400be1}{}\label{classMultiplayer__State_a057227b0d6e3b56bdeaad2f76b400be1}
 
-\item 
-\hyperlink{structLayout}{Layout} {\bfseries m\+\_\+layout}\hypertarget{classMultiplayer__State_ab6ce81448a5e3cc228e33547b4034cd1}{}\label{classMultiplayer__State_ab6ce81448a5e3cc228e33547b4034cd1}
+\begin{DoxyCompactList}\small\item\em Pointer to game gui. \end{DoxyCompactList}\item 
+\hyperlink{structLayout}{Layout} \hyperlink{classMultiplayer__State_ab6ce81448a5e3cc228e33547b4034cd1}{m\+\_\+layout}\hypertarget{classMultiplayer__State_ab6ce81448a5e3cc228e33547b4034cd1}{}\label{classMultiplayer__State_ab6ce81448a5e3cc228e33547b4034cd1}
 
-\item 
-\hyperlink{classPlayer}{Player} $\ast$ {\bfseries m\+\_\+player1}\hypertarget{classMultiplayer__State_ac051594a0b6bc7b586a2dd82a6141cbc}{}\label{classMultiplayer__State_ac051594a0b6bc7b586a2dd82a6141cbc}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structLayout}{Layout} type. \end{DoxyCompactList}\item 
+\hyperlink{classPlayer}{Player} $\ast$ \hyperlink{classMultiplayer__State_ac051594a0b6bc7b586a2dd82a6141cbc}{m\+\_\+player1}\hypertarget{classMultiplayer__State_ac051594a0b6bc7b586a2dd82a6141cbc}{}\label{classMultiplayer__State_ac051594a0b6bc7b586a2dd82a6141cbc}
 
-\item 
-\hyperlink{classPlayer}{Player} $\ast$ {\bfseries m\+\_\+player2}\hypertarget{classMultiplayer__State_a330aea7939a2a56690e5c4aa5b4d92b7}{}\label{classMultiplayer__State_a330aea7939a2a56690e5c4aa5b4d92b7}
+\begin{DoxyCompactList}\small\item\em Pointer to the first player. \end{DoxyCompactList}\item 
+\hyperlink{classPlayer}{Player} $\ast$ \hyperlink{classMultiplayer__State_a330aea7939a2a56690e5c4aa5b4d92b7}{m\+\_\+player2}\hypertarget{classMultiplayer__State_a330aea7939a2a56690e5c4aa5b4d92b7}{}\label{classMultiplayer__State_a330aea7939a2a56690e5c4aa5b4d92b7}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Pointer to the second player. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -119,6 +116,31 @@ Function for rendering to the screen.
 
 Implements \hyperlink{classGame__State_a4db9121068121425e89170b5cb151664}{Game\+\_\+\+State}.
 
+\index{Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}!handle\+Move@{handle\+Move}}
+\index{handle\+Move@{handle\+Move}!Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{handle\+Move(\+Player \&player, Player \&enemy, sf\+::\+Render\+Window \&window)}{handleMove(Player &player, Player &enemy, sf::RenderWindow &window)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Multiplayer\+\_\+\+State\+::handle\+Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} \&}]{player, }
+\item[{{\bf Player} \&}]{enemy, }
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMultiplayer__State_a6797a4f7a4c3ab4fa18b357156073274}{}\label{classMultiplayer__State_a6797a4f7a4c3ab4fa18b357156073274}
+
+
+Function that handles current input based on if \hyperlink{classPlayer}{Player} is AI or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Friendly player \\
+\hline
+{\em enemy} & Enemy player \\
+\hline
+{\em window} & Window to get input from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move is done 
+\end{DoxyReturn}
 \index{Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}!init@{init}}
 \index{init@{init}!Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}}
 \subsubsection[{\texorpdfstring{init(int screen\+Width, int screen\+Height, Resource\+Manager $\ast$resource\+Manager, int $\ast$diff1, int $\ast$diff2) override}{init(int screenWidth, int screenHeight, ResourceManager *resourceManager, int *diff1, int *diff2) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Multiplayer\+\_\+\+State\+::init (
@@ -151,6 +173,22 @@ Function that inits the current game state.
 
 Implements \hyperlink{classGame__State_a582ce3c0cddf042569bf3e08827a377c}{Game\+\_\+\+State}.
 
+\index{Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}!make\+Move@{make\+Move}}
+\index{make\+Move@{make\+Move}!Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{make\+Move(sf\+::\+Render\+Window \&window)}{makeMove(sf::RenderWindow &window)}}]{\setlength{\rightskip}{0pt plus 5cm}void Multiplayer\+\_\+\+State\+::make\+Move (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMultiplayer__State_a21ecdd3177fd35cba51603d1d17d53c1}{}\label{classMultiplayer__State_a21ecdd3177fd35cba51603d1d17d53c1}
+
+
+Function that controls all players turns. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Window to get input from \\
+\hline
+\end{DoxyParams}
 \index{Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}!process\+Input@{process\+Input}}
 \index{process\+Input@{process\+Input}!Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}}
 \subsubsection[{\texorpdfstring{process\+Input(sf\+::\+Render\+Window \&window) override}{processInput(sf::RenderWindow &window) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Multiplayer\+\_\+\+State\+::process\+Input (
@@ -171,6 +209,22 @@ Function that processes input from the player.
 
 Implements \hyperlink{classGame__State_ab6d698d94c4e8ec24a1ac1ca97ae3d98}{Game\+\_\+\+State}.
 
+\index{Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}!set\+G\+U\+I\+After\+Move@{set\+G\+U\+I\+After\+Move}}
+\index{set\+G\+U\+I\+After\+Move@{set\+G\+U\+I\+After\+Move}!Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}}
+\subsubsection[{\texorpdfstring{set\+G\+U\+I\+After\+Move(\+Player \&player)}{setGUIAfterMove(Player &player)}}]{\setlength{\rightskip}{0pt plus 5cm}void Multiplayer\+\_\+\+State\+::set\+G\+U\+I\+After\+Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} \&}]{player}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMultiplayer__State_afeede160f90a08044468b107432d388d}{}\label{classMultiplayer__State_afeede160f90a08044468b107432d388d}
+
+
+Function that controls G\+UI behaviour after successful move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \hyperlink{classPlayer}{Player} who just done the move \\
+\hline
+\end{DoxyParams}
 \index{Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}!should\+Switch@{should\+Switch}}
 \index{should\+Switch@{should\+Switch}!Multiplayer\+\_\+\+State@{Multiplayer\+\_\+\+State}}
 \subsubsection[{\texorpdfstring{should\+Switch() override}{shouldSwitch() override}}]{\setlength{\rightskip}{0pt plus 5cm}Game\+States Multiplayer\+\_\+\+State\+::should\+Switch (
